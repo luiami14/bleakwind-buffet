@@ -10,7 +10,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    class ThalmorTriple
+    public class ThalmorTriple
     {
         /// <summary>
         /// Price of the burger
