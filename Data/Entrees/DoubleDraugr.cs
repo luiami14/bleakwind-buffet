@@ -10,7 +10,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    class Double_Draugr
+    class DoubleDraugr
     {
         /// <summary>
         /// Price of the burger
@@ -107,4 +107,4 @@ namespace BleakwindBuffet.Data.Entrees
         }
     }
 }
-}
+
