@@ -35,6 +35,9 @@ namespace BleakwindBuffet.Data.Entrees
                 return 732;
             }
         }
+        /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
         private bool ketchup = true;
         /// <summary>
         /// Checks if the user wants ketchup or not
@@ -48,37 +51,47 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 ketchup = value;
-            }
+            } 
         }
         /// <summary>
-        /// 
+        /// Checks if the user wants the bun(gives the option)
         /// </summary>
-        public bool Bun
-        {
-            get;
-            set;
-        } = true;
-
-        private bool mustard = true;
+        public bool Bun { get; set; } = true;
         /// <summary>
-        /// 
+        /// Checks if the user wants mustard (gives the option)
         /// </summary>
-        public bool Mustard
+        public bool Mustard { get; set; } = true;
+        /// <summary>
+        /// Checks if the user wants Pickles (gives the option)
+        /// </summary>
+        public bool Pickle { get; set; } = true;
+        /// <summary>
+        /// Checks if the user wants cheese (gives the option)
+        /// </summary>
+        public bool Cheese { get; set; } = true;
+        /// <summary>
+        /// This method makes a new List everytime a user is odering this burger.
+        /// </summary>
+        public List<string> SpecialIntructions
         {
             get
             {
-                return mustard;
-            }
-            set
-            {
-                mustard = value;
+                List<string> instructions = new List<string>();
+                if (!Bun) instructions.Add("Hold bun");
+                if (!Ketchup) instructions.Add("Hold ketchup");
+                if (!Mustard) instructions.Add("Hold mustard");
+                if (!Pickle) instructions.Add("Hold pickle");
+                if (!Cheese) instructions.Add("Hold cheese");
+                return instructions;
             }
         }
-
-        private List<string> specialIntructions = new List<string>();
-        public List<string> SpecialIntructions
+        /// <summary>
+        /// This method just prints out the name of the burger
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
         {
-            get => new List<string>(specialIntructions);
+            return "Briarheart Burger";
         }
     }
 }
