@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Luis Amiel
- * Class name: Double Draugr.cs
+ * Class name: DoubleDraugr.cs
  * Purpose: Class used to represent one of the entrees in the menu
  */
 

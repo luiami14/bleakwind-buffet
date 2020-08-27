@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Luis Amiel
- * Class name: Smokehouse Skeleton.cs
+ * Class name: SmokehouseSkeleton.cs
  * Purpose: Class used to represent one of the entrees in the menu
  */
 using System;

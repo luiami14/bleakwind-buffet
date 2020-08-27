@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Luis Amiel
- * Class name: Thalmor Triple.cs
+ * Class name: ThalmorTriple.cs
  * Purpose: Class used to represent one of the entrees in the menu
  */
 

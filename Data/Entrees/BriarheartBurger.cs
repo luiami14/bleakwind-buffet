@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Luis Amiel
- * Class name: Briarheart Burger.cs
+ * Class name: BriarheartBurger.cs
  * Purpose: Class used to represent one of the many entrees
  */
 
