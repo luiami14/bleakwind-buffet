@@ -63,17 +63,21 @@ namespace BleakwindBuffet.Data.Drinks
         {
             get
             {
-                if (small)
+                if (size == Size.Small)
                 {
                     return 117;
                 }
-                else if (medium)
+                else if (size == Size.Medium)
                 {
                     return 153;
                 }
-                else if (large)
+                else if (size== Size.Large)
                 {
                     return 205;
+                }
+                else
+                {
+                    throw new NotImplementedException();
                 }
             }
         }
@@ -101,9 +105,11 @@ namespace BleakwindBuffet.Data.Drinks
         /// Checks if the user wants the ice(gives the option)
         /// </summary>
         public bool Ice { get; set; } = true;
+
+        private SodaFlavor flavor = SodaFlavor.Cherry;
         /// <summary>
         /// Checks if the user wants the flavor(gives the option)
         /// </summary>
-        public bool Flavor { get; set; } = cherry;
+        public bool Flavor { get; set; } = ;
     }
 }
