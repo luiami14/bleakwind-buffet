@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Luis Amiel
  * Class name: VokunSalad.cs
- * Purpose: Class used to represent one of the drinks in the menu
+ * Purpose: Class used to represent one of the sides in the menu
  */
 
 using BleakwindBuffet.Data.Enums;
