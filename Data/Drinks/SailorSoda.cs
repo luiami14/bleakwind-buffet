@@ -99,17 +99,33 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns></returns>
         public override string ToString()
         {
-            return "sdsd";
+            return size.ToString()+flavor.ToString()+"Sailor Soda";
         }
+        /// <summary>
+        /// backing variable for the ice property
+        /// </summary>
+        private bool ice = true;
         /// <summary>
         /// Checks if the user wants the ice(gives the option)
         /// </summary>
         public bool Ice { get; set; } = true;
-
+        /// <summary>
+        /// backing variable for the sodaflavor property
+        /// </summary>
         private SodaFlavor flavor = SodaFlavor.Cherry;
         /// <summary>
         /// Checks if the user wants the flavor(gives the option)
         /// </summary>
-        public bool Flavor { get; set; } = ;
+        public SodaFlavor Flavor
+        {
+            get
+            {
+                return flavor;
+            }
+            set
+            {
+                flavor = value;
+            }
+        }
     }
 }
