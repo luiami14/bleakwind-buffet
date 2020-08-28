@@ -71,7 +71,5 @@ namespace BleakwindBuffet.Data.Entrees
         {
             return "Garden Orc Omelette";
         }
-
-
     }
 }
