@@ -10,7 +10,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class AretineAppleJuice
+    public class AretinoAppleJuice
     {
         /// <summary>
         /// private variable that initializes the size
@@ -96,8 +96,8 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Ice) instructions.Add("Add ice");
-                return instructions;
+                if (Ice) instructions.Add("Add ice");
+                return instructions; 
             }
         }
         /// <summary>
@@ -107,6 +107,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Checks if the user wants the ice(gives the option)
         /// </summary>
-        public bool Ice { get; set; } = true;
+        public bool Ice { get; set; } = false;
     }
 }

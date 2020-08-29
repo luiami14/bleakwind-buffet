@@ -90,5 +90,16 @@ namespace BleakwindBuffet.Data.Sides
         {
             return size.ToString() + "Dragonborn Waffle Fries";
         }
+        /// <summary>
+        /// This method makes a new List everytime a user is odering
+        /// </summary>
+        public List<string> SpecialIntructions
+        {
+            get
+            {
+                List<string> instructions = new List<string>();
+                return instructions;
+            }
+        }
     }
 }

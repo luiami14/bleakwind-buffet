@@ -96,7 +96,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Checks if the user wants the ice(gives the option)
         /// </summary>
-        public bool Ice { get; set; } = true;
+        public bool Ice { get; set; } = false;
         /// <summary>
         /// This method makes a new List everytime a user is odering this drink
         /// </summary>
@@ -105,7 +105,7 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Ice) instructions.Add("Add ice");
+                if (Ice) instructions.Add("Add ice");
                 return instructions;
             }
         }

@@ -89,5 +89,16 @@ namespace BleakwindBuffet.Data.Sides
         {
             return size.ToString() + "Mad Otar Grits";
         }
+        /// <summary>
+        /// This method makes a new List everytime a user is odering
+        /// </summary>
+        public List<string> SpecialIntructions
+        {
+            get
+            {
+                List<string> instructions = new List<string>();
+                return instructions;
+            }
+        }
     }
 }
