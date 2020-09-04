@@ -92,7 +92,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// This method makes a new List everytime a user is odering
         /// </summary>
-        public List<string> SpecialIntructions
+        public List<string> SpecialInstructions
         {
             get
             {

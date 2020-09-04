@@ -92,7 +92,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// This method makes a new List everytime a user is odering this drink
         /// </summary>
-        public List<string> SpecialIntructions
+        public List<string> SpecialInstructions
         {
             get
             {
@@ -118,6 +118,14 @@ namespace BleakwindBuffet.Data.Drinks
         /// chekcs if the user wants cream
         /// </summary>
         public bool RoomForCream { get; set; } = true;
+        /// <summary>
+        /// backing variable for the Decaf property
+        /// </summary>
+        private bool decaf = true;
+        /// <summary>
+        /// Checks if user wants decaf
+        /// </summary>
+        public bool Decaf { get; set; } = true;
 
     }
 }

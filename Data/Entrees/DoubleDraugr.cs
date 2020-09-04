@@ -81,7 +81,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// This method makes a new List everytime a user is odering this burger.
         /// </summary>
-        public List<string> SpecialIntructions
+        public List<string> SpecialInstructions
         {
             get
             {

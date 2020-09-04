@@ -84,7 +84,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// This method makes a new List everytime a user is odering this drink
         /// </summary>
-        public List<string> SpecialIntructions
+        public List<string> SpecialInstructions
         {
             get
             {
