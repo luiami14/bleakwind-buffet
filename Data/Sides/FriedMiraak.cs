@@ -59,7 +59,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets the calories of pancakes
         /// </summary>
-        public int Calories
+        public uint Calories
         {
             get
             {

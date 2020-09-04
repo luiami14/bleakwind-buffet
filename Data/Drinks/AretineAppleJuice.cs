@@ -6,7 +6,6 @@
 using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
@@ -58,7 +57,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the calories of juice
         /// </summary>
-        public int Calories
+        public uint Calories
         {
             get
             {

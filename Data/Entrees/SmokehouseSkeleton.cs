@@ -24,7 +24,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the calories of the breakfast
         /// </summary>
-        public int Calories
+        public uint Calories
         {
             get
             {

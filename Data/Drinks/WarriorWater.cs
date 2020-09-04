@@ -59,7 +59,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the calories of water
         /// </summary>
-        public int Calories
+        public uint Calories
         {
             get
             {
