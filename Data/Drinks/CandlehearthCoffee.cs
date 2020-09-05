@@ -30,6 +30,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 size = value;
             }
+
         }
         /// <summary>
         /// Price of the coffee
