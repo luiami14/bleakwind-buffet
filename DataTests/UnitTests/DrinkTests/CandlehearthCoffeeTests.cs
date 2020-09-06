@@ -18,6 +18,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
             Assert.False(cj.Ice);
+
         }
 
         [Fact]
