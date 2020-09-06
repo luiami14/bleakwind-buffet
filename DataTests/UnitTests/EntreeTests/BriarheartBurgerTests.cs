@@ -102,12 +102,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectPrice()
         {
             BriarheartBurger bj = new BriarheartBurger();
+            Assert.Equal(6.32, bj.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
             BriarheartBurger bj = new BriarheartBurger();
+            Assert.Equal((uint)732, bj.Calories);
             
         }
 
@@ -118,12 +120,24 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                                                                     bool includePickle, bool includeCheese)
         {
             BriarheartBurger bj = new BriarheartBurger();
+            bj.Bun = includeBun;
+            bj.Ketchup = includeKetchup;
+            bj.Mustard = includeMustard;
+            bj.Pickle = includePickle;
+            bj.Cheese = includeCheese;
+            if(!includeBun) Assert.Contains("Hold bun", bj.SpecialInstructions);
+            if (!includeKetchup) Assert.Contains("Hold ketchup", bj.SpecialInstructions);
+            if (!includeMustard) Assert.Contains("Hold mustard", bj.SpecialInstructions);
+            if (!includePickle) Assert.Contains("Hold pickle", bj.SpecialInstructions);
+            if (!includeCheese) Assert.Contains("Hold cheese", bj.SpecialInstructions);
+            if(includeBun&&includeKetchup&&includeMustard&&includePickle&&includeCheese) Assert.Empty(bj.SpecialInstructions);
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
             BriarheartBurger bj = new BriarheartBurger();
+            Assert.Equal("Briarheart Burger", bj.ToString());
         }
     }
 }

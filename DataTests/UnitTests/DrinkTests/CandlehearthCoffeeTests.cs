@@ -116,8 +116,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             cj.Ice = includeIce;
             cj.RoomForCream = includeCream;
             if (includeIce) Assert.Contains("Add ice", cj.SpecialInstructions);
-            else if (includeCream) Assert.Contains("Add cream", cj.SpecialInstructions);
-            else Assert.Empty(cj.SpecialInstructions);
+            if (includeCream) Assert.Contains("Add cream", cj.SpecialInstructions);
+            if(!includeIce && !includeCream) Assert.Empty(cj.SpecialInstructions);
         }
 
         [Theory]
@@ -132,6 +132,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             CandlehearthCoffee cj = new CandlehearthCoffee();
             cj.Size = size;
             cj.Decaf = decaf;
+            Assert.Equal(name, cj.ToString());
         }
     }
 }

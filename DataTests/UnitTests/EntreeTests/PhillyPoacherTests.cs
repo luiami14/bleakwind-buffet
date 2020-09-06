@@ -66,11 +66,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
+            PhillyPoacher pj = new PhillyPoacher();
+            Assert.Equal(7.23, pj.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
+            PhillyPoacher pj = new PhillyPoacher();
+            Assert.Equal((uint)784, pj.Calories);
         }
 
         [Theory]
@@ -79,11 +83,21 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectSpecialInstructions(bool includeSirloin, bool includeOnion,
                                                             bool includeRoll)
         {
+            PhillyPoacher pj = new PhillyPoacher();
+            pj.Sirloin = includeSirloin;
+            pj.Onion = includeOnion;
+            pj.Roll = includeRoll;
+            if(!includeSirloin) Assert.Contains("Hold sirloin", pj.SpecialInstructions);
+            if (!includeOnion) Assert.Contains("Hold onions", pj.SpecialInstructions);
+            if (!includeRoll) Assert.Contains("Hold roll", pj.SpecialInstructions);
+            if (includeRoll && includeOnion && includeSirloin) Assert.Empty(pj.SpecialInstructions);
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
+            PhillyPoacher pj = new PhillyPoacher();
+            Assert.Equal("Philly Poacher", pj.ToString());
         }
     }
 }

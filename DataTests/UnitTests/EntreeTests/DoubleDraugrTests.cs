@@ -12,6 +12,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class DoubleDraugrTests
     {   
+        
         [Fact]
         public void ShouldIncludeBunByDefault()
         {
@@ -151,11 +152,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.Equal(7.32, dj.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.Equal((uint)843, dj.Calories);
         }
 
         [Theory]
@@ -165,11 +170,25 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                                                                     bool includePickle, bool includeCheese, bool includeTomato,
                                                                     bool includeLettuce, bool includeMayo)
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            dj.Bun = includeBun;
+            dj.Ketchup = includeKetchup;
+            dj.Mustard = includeMustard;
+            dj.Pickle = includePickle;
+            dj.Cheese = includeCheese;
+            if (!includeBun) Assert.Contains("Hold bun", dj.SpecialInstructions);
+            if (!includeKetchup) Assert.Contains("Hold ketchup", dj.SpecialInstructions);
+            if (!includeMustard) Assert.Contains("Hold mustard", dj.SpecialInstructions);
+            if (!includePickle) Assert.Contains("Hold pickle", dj.SpecialInstructions);
+            if (!includeCheese) Assert.Contains("Hold cheese", dj.SpecialInstructions);
+            if (includeBun && includeKetchup && includeMustard && includePickle && includeCheese) Assert.Empty(dj.SpecialInstructions);
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.Equal("Double Draugr", dj.ToString());
         }
     }
 }

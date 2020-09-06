@@ -83,11 +83,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
+            GardenOrcOmelette gj = new GardenOrcOmelette();
+            Assert.Equal(4.57, gj.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
+            GardenOrcOmelette gj = new GardenOrcOmelette();
+            Assert.Equal((uint)404, gj.Calories);
         }
 
         [Theory]
@@ -96,11 +100,23 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectSpecialInstructions(bool includeBroccoli, bool includeMushrooms,
                                                             bool includeTomato, bool includeCheddar)
         {
+            GardenOrcOmelette gj = new GardenOrcOmelette();
+            gj.Broccoli = includeBroccoli;
+            gj.Mushrooms = includeMushrooms;
+            gj.Tomato = includeTomato;
+            gj.Cheddar = includeCheddar;
+            if (!includeBroccoli) Assert.Contains("Hold broccoli", gj.SpecialInstructions);
+            if (!includeMushrooms) Assert.Contains("Hold mushrooms", gj.SpecialInstructions);
+            if (!includeTomato) Assert.Contains("Hold tomato", gj.SpecialInstructions);
+            if (!includeCheddar) Assert.Contains("Hold cheddar", gj.SpecialInstructions);
+            if (includeBroccoli && includeMushrooms && includeTomato && includeCheddar) Assert.Empty(gj.SpecialInstructions);
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
+            GardenOrcOmelette gj = new GardenOrcOmelette();
+            Assert.Equal("Garden Orc Omelette", gj.ToString());
         }
     }
 }

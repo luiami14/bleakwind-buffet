@@ -88,7 +88,14 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns></returns>
         public override string ToString()
         {
-            return size.ToString() + "Candlehearth Coffee";
+            if(Decaf == true)
+            {
+                return size.ToString()+ " Decaf Candlehearth Coffee";
+            }
+            else
+            {
+                return size.ToString() + " Candlehearth Coffee";
+            }
         }
         /// <summary>
         /// This method makes a new List everytime a user is odering this drink

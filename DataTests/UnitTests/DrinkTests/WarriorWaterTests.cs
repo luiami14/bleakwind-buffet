@@ -92,8 +92,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             wj.Ice = includeIce;
             wj.Lemon = includeLemon;
             if (!includeIce) Assert.Contains("Hold ice", wj.SpecialInstructions);
-            else if (includeLemon) Assert.Contains("Add lemon", wj.SpecialInstructions);
-            else Assert.Empty(wj.SpecialInstructions);
+            if (includeLemon) Assert.Contains("Add lemon", wj.SpecialInstructions);
+            if(includeIce && !includeLemon) Assert.Empty(wj.SpecialInstructions);
         }
         [Theory]
         [InlineData(Size.Small, "Small Warrior Water")]
@@ -101,8 +101,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(Size.Large, "Large Warrior Water")]
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
-            MarkarthMilk mj = new MarkarthMilk();
-            mj.Size = size;
+            WarriorWater wj = new WarriorWater();
+            wj.Size = size;
+            Assert.Equal(name, wj.ToString());
         }
     }
 }

@@ -83,11 +83,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
+            SmokehouseSkeleton sj = new SmokehouseSkeleton();
+            Assert.Equal(5.62, sj.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
+            SmokehouseSkeleton sj = new SmokehouseSkeleton();
+            Assert.Equal((uint)602, sj.Calories);
         }
 
         [Theory]
@@ -96,11 +100,23 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectSpecialInstructions(bool includeSausage, bool includeEgg,
                                                             bool includeHashbrowns, bool includePancake)
         {
+            SmokehouseSkeleton sj = new SmokehouseSkeleton();
+            sj.SausageLink = includeSausage;
+            sj.Egg = includeEgg;
+            sj.HashBrowns = includeHashbrowns;
+            sj.Pancake = includePancake;
+            if (!includeSausage) Assert.Contains("Hold sausage", sj.SpecialInstructions);
+            if (!includeEgg) Assert.Contains("Hold eggs", sj.SpecialInstructions);
+            if (!includeHashbrowns) Assert.Contains("Hold hash browns", sj.SpecialInstructions);
+            if (!includePancake) Assert.Contains("Hold pancakes", sj.SpecialInstructions);
+            if (includeSausage && includeEgg && includeHashbrowns && includePancake) Assert.Empty(sj.SpecialInstructions);
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
+            SmokehouseSkeleton sj = new SmokehouseSkeleton();
+            Assert.Equal("Smokehouse Skeleton", sj.ToString());
         }
     }
 }

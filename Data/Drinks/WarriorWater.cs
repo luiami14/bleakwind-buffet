@@ -87,7 +87,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns></returns>
         public override string ToString()
         {
-            return size.ToString() + "Warrior Water";
+            return size.ToString() + " Warrior Water";
         }
         /// <summary>
         /// backing variable for the ice property

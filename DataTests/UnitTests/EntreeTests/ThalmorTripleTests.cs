@@ -185,11 +185,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.Equal(8.32, tj.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.Equal((uint)943, tj.Calories);
         }
 
         [Theory]
@@ -200,11 +204,35 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                                                                     bool includeLettuce, bool includeMayo,
                                                                     bool includeBacon, bool includeEgg)
         {
+            ThalmorTriple tj = new ThalmorTriple();
+            tj.Bun = includeBun;
+            tj.Ketchup = includeKetchup;
+            tj.Mustard = includeMustard;
+            tj.Pickle = includePickle;
+            tj.Cheese = includeCheese;
+            tj.Tomato = includeTomato;
+            tj.Lettuce = includeLettuce;
+            tj.Mayo = includeMayo;
+            tj.Bacon = includeBacon;
+            tj.Egg = includeEgg;
+            if (!includeBun) Assert.Contains("Hold bun", tj.SpecialInstructions);
+            if (!includeKetchup) Assert.Contains("Hold ketchup", tj.SpecialInstructions);
+            if (!includeMustard) Assert.Contains("Hold mustard", tj.SpecialInstructions);
+            if (!includePickle) Assert.Contains("Hold pickle", tj.SpecialInstructions);
+            if (!includeCheese) Assert.Contains("Hold cheese", tj.SpecialInstructions);
+            if (!includeTomato) Assert.Contains("Hold tomato", tj.SpecialInstructions);
+            if (!includeLettuce) Assert.Contains("Hold lettuce", tj.SpecialInstructions);
+            if (!includeMayo) Assert.Contains("Hold mayo", tj.SpecialInstructions);
+            if (!includeBacon) Assert.Contains("Hold bacon", tj.SpecialInstructions);
+            if (!includeEgg) Assert.Contains("Hold egg", tj.SpecialInstructions);
+            if (includeBun && includeKetchup && includeMustard && includePickle && includeCheese && includeTomato && includeLettuce && includeMayo && includeBacon && includeEgg) Assert.Empty(tj.SpecialInstructions);
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.Equal("Thalmor Triple", tj.ToString());
         }
     }
 }
