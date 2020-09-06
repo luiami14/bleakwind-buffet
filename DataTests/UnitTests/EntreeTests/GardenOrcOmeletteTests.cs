@@ -12,34 +12,45 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class GardenOrcOmeletteTests
     {
+        /// <summary>
+        /// includes broccoli by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudeBroccoliByDefault()
         {
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.True(gj.Broccoli);
         }
-
+        /// <summary>
+        /// includes mushrooms by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudeMushroomsByDefault()
         {
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.True(gj.Mushrooms);
         }
-
+        /// <summary>
+        /// includes tomato by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudeTomatoByDefault()
         {
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.True(gj.Tomato);
         }
-
+        /// <summary>
+        /// includes cheddar by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudeCheddarByDefault()
         {
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.True(gj.Cheddar);
         }
-
+        /// <summary>
+        /// sets the broccoli
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetBroccoli()
         {
@@ -49,7 +60,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             gj.Broccoli = false;
             Assert.False(gj.Broccoli);
         }
-
+        /// <summary>
+        /// sets the mushrooms
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetMushrooms()
         {
@@ -59,7 +72,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             gj.Mushrooms = false;
             Assert.False(gj.Mushrooms);
         }
-
+        /// <summary>
+        /// sets the tomato
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetTomato()
         {
@@ -69,7 +84,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             gj.Tomato = false;
             Assert.False(gj.Tomato);
         }
-
+        /// <summary>
+        /// sets the cheddar
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetCheddar()
         {

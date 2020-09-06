@@ -11,64 +11,82 @@ using BleakwindBuffet.Data.Entrees;
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class DoubleDraugrTests
-    {   
-        
+    {
+        /// <summary>
+        /// includes bun by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeBunByDefault()
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.True(dj.Bun);
         }
-
+        /// <summary>
+        /// includes ket by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeKetchupByDefault()
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.True(dj.Ketchup);
         }
-
+        /// <summary>
+        /// includes mustard by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeMustardByDefault()
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.True(dj.Mustard);
         }
-
+        /// <summary>
+        /// includes pickle by default
+        /// </summary>
         [Fact]
         public void ShouldIncludePickleByDefault()
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.True(dj.Pickle);
         }
-
+        /// <summary>
+        /// includes cheese by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeCheeseByDefault()
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.True(dj.Cheese);
         }
-
+        /// <summary>
+        /// includes tomato by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeTomatoByDefault()
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.True(dj.Tomato);
         }
-
+        /// <summary>
+        /// includes lettuce by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeLettuceByDefault()
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.True(dj.Lettuce);
         }
-
+        /// <summary>
+        /// includes mayo by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeMayoByDefault()
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.True(dj.Mayo);
         }
-
+        /// <summary>
+        /// sets the bun
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetBun()
         {
@@ -78,7 +96,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             dj.Bun = false;
             Assert.False(dj.Bun);
         }
-
+        /// <summary>
+        /// sets the ket
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetKetchup()
         {
@@ -88,7 +108,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             dj.Ketchup = false;
             Assert.False(dj.Ketchup);
         }
-
+        /// <summary>
+        /// sets the mustard
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetMustard()
         {
@@ -98,7 +120,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             dj.Mustard = false;
             Assert.False(dj.Mustard);
         }
-
+        /// <summary>
+        /// sets the pickle
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetPickle()
         {
@@ -108,7 +132,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             dj.Pickle = false;
             Assert.False(dj.Pickle);
         }
-
+        /// <summary>
+        /// sets the cheese
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetCheese()
         {
@@ -118,7 +144,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             dj.Cheese = false;
             Assert.False(dj.Cheese);
         }
-
+        /// <summary>
+        /// sets the tomato
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetTomato()
         {
@@ -128,7 +156,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             dj.Tomato = false;
             Assert.False(dj.Tomato);
         }
-
+        /// <summary>
+        /// sets the lettuce
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetLettuce()
         {
@@ -138,7 +168,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             dj.Lettuce = false;
             Assert.False(dj.Lettuce);
         }
-
+        /// <summary>
+        /// sets the mayo
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetMayo()
         {
@@ -148,21 +180,35 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             dj.Mayo = false;
             Assert.False(dj.Mayo);
         }
-
+        /// <summary>
+        /// returns the correct price
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.Equal(7.32, dj.Price);
         }
-
+        /// <summary>
+        /// returns the correct calories
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.Equal((uint)843, dj.Calories);
         }
-
+        /// <summary>
+        /// returns special instructions
+        /// </summary>
+        /// <param name="includeBun">bun parameter</param>
+        /// <param name="includeKetchup">ket paramter</param>
+        /// <param name="includeMustard">mustard parameter</param>
+        /// <param name="includePickle">pickle paramter</param>
+        /// <param name="includeCheese">cheese parameter</param>
+        /// <param name="includeTomato">tomato parameter</param>
+        /// <param name="includeLettuce">lettuce parameter</param>
+        /// <param name="includeMayo">mayo parameter</param>
         [Theory]
         [InlineData(true, true, true, true, true, true, true, true)]
         [InlineData(false, false, false, false, false, false, false, false)]
@@ -183,7 +229,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             if (!includeCheese) Assert.Contains("Hold cheese", dj.SpecialInstructions);
             if (includeBun && includeKetchup && includeMustard && includePickle && includeCheese) Assert.Empty(dj.SpecialInstructions);
         }
-
+        /// <summary>
+        /// returns the correct string
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {
