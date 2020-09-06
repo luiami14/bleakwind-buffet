@@ -12,27 +12,36 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class PhillyPoacherTests
     {
+        /// <summary>
+        /// includes sirloin by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudeSirloinByDefault()
         {
             PhillyPoacher pj = new PhillyPoacher();
             Assert.True(pj.Sirloin);
         }
-
+        /// <summary>
+        /// should include onion by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudeOnionByDefault()
         {
             PhillyPoacher pj = new PhillyPoacher();
             Assert.True(pj.Onion);
         }
-
+        /// <summary>
+        /// includes roll by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudeRollByDefault()
         {
             PhillyPoacher pj = new PhillyPoacher();
             Assert.True(pj.Roll);
         }
-
+        /// <summary>
+        /// sets sirloin
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSirloin()
         {
@@ -42,7 +51,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             pj.Sirloin = false;
             Assert.False(pj.Sirloin);
         }
-
+        /// <summary>
+        /// setting the onions
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetOnions()
         {
@@ -52,7 +63,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             pj.Onion = false;
             Assert.False(pj.Onion);
         }
-
+        /// <summary>
+        /// setting the roll
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetRoll()
         {
@@ -62,21 +75,30 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             pj.Roll = false;
             Assert.False(pj.Roll);
         }
-
+        /// <summary>
+        /// returns the correct price
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
             PhillyPoacher pj = new PhillyPoacher();
             Assert.Equal(7.23, pj.Price);
         }
-
+        /// <summary>
+        /// returns the correct calories
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
             PhillyPoacher pj = new PhillyPoacher();
             Assert.Equal((uint)784, pj.Calories);
         }
-
+        /// <summary>
+        /// returns the special instructions
+        /// </summary>
+        /// <param name="includeSirloin">sirloin parameter</param>
+        /// <param name="includeOnion">onion parameter</param>
+        /// <param name="includeRoll">roll parameter</param>
         [Theory]
         [InlineData(true, true, true)]
         [InlineData(false, false, false)]
@@ -92,7 +114,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             if (!includeRoll) Assert.Contains("Hold roll", pj.SpecialInstructions);
             if (includeRoll && includeOnion && includeSirloin) Assert.Empty(pj.SpecialInstructions);
         }
-
+        /// <summary>
+        /// returns the correct to string
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {

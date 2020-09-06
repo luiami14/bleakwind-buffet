@@ -11,35 +11,46 @@ using BleakwindBuffet.Data.Entrees;
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class SmokehouseSkeletonTests
-    {        
+    {
+        /// <summary>
+        /// includes sausage by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudeSausageByDefault()
         {
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.True(sj.SausageLink);
         }
-
+        /// <summary>
+        /// includes eggs by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudeEggByDefault()
         {
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.True(sj.Egg);
         }
-
+        /// <summary>
+        /// includes hashbrowns by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudeHashbrownsByDefault()
         {
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.True(sj.HashBrowns);
         }
-
+        /// <summary>
+        /// includes pancakes by default
+        /// </summary>
         [Fact]
         public void ShouldInlcudePancakeByDefault()
         {
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.True(sj.Pancake);
         }
-
+        /// <summary>
+        /// sets to sausage
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSausage()
         {
@@ -49,7 +60,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             sj.SausageLink = false;
             Assert.False(sj.SausageLink);
         }
-
+        /// <summary>
+        /// sets to eggs
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetEgg()
         {
@@ -59,7 +72,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             sj.Egg = false;
             Assert.False(sj.Egg);
         }
-
+        /// <summary>
+        /// sets to hashbrowns
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetHashbrowns()
         {
@@ -69,7 +84,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             sj.HashBrowns = false;
             Assert.False(sj.HashBrowns);
         }
-
+        /// <summary>
+        /// sets to pancakes
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetPancake()
         {
@@ -79,21 +96,31 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             sj.Pancake = false;
             Assert.False(sj.Pancake);
         }
-
+        /// <summary>
+        /// returns the correct price
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.Equal(5.62, sj.Price);
         }
-
+        /// <summary>
+        /// returns the correct calories
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.Equal((uint)602, sj.Calories);
         }
-
+        /// <summary>
+        /// returns the correct special instructions
+        /// </summary>
+        /// <param name="includeSausage">sausage parameter</param>
+        /// <param name="includeEgg">egg parameter</param>
+        /// <param name="includeHashbrowns">hashbrown parameter</param>
+        /// <param name="includePancake">pancake parameter</param>
         [Theory]
         [InlineData(true, true, true, true)]
         [InlineData(false, false, false, false)]
@@ -111,7 +138,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             if (!includePancake) Assert.Contains("Hold pancakes", sj.SpecialInstructions);
             if (includeSausage && includeEgg && includeHashbrowns && includePancake) Assert.Empty(sj.SpecialInstructions);
         }
-
+        /// <summary>
+        /// returns the correct toString()
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {

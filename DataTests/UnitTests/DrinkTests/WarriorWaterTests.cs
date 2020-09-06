@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Luis Amiel
  * Class: WarriorWaterTests.cs
  * Purpose: Test the MarkarthMilk.cs class in the Data library
  */
@@ -14,24 +14,36 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class WarriorWaterTests
     {
+        /// <summary>
+        /// not include ice by default
+        /// </summary>
         [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
             WarriorWater wj = new WarriorWater();
             Assert.True(wj.Ice);
         }
+        /// <summary>
+        /// not include lemon by default
+        /// </summary>
         [Fact]
         public void ShouldNotIncludeLemonByDefault()
         {
             WarriorWater wj = new WarriorWater();
             Assert.False(wj.Lemon);
         }
+        /// <summary>
+        /// small by default
+        /// </summary>
         [Fact]
         public void ShouldBySmallByDefault()
         {
             WarriorWater wj = new WarriorWater();
             Assert.Equal(Size.Small, wj.Size);
         }
+        /// <summary>
+        /// set to a size
+        /// </summary>
         [Fact]
         public void ShouldByAbleToSetIce()
         {
@@ -41,6 +53,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             wj.Ice = false;
             Assert.False(wj.Ice);
         }
+        /// <summary>
+        /// set to lemon
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetLemon()
         {
@@ -50,6 +65,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             wj.Lemon = false;
             Assert.False(wj.Lemon);
         }
+        /// <summary>
+        /// able to set to a size
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -61,6 +79,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             wj.Size = Size.Small;
             Assert.Equal(Size.Small, wj.Size);
         }
+        /// <summary>
+        /// correct price for size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="price">price parameter</param>
         [Theory]
         [InlineData(Size.Small, 0.00)]
         [InlineData(Size.Medium, 0.00)]
@@ -71,6 +94,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             wj.Size = size;
             Assert.Equal(price, wj.Price);
         }
+        /// <summary>
+        /// correct calories for the size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="cal">calories parameter</param>
         [Theory]
         [InlineData(Size.Small, 0)]
         [InlineData(Size.Medium, 0)]
@@ -81,6 +109,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             wj.Size = size;
             Assert.Equal(cal, wj.Calories);
         }
+        /// <summary>
+        /// correct special instructions
+        /// </summary>
+        /// <param name="includeIce">ice parameter</param>
+        /// <param name="includeLemon">lemon parameter</param>
         [Theory]
         [InlineData(true, true)]
         [InlineData(true, false)]
@@ -95,6 +128,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             if (includeLemon) Assert.Contains("Add lemon", wj.SpecialInstructions);
             if(includeIce && !includeLemon) Assert.Empty(wj.SpecialInstructions);
         }
+        /// <summary>
+        /// correct ToString based on the size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="name">name parameter</param>
         [Theory]
         [InlineData(Size.Small, "Small Warrior Water")]
         [InlineData(Size.Medium, "Medium Warrior Water")]

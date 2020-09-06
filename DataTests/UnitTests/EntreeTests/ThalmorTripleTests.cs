@@ -12,76 +12,99 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class ThalmorTripleTests
     {
+        /// <summary>
+        /// includes bun by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeBunByDefault()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.True(tj.Bun);
         }
-
+        /// <summary>
+        /// includes ket by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeKetchupByDefault()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.True(tj.Ketchup);
         }
-
+        /// <summary>
+        /// includes mustard by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeMustardByDefault()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.True(tj.Mustard);
         }
-
+        /// <summary>
+        /// includes pickle by default
+        /// </summary>
         [Fact]
         public void ShouldIncludePickleByDefault()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.True(tj.Pickle);
         }
-
+        /// <summary>
+        /// includes cheese by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeCheeseByDefault()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.True(tj.Cheese);
         }
-
+        /// <summary>
+        /// includes tomato by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeTomatoByDefault()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.True(tj.Tomato);
         }
-
+        /// <summary>
+        /// includes lettuce by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeLettuceByDefault()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.True(tj.Lettuce);
         }
-
+        /// <summary>
+        /// includes mayo by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeMayoByDefault()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.True(tj.Mayo);
         }
-
+        /// <summary>
+        /// includes bacon by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeBaconByDefault()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.True(tj.Bacon);
         }
-
+        /// <summary>
+        /// includes eggs by default
+        /// </summary>
         [Fact]
         public void ShouldIncludeEggByDefault()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.True(tj.Egg);
         }
-
+        /// <summary>
+        /// sets to bun
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetBun()
         {
@@ -91,7 +114,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             tj.Bun = false;
             Assert.False(tj.Bun);
         }
-
+        /// <summary>
+        /// sets to ketchup
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetKetchup()
         {
@@ -101,7 +126,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             tj.Ketchup = false;
             Assert.False(tj.Ketchup);
         }
-
+        /// <summary>
+        /// sets to mustard
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetMustard()
         {
@@ -111,7 +138,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             tj.Mustard = false;
             Assert.False(tj.Mustard);
         }
-
+        /// <summary>
+        /// sets to pickle
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetPickle()
         {
@@ -121,7 +150,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             tj.Pickle = false;
             Assert.False(tj.Pickle);
         }
-
+        /// <summary>
+        /// sets to cheese
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetCheese()
         {
@@ -131,7 +162,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             tj.Cheese = false;
             Assert.False(tj.Cheese);
         }
-
+        /// <summary>
+        /// sets to tomato
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetTomato()
         {
@@ -141,7 +174,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             tj.Tomato = false;
             Assert.False(tj.Tomato);
         }
-
+        /// <summary>
+        /// sets to lettuce
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetLettuce()
         {
@@ -151,7 +186,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             tj.Lettuce = false;
             Assert.False(tj.Lettuce);
         }
-
+        /// <summary>
+        /// sets to mayo
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetMayo()
         {
@@ -161,7 +198,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             tj.Mayo = false;
             Assert.False(tj.Mayo);
         }
-
+        /// <summary>
+        /// sets to bacon
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetBacon()
         {
@@ -171,7 +210,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             tj.Bacon = false;
             Assert.False(tj.Bacon);
         }
-
+        /// <summary>
+        /// sets to egg
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetEgg()
         {
@@ -181,21 +222,37 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             tj.Egg = false;
             Assert.False(tj.Egg);
         }
-
+        /// <summary>
+        /// returns correct price
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.Equal(8.32, tj.Price);
         }
-
+        /// <summary>
+        /// returns correct calories
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.Equal((uint)943, tj.Calories);
         }
-
+        /// <summary>
+        /// returns special instructions 
+        /// </summary>
+        /// <param name="includeBun">bun parameter</param>
+        /// <param name="includeKetchup">ket parameter</param>
+        /// <param name="includeMustard">mustard parameter</param>
+        /// <param name="includePickle">pickle parameter</param>
+        /// <param name="includeCheese">cheese parameter</param>
+        /// <param name="includeTomato">tomato parameter</param>
+        /// <param name="includeLettuce">lettuce parameter</param>
+        /// <param name="includeMayo">mayo parameter</param>
+        /// <param name="includeBacon">bacon parameter</param>
+        /// <param name="includeEgg">egg parameter</param>
         [Theory]
         [InlineData(true, true, true, true, true, true, true, true, true, true)]
         [InlineData(false, false, false, false, false, false, false, false, false, false)]
@@ -227,7 +284,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             if (!includeEgg) Assert.Contains("Hold egg", tj.SpecialInstructions);
             if (includeBun && includeKetchup && includeMustard && includePickle && includeCheese && includeTomato && includeLettuce && includeMayo && includeBacon && includeEgg) Assert.Empty(tj.SpecialInstructions);
         }
-
+        /// <summary>
+        /// returns correct toString()
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {

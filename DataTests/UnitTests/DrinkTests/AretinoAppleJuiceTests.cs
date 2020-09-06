@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Luis Amiel
  * Class: AretinoAppleJuiceTests.cs
  * Purpose: Test the AretinoAppleJuice.cs class in the Data library
  */
@@ -13,20 +13,27 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class AretinoAppleJuiceTests
     {
+        /// <summary>
+        /// should not include Ice by default
+        /// </summary>
         [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
             AretinoAppleJuice aj = new AretinoAppleJuice();
             Assert.False(aj.Ice);
         }
-
+        /// <summary>
+        /// small by default
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
             AretinoAppleJuice aj = new AretinoAppleJuice();
             Assert.Equal(Size.Small, aj.Size);
         }
-
+        /// <summary>
+        /// setting ice
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetIce()
         {
@@ -36,7 +43,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             aj.Ice = false;
             Assert.False(aj.Ice);
         }
-
+        /// <summary>
+        /// able to set size
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -48,7 +57,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             aj.Size = Size.Small;
             Assert.Equal(Size.Small, aj.Size);
         }
-
+        /// <summary>
+        /// correct price for size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="price">price parameter</param>
         [Theory]
         [InlineData(Size.Small, 0.62)]
         [InlineData(Size.Medium, 0.87)]
@@ -59,7 +72,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             aj.Size = size;
             Assert.Equal(price, aj.Price);
         }
-
+        /// <summary>
+        /// correct calories for size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="cal">calories parameter</param>
         [Theory]
         [InlineData(Size.Small, 44)]
         [InlineData(Size.Medium, 88)]
@@ -70,7 +87,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             aj.Size = size;
             Assert.Equal(cal, aj.Calories);
         }
-
+        /// <summary>
+        /// correct special instructions
+        /// </summary>
+        /// <param name="includeIce">Ice parameter</param>
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
@@ -81,7 +101,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             if (includeIce) Assert.Contains("Add ice", aj.SpecialInstructions);
             else Assert.Empty(aj.SpecialInstructions);
         }
-
+        /// <summary>
+        /// correct string based on the size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="name">name parameter</param>
         [Theory]
         [InlineData(Size.Small, "Small Aretino Apple Juice")]
         [InlineData(Size.Medium, "Medium Aretino Apple Juice")]

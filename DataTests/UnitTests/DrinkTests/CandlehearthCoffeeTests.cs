@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Luis Amiel
  * Class: CandlehearthCoffeeTests.cs
  * Purpose: Test the CandlehearthCoffee.cs class in the Data library
  */
@@ -13,34 +13,45 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class CandlehearthCoffeeTests
     {
+        /// <summary>
+        /// not include ice by default
+        /// </summary>
         [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
             Assert.True(cj.Ice);
         }
-
+        /// <summary>
+        /// not include default by default
+        /// </summary>
         [Fact]
         public void ShouldNotBeDecafByDefault()
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
             Assert.True(cj.Decaf);
         }
-
+        /// <summary>
+        /// not have room for cream by default
+        /// </summary>
         [Fact]
         public void ShouldNotHaveRoomForCreamByDefault()
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
             Assert.True(cj.RoomForCream);
         }
-
+        /// <summary>
+        /// small by default
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
             Assert.Equal(Size.Small, cj.Size);
         }
-
+        /// <summary>
+        /// set to ice
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetIce()
         {
@@ -50,7 +61,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             cj.Ice = false;
             Assert.False(cj.Ice);
         }
-
+        /// <summary>
+        /// set to decaf
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetDecaf()
         {
@@ -60,7 +73,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             cj.Decaf = false;
             Assert.False(cj.Decaf);
         }
-
+        /// <summary>
+        /// set room for cream
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetRoomForCream()
         {
@@ -70,7 +85,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             cj.RoomForCream = false;
             Assert.False(cj.RoomForCream);
         }
-
+        /// <summary>
+        /// able to set for size
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -82,7 +99,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             cj.Size = Size.Small;
             Assert.Equal(Size.Small, cj.Size);
         }
-
+        /// <summary>
+        /// correct prize for size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="price">name parameter</param>
         [Theory]
         [InlineData(Size.Small, 0.75)]
         [InlineData(Size.Medium, 1.25)]
@@ -93,7 +114,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             cj.Size = size;
             Assert.Equal(price, cj.Price);
         }
-
+        /// <summary>
+        /// correct calories for the size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="cal">calorie parameter</param>
         [Theory]
         [InlineData(Size.Small, 7)]
         [InlineData(Size.Medium, 10)]
@@ -104,7 +129,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             cj.Size = size;
             Assert.Equal(cal, cj.Calories);
         }
-
+        /// <summary>
+        /// correct special instructions 
+        /// </summary>
+        /// <param name="includeIce">ice parameter</param>
+        /// <param name="includeCream">cream parameter</param>
         [Theory]
         [InlineData(true, true)]
         [InlineData(true, false)]
@@ -119,7 +148,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             if (includeCream) Assert.Contains("Add cream", cj.SpecialInstructions);
             if(!includeIce && !includeCream) Assert.Empty(cj.SpecialInstructions);
         }
-
+        /// <summary>
+        /// correct toString based on the size
+        /// </summary>
+        /// <param name="decaf">decaf parameter</param>
+        /// <param name="size">size parameter</param>
+        /// <param name="name">name parameter</param>
         [Theory]
         [InlineData(true, Size.Small, "Small Decaf Candlehearth Coffee")]
         [InlineData(true, Size.Medium, "Medium Decaf Candlehearth Coffee")]

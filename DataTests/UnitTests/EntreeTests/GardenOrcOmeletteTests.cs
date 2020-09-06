@@ -96,21 +96,31 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             gj.Cheddar = false;
             Assert.False(gj.Cheddar);
         }
-
+        /// <summary>
+        /// returns the correct price
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.Equal(4.57, gj.Price);
         }
-
+        /// <summary>
+        /// returns the correct calories
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.Equal((uint)404, gj.Calories);
         }
-
+        /// <summary>
+        /// shoudl return special instractions
+        /// </summary>
+        /// <param name="includeBroccoli">broccoli parameter</param>
+        /// <param name="includeMushrooms">mushroom parameter</param>
+        /// <param name="includeTomato">tomato parameter</param>
+        /// <param name="includeCheddar">cheddar parameter</param>
         [Theory]
         [InlineData(true, true, true, true)]
         [InlineData(false, false, false, false)]
@@ -128,7 +138,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             if (!includeCheddar) Assert.Contains("Hold cheddar", gj.SpecialInstructions);
             if (includeBroccoli && includeMushrooms && includeTomato && includeCheddar) Assert.Empty(gj.SpecialInstructions);
         }
-
+        /// <summary>
+        /// returns the correct string
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {
