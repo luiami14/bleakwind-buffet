@@ -84,7 +84,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// This method just prints out the name of the Grits
         /// </summary>
-        /// <returns></returns>
+        /// <returns>returns the name of the side</returns>
         public override string ToString()
         {
             return size.ToString() + " Mad Otar Grits";

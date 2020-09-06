@@ -82,7 +82,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// This method just prints out the name of the drink
         /// </summary>
-        /// <returns></returns>
+        /// <returns>returns the size and name of the drink</returns>
         public override string ToString()
         {
             return size.ToString() + " Aretino Apple Juice";

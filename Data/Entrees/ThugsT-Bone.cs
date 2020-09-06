@@ -46,7 +46,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// This method just prints out the name of the T-Bone
         /// </summary>
-        /// <returns></returns>
+        /// <returns>returns the name of the entree</returns>
         public override string ToString()
         {
             return "Thugs T-Bone";
