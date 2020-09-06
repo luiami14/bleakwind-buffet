@@ -58,7 +58,6 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             AretinoAppleJuice aj = new AretinoAppleJuice();
             aj.Size = size;
             Assert.Equal(price, aj.Price);
-
         }
 
         [Theory]

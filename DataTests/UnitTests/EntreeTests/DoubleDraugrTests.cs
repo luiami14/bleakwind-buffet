@@ -6,6 +6,7 @@
 using Xunit;
 
 using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -14,81 +15,137 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldIncludeBunByDefault()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.True(dj.Bun);
         }
 
         [Fact]
         public void ShouldIncludeKetchupByDefault()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.True(dj.Ketchup);
         }
 
         [Fact]
         public void ShouldIncludeMustardByDefault()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.True(dj.Mustard);
         }
 
         [Fact]
         public void ShouldIncludePickleByDefault()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.True(dj.Pickle);
         }
 
         [Fact]
         public void ShouldIncludeCheeseByDefault()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.True(dj.Cheese);
         }
 
         [Fact]
         public void ShouldIncludeTomatoByDefault()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.True(dj.Tomato);
         }
 
         [Fact]
         public void ShouldIncludeLettuceByDefault()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.True(dj.Lettuce);
         }
 
         [Fact]
         public void ShouldIncludeMayoByDefault()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.True(dj.Mayo);
         }
 
         [Fact]
         public void ShouldBeAbleToSetBun()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            dj.Bun = true;
+            Assert.True(dj.Bun);
+            dj.Bun = false;
+            Assert.False(dj.Bun);
         }
 
         [Fact]
         public void ShouldBeAbleToSetKetchup()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            dj.Ketchup = true;
+            Assert.True(dj.Ketchup);
+            dj.Ketchup = false;
+            Assert.False(dj.Ketchup);
         }
 
         [Fact]
         public void ShouldBeAbleToSetMustard()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            dj.Mustard = true;
+            Assert.True(dj.Mustard);
+            dj.Mustard = false;
+            Assert.False(dj.Mustard);
         }
 
         [Fact]
         public void ShouldBeAbleToSetPickle()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            dj.Pickle = true;
+            Assert.True(dj.Pickle);
+            dj.Pickle = false;
+            Assert.False(dj.Pickle);
         }
 
         [Fact]
         public void ShouldBeAbleToSetCheese()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            dj.Cheese = true;
+            Assert.True(dj.Cheese);
+            dj.Cheese = false;
+            Assert.False(dj.Cheese);
         }
 
         [Fact]
         public void ShouldBeAbleToSetTomato()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            dj.Tomato = true;
+            Assert.True(dj.Tomato);
+            dj.Tomato = false;
+            Assert.False(dj.Tomato);
         }
 
         [Fact]
         public void ShouldBeAbleToSetLettuce()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            dj.Lettuce = true;
+            Assert.True(dj.Lettuce);
+            dj.Lettuce = false;
+            Assert.False(dj.Lettuce);
         }
 
         [Fact]
         public void ShouldBeAbleToSetMayo()
         {
+            DoubleDraugr dj = new DoubleDraugr();
+            dj.Mayo = true;
+            Assert.True(dj.Mayo);
+            dj.Mayo = false;
+            Assert.False(dj.Mayo);
         }
 
         [Fact]

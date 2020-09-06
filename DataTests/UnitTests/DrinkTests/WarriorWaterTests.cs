@@ -18,7 +18,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldNotIncludeIceByDefault()
         {
             WarriorWater wj = new WarriorWater();
-            Assert.False(wj.Ice);
+            Assert.True(wj.Ice);
+        }
+        [Fact]
+        public void ShouldNotIncludeLemonByDefault()
+        {
+            WarriorWater wj = new WarriorWater();
+            Assert.False(wj.Lemon);
         }
         [Fact]
         public void ShouldBySmallByDefault()
@@ -34,6 +40,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.True(wj.Ice);
             wj.Ice = false;
             Assert.False(wj.Ice);
+        }
+        [Fact]
+        public void ShouldBeAbleToSetLemon()
+        {
+            WarriorWater wj = new WarriorWater();
+            wj.Lemon = true;
+            Assert.True(wj.Lemon);
+            wj.Lemon = false;
+            Assert.False(wj.Lemon);
         }
         [Fact]
         public void ShouldBeAbleToSetSize()
@@ -66,23 +81,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             wj.Size = size;
             Assert.Equal(cal, wj.Calories);
         }
-        [Fact]
-        public void ShouldBeAbleToSetLemon()
-        {
-            WarriorWater wj = new WarriorWater();
-            wj.Lemon = true;
-            Assert.True(wj.Lemon);
-            wj.Lemon = false;
-            Assert.False(wj.Lemon);
-        }
         [Theory]
-        [InlineData(true)]
-        [InlineData(false)]
-        public void ShouldHaveCorrectSpecialInstructions(bool includeIce)
+        [InlineData(true, true)]
+        [InlineData(true, false)]
+        [InlineData(false, true)]
+        [InlineData(false, false)]
+        public void ShouldHaveCorrectSpecialInstructions(bool includeIce, bool includeLemon)
         {
             WarriorWater wj = new WarriorWater();
             wj.Ice = includeIce;
+            wj.Lemon = includeLemon;
             if (!includeIce) Assert.Contains("Hold ice", wj.SpecialInstructions);
+            else if (includeLemon) Assert.Contains("Add lemon", wj.SpecialInstructions);
             else Assert.Empty(wj.SpecialInstructions);
         }
         [Theory]
