@@ -17,22 +17,21 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldNotIncludeIceByDefault()
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
-            Assert.False(cj.Ice);
-
+            Assert.True(cj.Ice);
         }
 
         [Fact]
         public void ShouldNotBeDecafByDefault()
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
-            Assert.False(cj.Decaf);
+            Assert.True(cj.Decaf);
         }
 
         [Fact]
         public void ShouldNotHaveRoomForCreamByDefault()
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
-            Assert.False(cj.RoomForCream);
+            Assert.True(cj.RoomForCream);
         }
 
         [Fact]
