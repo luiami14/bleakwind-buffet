@@ -13,13 +13,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class VokunSaladTests
     {
+        /// <summary>
+        /// small by default 
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
             VokunSalad vj = new VokunSalad();
             Assert.Equal(Size.Small, vj.Size);
         }
-
+        /// <summary>
+        /// able to set any size
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -31,14 +36,20 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             vj.Size = Size.Small;
             Assert.Equal(Size.Small, vj.Size);
         }
-
+        /// <summary>
+        /// returns special instructions 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectSpecialInstructions()
         {
             VokunSalad vj = new VokunSalad();
             Assert.Empty(vj.SpecialInstructions);
         }
-
+        /// <summary>
+        /// returns price based on the size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="price">price parameter</param>
         [Theory]
         [InlineData(Size.Small, 0.93)]
         [InlineData(Size.Medium, 1.28)]
@@ -49,7 +60,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             vj.Size = size;
             Assert.Equal(price, vj.Price);
         }
-
+        /// <summary>
+        /// correct calories based on the size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="calories">calories parameter</param>
         [Theory]
         [InlineData(Size.Small, 41)]
         [InlineData(Size.Medium, 52)]
@@ -60,7 +75,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             vj.Size = size;
             Assert.Equal(calories, vj.Calories);
         }
-
+        /// <summary>
+        /// correct spring based on the size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="name">name parameter</param>
         [Theory]
         [InlineData(Size.Small, "Small Vokun Salad")]
         [InlineData(Size.Medium, "Medium Vokun Salad")]

@@ -13,13 +13,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class DragonbornWaffleFriesTests
     {
+        /// <summary>
+        /// small is set to default
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
             DragonbornWaffleFries dj = new DragonbornWaffleFries();
             Assert.Equal(Size.Small, dj.Size);
         }
-
+        /// <summary>
+        /// this makes it to set a size
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -31,14 +36,20 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             dj.Size = Size.Small;
             Assert.Equal(Size.Small, dj.Size);
         }
-
+        /// <summary>
+        /// there are no special instructions
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectSpecialInstructions()
         {
             DragonbornWaffleFries dj = new DragonbornWaffleFries();
             Assert.Empty(dj.SpecialInstructions);
         }
-
+        /// <summary>
+        /// returns price based on the users price
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="price">price parameter</param>
         [Theory]
         [InlineData(Size.Small, 0.42)]
         [InlineData(Size.Medium, 0.76)]
@@ -49,7 +60,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             dj.Size = size;
             Assert.Equal(price, dj.Price);
         }
-
+        /// <summary>
+        /// the calories based on the size of the food
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="calories">calories parameter</param>
         [Theory]
         [InlineData(Size.Small, 77)]
         [InlineData(Size.Medium, 89)]
@@ -60,7 +75,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             dj.Size = size;
             Assert.Equal(calories, dj.Calories);
         }
-
+        /// <summary>
+        /// returning correct string based on the size
+        /// </summary>
+        /// <param name="size">size parameter</param>
+        /// <param name="name">name parameter</param>
         [Theory]
         [InlineData(Size.Small, "Small Dragonborn Waffle Fries")]
         [InlineData(Size.Medium, "Medium Dragonborn Waffle Fries")]
