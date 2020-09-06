@@ -7,6 +7,7 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Drinks;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -15,31 +16,49 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            Assert.False(cj.Ice);
         }
 
         [Fact]
         public void ShouldNotBeDecafByDefault()
         {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            Assert.False(cj.Decaf);
         }
 
         [Fact]
         public void ShouldNotHaveRoomForCreamByDefault()
         {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            Assert.False(cj.RoomForCream);
         }
 
         [Fact]
         public void ShouldBeSmallByDefault()
         {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            Assert.Equal(Size.Small, cj.Size);
         }
 
         [Fact]
         public void ShouldBeAbleToSetIce()
         {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            cj.Ice = true;
+            Assert.True(cj.Ice);
+            cj.Ice = false;
+            Assert.False(cj.Ice);
         }
 
         [Fact]
         public void ShouldBeAbleToSetDecaf()
         {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            cj.Decaf = true;
+            Assert.True(cj.Decaf);
+            cj.Decaf = false;
+            Assert.False(cj.Decaf);
         }
 
         [Fact]
@@ -50,6 +69,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            cj.Size = Size.Large;
+            Assert.Equal(Size.Large, cj.Size);
+            cj.Size = Size.Medium;
+            Assert.Equal(Size.Medium, cj.Size);
+            cj.Size = Size.Small;
+            Assert.Equal(Size.Small, cj.Size);
         }
 
         [Theory]
@@ -58,6 +84,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(Size.Large, 1.75)]
         public void ShouldHaveCorrectPriceForSize(Size size, double price)
         {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            cj.Size = size;
+            Assert.Equal(price, cj.Price);
         }
 
         [Theory]
@@ -66,6 +95,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(Size.Large, 20)]
         public void ShouldHaveCorrectCaloriesForSize(Size size, uint cal)
         {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            cj.Size = size;
+            Assert.Equal(cal, cj.Calories);
         }
 
         [Theory]

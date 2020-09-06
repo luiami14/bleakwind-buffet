@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Luis Amiel
- * Class name: AretineAppleJuice.cs
+ * Class name: AretinoAppleJuice.cs
  * Purpose: Class used to represent one of the drinks in the menu
  */
 using BleakwindBuffet.Data.Enums;
@@ -85,7 +85,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns></returns>
         public override string ToString()
         {
-            return size.ToString() + "Aretino Apple Juice";
+            return size.ToString() + " Aretino Apple Juice";
         }
         /// <summary>
         /// This method makes a new List everytime a user is odering this drink
