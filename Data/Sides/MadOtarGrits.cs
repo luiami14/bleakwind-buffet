@@ -87,7 +87,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <returns></returns>
         public override string ToString()
         {
-            return size.ToString() + "Mad Otar Grits";
+            return size.ToString() + " Mad Otar Grits";
         }
         /// <summary>
         /// This method makes a new List everytime a user is odering

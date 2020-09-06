@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Luis Amiel
  * Class: VokunSaladTests.cs
  * Purpose: Test the VokunSalad.cs class in the Data library
  */
@@ -7,6 +7,7 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Sides;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
@@ -15,16 +16,27 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [Fact]
         public void ShouldBeSmallByDefault()
         {
+            VokunSalad vj = new VokunSalad();
+            Assert.Equal(Size.Small, vj.Size);
         }
 
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
+            VokunSalad vj = new VokunSalad();
+            vj.Size = Size.Large;
+            Assert.Equal(Size.Large, vj.Size);
+            vj.Size = Size.Medium;
+            Assert.Equal(Size.Medium, vj.Size);
+            vj.Size = Size.Small;
+            Assert.Equal(Size.Small, vj.Size);
         }
 
         [Fact]
         public void ShouldReturnCorrectSpecialInstructions()
         {
+            VokunSalad vj = new VokunSalad();
+            Assert.Empty(vj.SpecialInstructions);
         }
 
         [Theory]
@@ -33,6 +45,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [InlineData(Size.Large, 1.82)]
         public void ShouldReturnCorrectPriceBasedOnSize(Size size, double price)
         {
+            VokunSalad vj = new VokunSalad();
+            vj.Size = size;
+            Assert.Equal(price, vj.Price);
         }
 
         [Theory]
@@ -41,6 +56,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [InlineData(Size.Large, 73)]
         public void ShouldReturnCorrectCaloriesBasedOnSize(Size size, uint calories)
         {
+            VokunSalad vj = new VokunSalad();
+            vj.Size = size;
+            Assert.Equal(calories, vj.Calories);
         }
 
         [Theory]
@@ -49,6 +67,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         [InlineData(Size.Large, "Large Vokun Salad")]
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
+            VokunSalad vj = new VokunSalad();
+            vj.Size = size;
+            Assert.Equal(name, vj.ToString());
         }
     }
 }

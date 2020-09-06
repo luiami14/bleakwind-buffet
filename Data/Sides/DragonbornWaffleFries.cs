@@ -88,7 +88,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <returns></returns>
         public override string ToString()
         {
-            return size.ToString() + "Dragonborn Waffle Fries";
+            return size.ToString() + " Dragonborn Waffle Fries";
         }
         /// <summary>
         /// This method makes a new List everytime a user is odering

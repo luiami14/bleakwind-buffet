@@ -87,7 +87,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <returns></returns>
         public override string ToString()
         {
-            return size.ToString() + "Fried Miraak";
+            return size.ToString() + " Fried Miraak";
         }
         /// <summary>
         /// This method makes a new List everytime a user is odering
