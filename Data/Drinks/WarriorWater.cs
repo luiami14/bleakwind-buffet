@@ -11,42 +11,24 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class WarriorWater
+    public class WarriorWater : Drink
     {
-        /// <summary>
-        /// private variable that initializes the size
-        /// </summary>
-        private Size size = Size.Small;
-        /// <summary>
-        /// Provides available sizes
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
         /// <summary>
         /// Price of the water
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 0.00;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 0.00;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 0.00;
                 }
@@ -59,19 +41,19 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the calories of water
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 0;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 0;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 0;
                 }
@@ -87,7 +69,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>returns the name of the drink</returns>
         public override string ToString()
         {
-            return size.ToString() + " Warrior Water";
+            return Size.ToString() + " Warrior Water";
         }
         /// <summary>
         /// backing variable for the ice property
@@ -108,7 +90,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// This method makes a new List everytime a user is ordering this drink
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

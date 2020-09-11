@@ -10,12 +10,12 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class GardenOrcOmelette
+    public class GardenOrcOmelette : Entree
     {
         /// <summary>
         /// Price of the Omelette
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -25,7 +25,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the calories of the omellette
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -51,7 +51,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// This method makes a new List everytime a user is odering this breakfast.
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

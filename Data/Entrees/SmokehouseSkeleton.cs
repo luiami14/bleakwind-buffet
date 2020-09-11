@@ -9,12 +9,12 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class SmokehouseSkeleton
+    public class SmokehouseSkeleton : Entree
     {
         /// <summary>
         /// Price of the breakfast
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -24,7 +24,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the calories of the breakfast
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -50,7 +50,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// This method makes a new List everytime a user is odering this breakfast.
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

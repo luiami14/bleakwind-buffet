@@ -167,6 +167,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             SailorSoda sj = new SailorSoda();
             sj.Size = size;
+            sj.Flavor = flavor;
+            Assert.Equal(sj.ToString(), name);
         }
     }
 }

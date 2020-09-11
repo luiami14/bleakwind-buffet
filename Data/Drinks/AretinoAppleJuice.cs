@@ -9,42 +9,24 @@ using System.Collections.Generic;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class AretinoAppleJuice
+    public class AretinoAppleJuice : Drink
     {
-        /// <summary>
-        /// private variable that initializes the size
-        /// </summary>
-        private Size size = Size.Small;
-        /// <summary>
-        /// Provides available sizes
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
         /// <summary>
         /// Price of the juice
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 0.62;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 0.87;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 1.01;
                 }
@@ -57,19 +39,19 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the calories of juice
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 44;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 88;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 132;
                 }
@@ -85,12 +67,12 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>returns the size and name of the drink</returns>
         public override string ToString()
         {
-            return size.ToString() + " Aretino Apple Juice";
+            return Size.ToString() + " Aretino Apple Juice";
         }
         /// <summary>
         /// This method makes a new List everytime a user is odering this drink
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -13,12 +13,12 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// All of the ingredients and calories of the burger
     /// </summary>
-    public class BriarheartBurger
+    public class BriarheartBurger : Entree
     {
         /// <summary>
         /// Price of the burger
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -28,11 +28,11 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the calories of the burger
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                return 732;
+                return 743;
             }
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// This method makes a new List everytime a user is odering this burger.
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

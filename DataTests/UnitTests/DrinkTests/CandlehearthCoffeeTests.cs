@@ -20,7 +20,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldNotIncludeIceByDefault()
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
-            Assert.True(cj.Ice);
+            Assert.False(cj.Ice);
         }
         /// <summary>
         /// not include default by default
@@ -29,7 +29,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldNotBeDecafByDefault()
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
-            Assert.True(cj.Decaf);
+            Assert.False(cj.Decaf);
         }
         /// <summary>
         /// not have room for cream by default
@@ -38,7 +38,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldNotHaveRoomForCreamByDefault()
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
-            Assert.True(cj.RoomForCream);
+            Assert.False(cj.RoomForCream);
         }
         /// <summary>
         /// small by default

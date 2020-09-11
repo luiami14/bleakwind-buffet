@@ -12,42 +12,24 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class DragonbornWaffleFries
+    public class DragonbornWaffleFries : Side
     {
-        /// <summary>
-        /// private variable that initializes the size
-        /// </summary>
-        private Size size = Size.Small;
-        /// <summary>
-        /// Provides available sizes
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
         /// <summary>
         /// Price of the fries
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 0.42;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 0.76;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 0.96;
                 }
@@ -60,19 +42,19 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets the calories of fries
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 77;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 89;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 100;
                 }
@@ -88,12 +70,12 @@ namespace BleakwindBuffet.Data.Sides
         /// <returns>returns the name of the side</returns>
         public override string ToString()
         {
-            return size.ToString() + " Dragonborn Waffle Fries";
+            return Size.ToString() + " Dragonborn Waffle Fries";
         }
         /// <summary>
         /// This method makes a new List everytime a user is odering
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

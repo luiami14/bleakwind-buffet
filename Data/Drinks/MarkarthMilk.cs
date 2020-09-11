@@ -11,42 +11,24 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class MarkarthMilk
+    public class MarkarthMilk : Drink
     {
-        /// <summary>
-        /// private variable that initializes the size
-        /// </summary>
-        private Size size = Size.Small;
-        /// <summary>
-        /// Provides available sizes
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
         /// <summary>
         /// Price of the milk
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 1.05;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 1.11;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 1.22;
                 }
@@ -59,19 +41,19 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the calories of milk
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 56;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 72;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 93;
                 }
@@ -87,7 +69,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>returns the name of the drink</returns>
         public override string ToString()
         {
-            return size.ToString()+ "Markarth Milk";
+            return Size.ToString()+ " Markarth Milk";
         }
         /// <summary>
         /// backing variable for the ice property
@@ -100,7 +82,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// This method makes a new List everytime a user is odering this drink
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

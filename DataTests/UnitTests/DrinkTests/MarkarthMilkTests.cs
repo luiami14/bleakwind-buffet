@@ -115,6 +115,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             MarkarthMilk mj = new MarkarthMilk();
             mj.Size = size;
+            Assert.Equal(mj.ToString(), name);
         }
     }
 }
