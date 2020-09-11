@@ -7,10 +7,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Interface;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public abstract class Side
+    public abstract class Side : IOrderItem
     {
         /// <summary>
         /// The size of the drink

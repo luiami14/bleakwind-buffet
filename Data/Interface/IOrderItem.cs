@@ -1,40 +1,36 @@
 ﻿/*
  * Author: Luis Amiel
- * Class name: Drink.cs
- * Purpose: Class used for a base class
+ * Class name: IOrderItem.cs
+ * Purpose: A Interface for Entreee,Drink, and Side
  */
 
 using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
-using BleakwindBuffet.Data.Interface;
 
-namespace BleakwindBuffet.Data.Drinks
+namespace BleakwindBuffet.Data.Interface
 {
-    /// <summary>
-    /// A base class representing the common properties of drinks
-    /// </summary>
-    public abstract class Drink : IOrderItem
+    public interface IOrderItem
     {
         /// <summary>
         /// The size of the drink
         /// </summary>
-        public virtual Size Size { get; set; }
+        Size Size { get; set; }
         /// <summary>
         /// The price of the drink
         /// </summary>
         /// <value>
         /// In Us dollars
         /// </value>
-        public abstract double Price { get; }
+        double Price { get; }
         /// <summary>
         /// The calories of the drink
         /// </summary>
-        public abstract uint Calories { get; }
+        uint Calories { get; }
         /// <summary>
         /// Special instructions to prepare the drink
         /// </summary>
-        public abstract List<string> SpecialInstructions { get; }
+        List<string> SpecialInstructions { get; }
     }
 }
