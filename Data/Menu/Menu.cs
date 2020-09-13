@@ -72,12 +72,6 @@ namespace BleakwindBuffet.Data.Menu
         public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> tj = new List<IOrderItem>();
-            AretinoAppleJuice sj = new AretinoAppleJuice();
-            CandlehearthCoffee cc = new CandlehearthCoffee();
-            MarkarthMilk mm = new MarkarthMilk();
-            SailorSoda ss = new SailorSoda();
-            WarriorWater ww = new WarriorWater();
-
             for(int num=0; num<3; num++)
             {
                 tj.Add(new AretinoAppleJuice());
@@ -90,17 +84,22 @@ namespace BleakwindBuffet.Data.Menu
             {
                 tj.Add(new MarkarthMilk());
             }
-
-
-            for (int num = 0; num < 3; num++)
+            int flavor = 0;
+            for(int i = 0;i<6;i++)
             {
-                tj.Add(new SailorSoda());
+                for(int k = 0;k<3;k++)
+                {
+                    SailorSoda sd = new SailorSoda();
+                    sd.Size = (Size)k;
+                    sd.Flavor = (SodaFlavor)flavor;
+                    tj.Add(sd);
+                }
+                flavor++;
             }
             for (int num = 0; num < 3; num++)
             {
                 tj.Add(new WarriorWater());
             }
-
             int size = 0;
             foreach(Drink drink in tj)
             {
@@ -115,7 +114,6 @@ namespace BleakwindBuffet.Data.Menu
                 }
             }
             return tj;
-
         }
         public static IEnumerable<IOrderItem> FullMenu()
         {
