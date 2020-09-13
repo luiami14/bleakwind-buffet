@@ -8,11 +8,31 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data.Interface;
+using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class DragonbornWaffleFriesTests
     {
+        /// <summary>
+        /// A test that tests if it should be a Side
+        /// </summary>
+        [Fact]
+        public void ShouldBeASide()
+        {
+            DragonbornWaffleFries dj = new DragonbornWaffleFries();
+            Assert.IsAssignableFrom<Side>(dj);
+        }
+        /// <summary>
+        /// A test that tests if it should be a orderItem
+        /// </summary>
+        [Fact]
+        public void ShouldBeAnIOrderItem()
+        {
+            DragonbornWaffleFries dj = new DragonbornWaffleFries();
+            Assert.IsAssignableFrom<IOrderItem>(dj);
+        }
         /// <summary>
         /// small is set to default
         /// </summary>

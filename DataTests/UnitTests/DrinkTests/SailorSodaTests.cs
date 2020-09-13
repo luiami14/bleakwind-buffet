@@ -10,11 +10,30 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Interface;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class SailorSodaTests
     {
+        /// <summary>
+        /// A test that tests if it should be a drink
+        /// </summary>
+        [Fact]
+        public void ShouldBeADrink()
+        {
+            SailorSoda sj = new SailorSoda();
+            Assert.IsAssignableFrom<Drink>(sj);
+        }
+        /// <summary>
+        /// A test that tests if it should be a orderItem
+        /// </summary>
+        [Fact]
+        public void ShouldBeAnIOrderItem()
+        {
+            SailorSoda sj = new SailorSoda();
+            Assert.IsAssignableFrom<IOrderItem>(sj);
+        }
         /// <summary>
         /// include ice by default
         /// </summary>

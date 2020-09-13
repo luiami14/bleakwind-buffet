@@ -8,11 +8,30 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Interface;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class MarkarthMilkTests
     {
+        /// <summary>
+        /// A test that tests if it should be a drink
+        /// </summary>
+        [Fact]
+        public void ShouldBeADrink()
+        {
+            MarkarthMilk mj = new MarkarthMilk();
+            Assert.IsAssignableFrom<Drink>(mj);
+        }
+        /// <summary>
+        /// A test that tests if it should be a orderItem
+        /// </summary>
+        [Fact]
+        public void ShouldBeAnIOrderItem()
+        {
+            MarkarthMilk mj = new MarkarthMilk();
+            Assert.IsAssignableFrom<IOrderItem>(mj);
+        }
         /// <summary>
         /// not include ice by default
         /// </summary>

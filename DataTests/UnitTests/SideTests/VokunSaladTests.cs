@@ -8,11 +8,31 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data.Interface;
+using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class VokunSaladTests
     {
+        /// <summary>
+        /// A test that tests if it should be a Side
+        /// </summary>
+        [Fact]
+        public void ShouldBeASide()
+        {
+            VokunSalad vj = new VokunSalad();
+            Assert.IsAssignableFrom<Side>(vj);
+        }
+        /// <summary>
+        /// A test that tests if it should be a orderItem
+        /// </summary>
+        [Fact]
+        public void ShouldBeAnIOrderItem()
+        {
+            VokunSalad vj = new VokunSalad();
+            Assert.IsAssignableFrom<IOrderItem>(vj);
+        }
         /// <summary>
         /// small by default 
         /// </summary>
