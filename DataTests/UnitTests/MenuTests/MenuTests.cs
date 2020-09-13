@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Luis Amiel
+ * Class name: MenuTests.cs
+ * Purpose: A test class for the menu class
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
@@ -14,6 +19,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
 {
     public class MenuTests
     {
+        /// <summary>
+        /// Test that the menu returns all of the entrees
+        /// </summary>
         [Fact]
         public void MenuReturnsAllEntrees()
         {
@@ -32,7 +40,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
             Assert.Contains(Menu.FullMenu(), (item) => { return item is ThalmorTriple; });
             Assert.Contains(Menu.FullMenu(), (item) => { return item is ThugsTBone; });
         }
-
+        /// <summary>
+        /// Test that the menu returns all of the drinks
+        /// </summary>
+        /// <param name="name">the name parameter</param>
         [Theory]
         [InlineData("Small Warrior Water")]
         [InlineData("Medium Warrior Water")]
@@ -41,12 +52,47 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
         [InlineData("Small Watermelon Sailor Soda")]
         [InlineData("Medium Watermelon Sailor Soda")]
         [InlineData("Large Watermelon Sailor Soda")]
+
+        [InlineData("Small Blackberry Sailor Soda")]
+        [InlineData("Medium Blackberry Sailor Soda")]
+        [InlineData("Large Blackberry Sailor Soda")]
+
+        [InlineData("Small Cherry Sailor Soda")]
+        [InlineData("Medium Cherry Sailor Soda")]
+        [InlineData("Large Cherry Sailor Soda")]
+
+        [InlineData("Small Grapefruit Sailor Soda")]
+        [InlineData("Medium Grapefruit Sailor Soda")]
+        [InlineData("Large Grapefruit Sailor Soda")]
+
+        [InlineData("Small Lemon Sailor Soda")]
+        [InlineData("Medium Lemon Sailor Soda")]
+        [InlineData("Large Lemon Sailor Soda")]
+
+        [InlineData("Small Peach Sailor Soda")]
+        [InlineData("Medium Peach Sailor Soda")]
+        [InlineData("Large Peach Sailor Soda")]
+
+        [InlineData("Small Candlehearth Coffee")]
+        [InlineData("Medium Candlehearth Coffee")]
+        [InlineData("Large Candlehearth Coffee")]
+
+        [InlineData("Small Aretino Apple Juice")]
+        [InlineData("Medium Aretino Apple Juice")]
+        [InlineData("Large Aretino Apple Juice")]
+
+        [InlineData("Small Markarth Milk")]
+        [InlineData("Medium Markarth Milk")]
+        [InlineData("Large Markarth Milk")]
         public void ReturnsAllDrinks(string name)
         {
             Assert.Contains(Menu.Drinks(), (item) => { return item.ToString().Equals(name); });
             Assert.Contains(Menu.FullMenu(), (item) => { return item.ToString().Equals(name); });
         }
-
+        /// <summary>
+        /// Test that the menu returns all of the sides
+        /// </summary>
+        /// <param name="name">the name parameter</param>
         [Theory]
         [InlineData("Small Vokun Salad")]
         [InlineData("Medium Vokun Salad")]
@@ -55,9 +101,17 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
         [InlineData("Small Fried Miraak")]
         [InlineData("Medium Fried Miraak")]
         [InlineData("Large Fried Miraak")]
+
+        [InlineData("Small Dragonborn Waffle Fries")]
+        [InlineData("Medium Dragonborn Waffle Fries")]
+        [InlineData("Large Dragonborn Waffle Fries")]
+
+        [InlineData("Small Mad Otar Grits")]
+        [InlineData("Medium Mad Otar Grits")]
+        [InlineData("Large Mad Otar Grits")]
         public void ReturnsAllSides(string name)
         {
-            Assert.Contains(Menu.Drinks(), (item) => { return item.ToString().Equals(name); });
+            Assert.Contains(Menu.Sides(), (item) => { return item.ToString().Equals(name); });
             Assert.Contains(Menu.FullMenu(), (item) => { return item.ToString().Equals(name); });
         }
 
