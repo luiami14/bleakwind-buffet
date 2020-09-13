@@ -10,7 +10,7 @@ using BleakwindBuffet.Data.Drinks;
 
 namespace BleakwindBuffet.Data.Menu
 {
-    public class Menu
+    public static class Menu
     {
         public static IEnumerable<IOrderItem> Entrees()
         {

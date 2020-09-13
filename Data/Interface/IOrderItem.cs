@@ -14,10 +14,6 @@ namespace BleakwindBuffet.Data.Interface
     public interface IOrderItem
     {
         /// <summary>
-        /// The size of the drink
-        /// </summary>
-        Size Size { get; set; }
-        /// <summary>
         /// The price of the drink
         /// </summary>
         /// <value>

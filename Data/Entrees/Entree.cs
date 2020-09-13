@@ -18,10 +18,6 @@ namespace BleakwindBuffet.Data.Entrees
     public abstract class Entree : IOrderItem
     {
         /// <summary>
-        /// The size of the drink
-        /// </summary>
-        public virtual Size Size { get; set; }
-        /// <summary>
         /// The price of the drink
         /// </summary>
         /// <value>
