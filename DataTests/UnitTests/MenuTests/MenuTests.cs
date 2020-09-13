@@ -25,12 +25,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
             Assert.Contains(Menu.Entrees(), (item) => { return item is ThalmorTriple; });
             Assert.Contains(Menu.Entrees(), (item) => { return item is ThugsTBone; });
             Assert.Contains(Menu.FullMenu(), (item) => { return item is BriarheartBurger; });
-            Assert.Contains(Menu.Entrees(), (item) => { return item is DoubleDraugr; });
-            Assert.Contains(Menu.Entrees(), (item) => { return item is GardenOrcOmelette; });
-            Assert.Contains(Menu.Entrees(), (item) => { return item is PhillyPoacher; });
-            Assert.Contains(Menu.Entrees(), (item) => { return item is SmokehouseSkeleton; });
-            Assert.Contains(Menu.Entrees(), (item) => { return item is ThalmorTriple; });
-            Assert.Contains(Menu.Entrees(), (item) => { return item is ThugsTBone; });
+            Assert.Contains(Menu.FullMenu(), (item) => { return item is DoubleDraugr; });
+            Assert.Contains(Menu.FullMenu(), (item) => { return item is GardenOrcOmelette; });
+            Assert.Contains(Menu.FullMenu(), (item) => { return item is PhillyPoacher; });
+            Assert.Contains(Menu.FullMenu(), (item) => { return item is SmokehouseSkeleton; });
+            Assert.Contains(Menu.FullMenu(), (item) => { return item is ThalmorTriple; });
+            Assert.Contains(Menu.FullMenu(), (item) => { return item is ThugsTBone; });
         }
 
         [Theory]
@@ -48,13 +48,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
         }
 
         [Theory]
-        [InlineData("Small Warrior Water")]
-        [InlineData("Medium Warrior Water")]
-        [InlineData("Large Warrior Water")]
+        [InlineData("Small Vokun Salad")]
+        [InlineData("Medium Vokun Salad")]
+        [InlineData("Large Vokun Salad")]
 
-        [InlineData("Small Watermelon Sailor Soda")]
-        [InlineData("Medium Watermelon Sailor Soda")]
-        [InlineData("Large Watermelon Sailor Soda")]
+        [InlineData("Small Fried Miraak")]
+        [InlineData("Medium Fried Miraak")]
+        [InlineData("Large Fried Miraak")]
         public void ReturnsAllSides(string name)
         {
             Assert.Contains(Menu.Drinks(), (item) => { return item.ToString().Equals(name); });
