@@ -7,7 +7,7 @@ using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Drinks;
 using Xunit;
-using BleakwindBuffet.Data.Menu
+using BleakwindBuffet.Data.Menu;
 
 
 namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
@@ -18,6 +18,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
         public void MenuReturnsAllEntrees()
         {
             Assert.Contains(Menu.Entrees(), (item) => { return item is BriarheartBurger; });
+            Assert.Contains(Menu.Entrees(), (item) => { return item is DoubleDraugr; });
+            Assert.Contains(Menu.Entrees(), (item) => { return item is GardenOrcOmelette; });
+            Assert.Contains(Menu.Entrees(), (item) => { return item is PhillyPoacher; });
+            Assert.Contains(Menu.Entrees(), (item) => { return item is SmokehouseSkeleton; });
+            Assert.Contains(Menu.Entrees(), (item) => { return item is ThalmorTriple; });
+            Assert.Contains(Menu.Entrees(), (item) => { return item is ThugsTBone; });
+            Assert.Contains(Menu.FullMenu(), (item) => { return item is BriarheartBurger; });
             Assert.Contains(Menu.Entrees(), (item) => { return item is DoubleDraugr; });
             Assert.Contains(Menu.Entrees(), (item) => { return item is GardenOrcOmelette; });
             Assert.Contains(Menu.Entrees(), (item) => { return item is PhillyPoacher; });
