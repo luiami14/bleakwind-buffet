@@ -20,7 +20,7 @@ namespace PointOfSale
         /// </summary>
         public MainWindowViewModel()
         {
-            SwitchView = 0;
+            SwitchView = 1;
         }
     }
 }

@@ -5,10 +5,96 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="350" d:DesignWidth="800">
     <Grid>
-        <TextBlock FontSize="20" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
-            Screen for View1
-        </TextBlock>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        
+        <TextBox Grid.ColumnSpan="3" FontSize="35" TextAlignment="Center">
+            Add to Order
+        </TextBox>
+
+        <TextBox Grid.ColumnSpan="1"  Grid.Row="1" FontSize="20" TextAlignment="Center" >
+            Entrees
+        </TextBox>
+
+        <TextBox Grid.ColumnSpan="1"  Grid.Row="1" Grid.Column="1" FontSize="20" TextAlignment="Center" >
+            Drinks
+        </TextBox>
+
+        <TextBox Grid.ColumnSpan="1"  Grid.Row="1" Grid.Column="2" FontSize="20" TextAlignment="Center" >
+            Sides
+        </TextBox>
+
+            <Button Grid.Row="2" Click="BriarheartBurger">
+                 Briarheart Burger
+            </Button>
+            <Button Grid.Row="2" Grid.Column="1" Click="SailorSoda">
+                Sailor Soda
+            </Button>
+            <Button Grid.Row="2" Grid.Column="2" Click="VokunSalad">
+                Vokun Salad
+            </Button>
+        
+            <Button Grid.Row="3" Click="DoubleDraugr">
+                 DoubleDraugr
+            </Button>
+            <Button Grid.Row="3" Grid.Column="1" Click="MarkathMilk">
+                Markath Milk
+            </Button>
+            <Button Grid.Row="3" Grid.Column="2" Click="FriedMiraak">
+                Fried Miraak
+            </Button>
+        
+            <Button Grid.Row="4" Click="ThalmorTriple">
+                 ThalmorTriple
+            </Button>
+            <Button Grid.Row="4" Grid.Column="1" Click="AretinoAppleJuice">
+                Aretino Apple Juice
+            </Button>
+            <Button Grid.Row="4" Grid.Column="2" Click="MadOtarGrits">
+                Mad Otar Grits
+            </Button>
+        
+            <Button Grid.Row="5" Click="SmokehouseSkeleton">
+                 SmokehouseSkeleton
+            </Button>
+            <Button Grid.Row="5" Grid.Column="1" Click="CandlehearthCoffee">
+                Candlehearth Coffee
+            </Button>
+            <Button Grid.Row="5" Grid.Column="2" Click="DragonbornWaffleFries">
+                Dragonborn Waffle Fries
+            </Button>
+        
+             <Button Grid.Row="6" Click="GardenOrcOmlette">
+                 Garden Orc Omlette
+            </Button>
+            <Button Grid.Row="6" Grid.Column="1" Click="WarriorWater">
+                Warrior Water
+            </Button>
+        
+            <Button Grid.Row="7" Click="ThugsT-Bone">
+                 Thugs T-Bone
+            </Button>
+        
+            <Button Grid.Row="8" Click="PhillyPoacher">
+                 Philly Poacher
+            </Button>
+        
     </Grid>
 </UserControl>
