@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Luis Amiel
+ * Class name: Menu.cs
+ * Purpose: Just a simple menu class
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
@@ -12,6 +17,10 @@ namespace BleakwindBuffet.Data.Menu
 {
     public static class Menu
     {
+        /// <summary>
+        /// The IOrder method for the Entrees
+        /// </summary>
+        /// <returns>returns the items on the list</returns>
         public static IEnumerable<IOrderItem> Entrees()
         {
             List<IOrderItem> tj = new List<IOrderItem>();
@@ -24,6 +33,10 @@ namespace BleakwindBuffet.Data.Menu
             tj.Add(new ThugsTBone());
             return tj;
         }
+        /// <summary>
+        /// The IOrder method for the Sides
+        /// </summary>
+        /// <returns>returns the items on the list</returns>
         public static IEnumerable<IOrderItem> Sides()
         {
             List<IOrderItem> tj = new List<IOrderItem>();
@@ -69,6 +82,10 @@ namespace BleakwindBuffet.Data.Menu
             tj.Add(vm);
             return tj;
         }
+        /// <summary>
+        /// The IOrder method for the Drinks
+        /// </summary>
+        /// <returns>returns the items on the list</returns>
         public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> tj = new List<IOrderItem>();
@@ -115,6 +132,10 @@ namespace BleakwindBuffet.Data.Menu
             }
             return tj;
         }
+        /// <summary>
+        /// The IOrder method for the FullMenu
+        /// </summary>
+        /// <returns>returns the items on the list</returns>
         public static IEnumerable<IOrderItem> FullMenu()
         {
             List<IOrderItem> tj = new List<IOrderItem>();
