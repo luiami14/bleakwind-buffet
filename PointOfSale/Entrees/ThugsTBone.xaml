@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.SailorSoda"
+﻿<UserControl x:Class="PointOfSale.ThugsTBone"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,7 +8,6 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -26,53 +25,12 @@
         </Grid.RowDefinitions>
 
         <TextBox Grid.ColumnSpan="3" Grid.RowSpan="9" Grid.Row="0"  FontWeight="Bold" FontSize="35" TextAlignment="Center">
-            Customize Sailor Soda
+            Customize Thugs T-Bone
         </TextBox>
-
-        <CheckBox Grid.Row="1">
-            Hold ice
-        </CheckBox>
-
-        <RadioButton  Grid.Row="1" Grid.Column="1" GroupName="Sizes">
-            Small
-        </RadioButton>
-
-        <RadioButton  Grid.Row="2" Grid.Column="1" GroupName="Sizes">
-            Medium
-        </RadioButton>
-
-        <RadioButton  Grid.Row="3" Grid.Column="1" GroupName="Sizes">
-            Large
-        </RadioButton>
-
-        <RadioButton  Grid.Row="1" Grid.Column="2" GroupName="Flavor">
-            Blackberry
-        </RadioButton>
-
-        <RadioButton  Grid.Row="2" Grid.Column="2" GroupName="Flavor">
-            Cherry
-        </RadioButton>
-
-        <RadioButton  Grid.Row="3" Grid.Column="2" GroupName="Flavor">
-            Grapefruit
-        </RadioButton>
-
-        <RadioButton  Grid.Row="4" Grid.Column="2" GroupName="Flavor">
-            Lemon
-        </RadioButton>
-
-        <RadioButton  Grid.Row="5" Grid.Column="2" GroupName="Flavor">
-            Peach
-        </RadioButton>
-
-        <RadioButton  Grid.Row="6" Grid.Column="2" GroupName="Flavor">
-            Watermelon
-        </RadioButton>
-
 
         <Button Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE
         </Button>
-            
+
     </Grid>
 </UserControl>

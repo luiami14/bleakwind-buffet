@@ -30,7 +30,21 @@ namespace PointOfSale
         {
             Button bt = (Button) sender;
             if (bt.Name == "BriarheartBurger") cn.MenuSelectionComponent.Child = new BriarheartBurger(cn);
-            else if() 
+            else if (bt.Name == "AretinoAppleJuice") cn.MenuSelectionComponent.Child = new AretinoAppleJuice(cn);
+            else if (bt.Name == "CandlehearthCoffee") cn.MenuSelectionComponent.Child = new CandlehearthCoffee(cn);
+            else if (bt.Name == "DoubleDraugr") cn.MenuSelectionComponent.Child = new DoubleDraugr(cn);
+            else if (bt.Name == "DragonbornWaffleFries") cn.MenuSelectionComponent.Child = new DragonbornWaffleFries(cn);
+            else if (bt.Name == "FriedMiraak") cn.MenuSelectionComponent.Child = new FriedMiraak(cn);
+            else if (bt.Name == "GardenOrcOmelette") cn.MenuSelectionComponent.Child = new GardenOrcOmelette(cn);
+            else if (bt.Name == "MadOtarGrits") cn.MenuSelectionComponent.Child = new MadOtarGrits(cn);
+            else if (bt.Name == "MarkathMilk") cn.MenuSelectionComponent.Child = new MarkathMilk(cn);
+            else if (bt.Name == "PhillyPoacher") cn.MenuSelectionComponent.Child = new PhillyPoacher(cn);
+            else if (bt.Name == "SailorSoda") cn.MenuSelectionComponent.Child = new SailorSoda(cn);
+            else if (bt.Name == "SmokehouseSkeleton") cn.MenuSelectionComponent.Child = new SmokehouseSkeleton(cn);
+            else if (bt.Name == "ThalmorTriple") cn.MenuSelectionComponent.Child = new ThalmorTriple(cn);
+            else if (bt.Name == "ThugsTBone") cn.MenuSelectionComponent.Child = new ThugsTBone(cn);
+            else if (bt.Name == "VokunSalad") cn.MenuSelectionComponent.Child = new VokunSalad(cn);
+            else if (bt.Name == "WarriorWater") cn.MenuSelectionComponent.Child = new WarriorWater(cn);
         }
 
     }

@@ -80,7 +80,7 @@
                 Dragonborn Waffle Fries
             </Button>
 
-        <Button Grid.Row="6" Click="ClicksButton" Name="GardenOrcOmlette">
+        <Button Grid.Row="6" Click="ClicksButton" Name="GardenOrcOmelette">
                  Garden Orc Omlette
             </Button>
         <Button Grid.Row="6" Grid.Column="1" Click="ClicksButton" Name="WarriorWater">

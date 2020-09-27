@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.AretinoAppleJuice"
+﻿<UserControl x:Class="PointOfSale.SmokehouseSkeleton"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,7 +8,6 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -26,28 +25,28 @@
         </Grid.RowDefinitions>
 
         <TextBox Grid.ColumnSpan="3" Grid.RowSpan="9" Grid.Row="0"  FontWeight="Bold" FontSize="35" TextAlignment="Center">
-            Customize Aretino Apple Juice
+            Customize Smokehouse Skeleton
         </TextBox>
 
         <CheckBox Grid.Row="1">
-            Add ice
+            Hold sausage
         </CheckBox>
 
-        <RadioButton  Grid.Row="1" Grid.Column="1" GroupName="Sizes">
-            Small
-        </RadioButton>
+        <CheckBox Grid.Row="2">
+            Hold eggs
+        </CheckBox>
 
-        <RadioButton  Grid.Row="2" Grid.Column="1" GroupName="Sizes">
-            Medium
-        </RadioButton>
+        <CheckBox Grid.Row="3">
+            Hold hash browns
+        </CheckBox>
 
-        <RadioButton  Grid.Row="3" Grid.Column="1" GroupName="Sizes">
-            Large
-        </RadioButton>
+        <CheckBox Grid.Row="4">
+            Hold pancakes
+        </CheckBox>
 
         <Button Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE
         </Button>
-
+            
     </Grid>
 </UserControl>

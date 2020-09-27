@@ -28,7 +28,7 @@ namespace PointOfSale
             vw = new View1(this);
             MenuSelectionComponent.Child = vw;
             vq = new View2(this);
-            MenuSelectionComponent.Child = vq;
+            OrderComponent.Child = vq;
         }
     }
 }

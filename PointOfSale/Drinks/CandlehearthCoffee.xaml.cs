@@ -14,12 +14,12 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for ThugsT_Bone.xaml
+    /// Interaction logic for CandleheartCoffee.xaml
     /// </summary>
-    public partial class ThugsT_Bone : UserControl
+    public partial class CandlehearthCoffee : UserControl
     {
         Container cn;
-        public ThugsT_Bone(Container c)
+        public CandlehearthCoffee(Container c)
         {
             InitializeComponent();
             cn = c;
