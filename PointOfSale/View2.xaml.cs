@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Luis Amiel
+ * Class name: View1.xaml.cs
+ * Purpose: The purpose of this class was implement another screen onto the main screen
+ */ 
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,8 +23,13 @@ namespace PointOfSale
     /// </summary>
     public partial class View2 : UserControl
     {
-        Container cn;
+        /* private back end variable*/
+        private Container cn;
 
+        /// <summary>
+        /// This View2 is the second view
+        /// </summary>
+        /// <param name="c">displaying the view in the container</param>
         public View2(Container c)
         {
             InitializeComponent();

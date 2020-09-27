@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Author: Luis Amiel
+ * Class name: AretinoAppleJuice.xaml.cs
+ * Purpose: To implement the applce juice into the selection
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,12 +24,23 @@ namespace PointOfSale
     /// </summary>
     public partial class AretinoAppleJuice : UserControl
     {
-        Container cn;
+        /* private back end variable*/
+        private Container cn;
+
+        /// <summary>
+        /// Displaying the juice in the container
+        /// </summary>
+        /// <param name="c">displaying the juice in the container</param>
         public AretinoAppleJuice(Container c)
         {
             InitializeComponent();
             cn = c;
         }
+        /// <summary>
+        /// This is when the user is done with their special intructions
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
             cn.MenuSelectionComponent.Child = new View1(cn);

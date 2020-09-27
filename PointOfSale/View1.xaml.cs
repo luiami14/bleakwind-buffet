@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Author: Luis Amiel
+ * Class name: View1.xaml.cs
+ * Purpose: The purpose of this class was implement the clicks of buttons
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,14 +24,23 @@ namespace PointOfSale
     /// </summary>
     public partial class View1 : UserControl
     {
-        Container cn;
+        /* private back end variable*/         
+        private Container cn;
 
+        /// <summary>
+        /// This View1 is the starting view of the menu
+        /// </summary>
+        /// <param name="c">displaying the view in the container</param>
         public View1(Container c)
         {
             InitializeComponent();
             cn = c;
         }
-
+        /// <summary>
+        /// This method selects every button that can be clicked in View1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void ClicksButton(object sender, RoutedEventArgs e)
         {
             Button bt = (Button) sender;

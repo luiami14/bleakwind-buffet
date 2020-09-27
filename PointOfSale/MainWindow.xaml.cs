@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Author: Luis Amiel
+ * Class name: MainWindow.xaml.cs
+ * Purpose: This widnow where everything is being displayed
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

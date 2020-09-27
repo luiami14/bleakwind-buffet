@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Luis Amiel
+ * Class name: ThalmorTriple.xaml.cs
+ * Purpose: To implement the Thalmor into the selection
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,12 +23,22 @@ namespace PointOfSale
     /// </summary>
     public partial class ThalmorTriple : UserControl
     {
+        /* private back end variable*/
         Container cn;
+        /// <summary>
+        /// Displaying the thalmor in the container
+        /// </summary>
+        /// <param name="c">displaying the smokehouse in the container</param>
         public ThalmorTriple(Container c)
         {
             InitializeComponent();
             cn = c;
         }
+        /// <summary>
+        /// This is when the user is done with their special intructions
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
             cn.MenuSelectionComponent.Child = new View1(cn);
