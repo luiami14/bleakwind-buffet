@@ -18,13 +18,17 @@ namespace PointOfSale
     /// </summary>
     public partial class DragonbornWaffleFries : UserControl
     {
-        public DragonbornWaffleFries()
+ 
+
+        Container cn;
+        public DragonbornWaffleFries(Container c)
         {
             InitializeComponent();
+            cn = c;
         }
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-
+            cn.MenuSelectionComponent.Child = new View1(cn);
         }
     }
 }

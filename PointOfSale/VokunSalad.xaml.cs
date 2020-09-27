@@ -18,13 +18,15 @@ namespace PointOfSale
     /// </summary>
     public partial class VokunSalad : UserControl
     {
-        public VokunSalad()
+        Container cn;
+        public VokunSalad(Container c)
         {
             InitializeComponent();
+            cn = c;
         }
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-
+            cn.MenuSelectionComponent.Child = new View1(cn);
         }
     }
 }

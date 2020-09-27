@@ -18,13 +18,15 @@ namespace PointOfSale
     /// </summary>
     public partial class ThalmorTriple : UserControl
     {
-        public ThalmorTriple()
+        Container cn;
+        public ThalmorTriple(Container c)
         {
             InitializeComponent();
+            cn = c;
         }
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-
+            cn.MenuSelectionComponent.Child = new View1(cn);
         }
     }
 }

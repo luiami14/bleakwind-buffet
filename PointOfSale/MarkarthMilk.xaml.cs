@@ -18,13 +18,15 @@ namespace PointOfSale
     /// </summary>
     public partial class MarkarthMilk : UserControl
     {
-        public MarkarthMilk()
+        Container cn;
+        public MarkarthMilk(Container c)
         {
             InitializeComponent();
+            cn = c;
         }
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-
+            cn.MenuSelectionComponent.Child = new View1(cn);
         }
     }
 }

@@ -18,13 +18,15 @@ namespace PointOfSale
     /// </summary>
     public partial class WarriorWater : UserControl
     {
-        public WarriorWater()
+        Container cn;
+        public WarriorWater(Container c)
         {
             InitializeComponent();
+            cn = c;
         }
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-
+            cn.MenuSelectionComponent.Child = new View1(cn);
         }
     }
 }

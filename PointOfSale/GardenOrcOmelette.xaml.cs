@@ -18,13 +18,15 @@ namespace PointOfSale
     /// </summary>
     public partial class GardenOrcOmelette : UserControl
     {
-        public GardenOrcOmelette()
+        Container cn;
+        public GardenOrcOmelette(Container c)
         {
             InitializeComponent();
+            cn = c;
         }
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-
+            cn.MenuSelectionComponent.Child = new View1(cn);
         }
     }
 }

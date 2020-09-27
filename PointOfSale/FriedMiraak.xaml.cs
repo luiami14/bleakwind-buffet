@@ -18,13 +18,15 @@ namespace PointOfSale
     /// </summary>
     public partial class FriedMiraak : UserControl
     {
-        public FriedMiraak()
+        Container cn;
+        public FriedMiraak(Container c)
         {
             InitializeComponent();
+            cn = c;
         }
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-
+            cn.MenuSelectionComponent.Child = new View1(cn);
         }
     }
 }

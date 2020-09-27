@@ -18,13 +18,15 @@ namespace PointOfSale
     /// </summary>
     public partial class CandleheartCoffee : UserControl
     {
-        public CandleheartCoffee()
+        Container cn;
+        public CandleheartCoffee(Container c)
         {
             InitializeComponent();
+            cn = c;
         }
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-
+            cn.MenuSelectionComponent.Child = new View1(cn);
         }
     }
 }
