@@ -16,11 +16,17 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for View2.xaml
     /// </summary>
-    public partial class View2 : UserControl
+    public partial class BriarheartBurger : UserControl
     {
-        public View2()
+        Container cn;
+        public BriarheartBurger(Container c)
         {
             InitializeComponent();
+            cn = c;
+        }
+        void DoneWithOrder(object sender, RoutedEventArgs e)
+        {
+            cn.MenuSelectionComponent.Child = new View1(cn); 
         }
     }
 }

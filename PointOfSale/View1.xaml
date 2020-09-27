@@ -10,9 +10,8 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
@@ -41,58 +40,58 @@
             Sides
         </TextBox>
 
-            <Button Grid.Row="2" Click="BriarheartBurger">
+            <Button Grid.Row="2" Click="ClicksButton" Name="BriarheartBurger">
                  Briarheart Burger
             </Button>
-            <Button Grid.Row="2" Grid.Column="1" Click="SailorSoda">
+        <Button Grid.Row="2" Grid.Column="1" Click="ClicksButton" Name="SailorSoda">
                 Sailor Soda
             </Button>
-            <Button Grid.Row="2" Grid.Column="2" Click="VokunSalad">
+        <Button Grid.Row="2" Grid.Column="2" Click="ClicksButton" Name="VokunSalad">
                 Vokun Salad
             </Button>
-        
-            <Button Grid.Row="3" Click="DoubleDraugr">
+
+        <Button Grid.Row="3" Click="ClicksButton" Name="DoubleDraugr">
                  DoubleDraugr
             </Button>
-            <Button Grid.Row="3" Grid.Column="1" Click="MarkathMilk">
+        <Button Grid.Row="3" Grid.Column="1" Click="ClicksButton" Name="MarkathMilk">
                 Markath Milk
             </Button>
-            <Button Grid.Row="3" Grid.Column="2" Click="FriedMiraak">
+        <Button Grid.Row="3" Grid.Column="2" Click="ClicksButton" Name="FriedMiraak">
                 Fried Miraak
             </Button>
-        
-            <Button Grid.Row="4" Click="ThalmorTriple">
+
+        <Button Grid.Row="4" Click="ClicksButton" Name="ThalmorTriple">
                  ThalmorTriple
             </Button>
-            <Button Grid.Row="4" Grid.Column="1" Click="AretinoAppleJuice">
+        <Button Grid.Row="4" Grid.Column="1" Click="ClicksButton" Name="AretinoAppleJuice">
                 Aretino Apple Juice
             </Button>
-            <Button Grid.Row="4" Grid.Column="2" Click="MadOtarGrits">
+        <Button Grid.Row="4" Grid.Column="2" Click="ClicksButton" Name="MadOtarGrits">
                 Mad Otar Grits
             </Button>
-        
-            <Button Grid.Row="5" Click="SmokehouseSkeleton">
+
+        <Button Grid.Row="5" Click="ClicksButton" Name="SmokehouseSkeleton">
                  SmokehouseSkeleton
             </Button>
-            <Button Grid.Row="5" Grid.Column="1" Click="CandlehearthCoffee">
+        <Button Grid.Row="5" Grid.Column="1" Click="ClicksButton" Name="CandlehearthCoffee">
                 Candlehearth Coffee
             </Button>
-            <Button Grid.Row="5" Grid.Column="2" Click="DragonbornWaffleFries">
+        <Button Grid.Row="5" Grid.Column="2" Click="ClicksButton" Name="DragonbornWaffleFries">
                 Dragonborn Waffle Fries
             </Button>
-        
-             <Button Grid.Row="6" Click="GardenOrcOmlette">
+
+        <Button Grid.Row="6" Click="ClicksButton" Name="GardenOrcOmlette">
                  Garden Orc Omlette
             </Button>
-            <Button Grid.Row="6" Grid.Column="1" Click="WarriorWater">
+        <Button Grid.Row="6" Grid.Column="1" Click="ClicksButton" Name="WarriorWater">
                 Warrior Water
             </Button>
-        
-            <Button Grid.Row="7" Click="ThugsTBone">
+
+        <Button Grid.Row="7" Click="ClicksButton" Name="ThugsTBone">
                  Thugs T-Bone
             </Button>
-        
-            <Button Grid.Row="8" Click="PhillyPoacher">
+
+        <Button Grid.Row="8" Click="ClicksButton" Name="PhillyPoacher">
                  Philly Poacher
             </Button>
         

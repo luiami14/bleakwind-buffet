@@ -18,9 +18,19 @@ namespace PointOfSale
     /// </summary>
     public partial class View1 : UserControl
     {
-        public View1()
+        Container cn;
+
+        public View1(Container c)
         {
             InitializeComponent();
+            cn = c;
+        }
+
+        void ClicksButton(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button) sender;
+            if (bt.Name == "BriarheartBurger") cn.MenuSelectionComponent.Child = new BriarheartBurger(cn);
+            else if() 
         }
 
     }

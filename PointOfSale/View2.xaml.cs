@@ -18,9 +18,12 @@ namespace PointOfSale
     /// </summary>
     public partial class View2 : UserControl
     {
-        public View2()
+        Container cn;
+
+        public View2(Container c)
         {
             InitializeComponent();
+            cn = c;
         }
     }
 }

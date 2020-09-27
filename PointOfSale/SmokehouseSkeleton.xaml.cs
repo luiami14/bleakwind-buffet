@@ -18,9 +18,16 @@ namespace PointOfSale
     /// </summary>
     public partial class SmokehouseSkeleton : UserControl
     {
-        public SmokehouseSkeleton()
+
+        Container cn;
+        public SmokehouseSkeleton(Container c)
         {
             InitializeComponent();
+            cn = c;
+        }
+        void DoneWithOrder(object sender, RoutedEventArgs e)
+        {
+            cn.MenuSelectionComponent.Child = new View1(cn);
         }
     }
 }

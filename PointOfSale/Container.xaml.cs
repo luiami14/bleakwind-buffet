@@ -14,19 +14,21 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for ThugsT_Bone.xaml
+    /// Interaction logic for Container.xaml
     /// </summary>
-    public partial class ThugsT_Bone : UserControl
+    public partial class Container : UserControl
     {
-        Container cn;
-        public ThugsT_Bone(Container c)
+
+        View1 vw;
+        View2 vq;
+
+        public Container()
         {
             InitializeComponent();
-            cn = c;
-        }
-        void DoneWithOrder(object sender, RoutedEventArgs e)
-        {
-            cn.MenuSelectionComponent.Child = new View1(cn);
+            vw = new View1(this);
+            MenuSelectionComponent.Child = vw;
+            vq = new View2(this);
+            MenuSelectionComponent.Child = vq;
         }
     }
 }

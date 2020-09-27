@@ -22,5 +22,9 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+        void DoneWithOrder(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
