@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.DoubleDraugr"
+﻿<UserControl x:Class="PointOfSale.FriedMiraak"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -26,40 +26,20 @@
         </Grid.RowDefinitions>
 
         <TextBox Grid.ColumnSpan="3" Grid.RowSpan="9" Grid.Row="0"  FontWeight="Bold" FontSize="35" TextAlignment="Center">
-            Customize DoubleDraugr Burger
+            Customize Fried Miraak
         </TextBox>
 
-        <CheckBox Grid.Row="1">
-            Hold bun
-        </CheckBox>
+        <RadioButton  Grid.Row="1" Grid.Column="1" GroupName="Sizes">
+            Small
+        </RadioButton>
 
-        <CheckBox Grid.Row="2">
-            Hold ketchup
-        </CheckBox>
+        <RadioButton  Grid.Row="2" Grid.Column="1" GroupName="Sizes">
+            Medium
+        </RadioButton>
 
-        <CheckBox Grid.Row="3">
-            Hold mustard
-        </CheckBox>
-
-        <CheckBox Grid.Row="4">
-            Hold pickle
-        </CheckBox>
-
-        <CheckBox Grid.Row="5">
-            Hold cheese
-        </CheckBox>
-
-        <CheckBox Grid.Row="6">
-            Hold tomato
-        </CheckBox>
-
-        <CheckBox Grid.Row="7">
-            Hold lettuce
-        </CheckBox>
-
-        <CheckBox Grid.Row="8">
-            Hold mayo
-        </CheckBox>
+        <RadioButton  Grid.Row="3" Grid.Column="1" GroupName="Sizes">
+            Large
+        </RadioButton>
 
         <Button Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE

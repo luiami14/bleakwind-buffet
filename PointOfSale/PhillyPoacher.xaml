@@ -30,15 +30,15 @@
         </TextBox>
 
         <CheckBox Grid.Row="1">
-            Sirloin
+            Hold sirloin
         </CheckBox>
 
         <CheckBox Grid.Row="2">
-            Onions
+            Hold onions
         </CheckBox>
 
         <CheckBox Grid.Row="3">
-            Roll
+            Hold roll
         </CheckBox>
 
         <Button Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">

@@ -88,7 +88,7 @@
                 Warrior Water
             </Button>
         
-            <Button Grid.Row="7" Click="ThugsT-Bone">
+            <Button Grid.Row="7" Click="ThugsTBone">
                  Thugs T-Bone
             </Button>
         
