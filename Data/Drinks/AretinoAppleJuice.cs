@@ -88,8 +88,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// backing variable for the ice property
         /// </summary>
         private bool ice = true;
-
-
         /// <summary>
         /// Checks if the user wants the ice(gives the option)
         /// </summary>

@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
@@ -13,8 +14,11 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// All of the ingredients and calories of the burger
     /// </summary>
-    public class BriarheartBurger : Entree
+    public class BriarheartBurger : Entree, INotifyPropertyChanged
     {
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Price of the burger
         /// </summary>
