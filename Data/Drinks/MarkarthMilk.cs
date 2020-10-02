@@ -7,12 +7,15 @@
 using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class MarkarthMilk : Drink
+    public class MarkarthMilk : Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Price of the milk
         /// </summary>
@@ -78,7 +81,18 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Checks if the user wants the ice(gives the option)
         /// </summary>
-        public bool Ice { get; set; } = false;
+        public bool Ice 
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// This method makes a new List everytime a user is odering this drink
         /// </summary>

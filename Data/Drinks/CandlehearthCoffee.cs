@@ -7,12 +7,15 @@
 using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class CandlehearthCoffee : Drink
+    public class CandlehearthCoffee : Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Price of the coffee
         /// </summary>
@@ -98,7 +101,18 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Checks if the user wants the ice(gives the option)
         /// </summary>
-        public bool Ice { get; set; } = false;
+        public bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// backing variable for the cream property
         /// </summary>
@@ -106,7 +120,18 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// chekcs if the user wants cream
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream 
+        {
+            get
+            {
+                return roomforcream;
+            } 
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoomForCream"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            } 
+        } 
         /// <summary>
         /// backing variable for the Decaf property
         /// </summary>
