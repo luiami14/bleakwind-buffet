@@ -6,12 +6,15 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class DoubleDraugr : Entree
+    public class DoubleDraugr : Entree, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Price of the burger
         /// </summary>

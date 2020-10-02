@@ -58,21 +58,82 @@ namespace BleakwindBuffet.Data.Entrees
             } 
         }
         /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool bun = true;
+        /// <summary>
         /// Checks if the user wants the bun(gives the option)
         /// </summary>
-        public bool Bun { get; set; } = true;
+        public bool Bun
+        {
+            get
+            {
+                return bun;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bun"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+
+        /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool mustard = true;
         /// <summary>
         /// Checks if the user wants mustard (gives the option)
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        public bool Mustard
+        {
+            get
+            {
+                return mustard;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mustard"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+        /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool pickle = true;
         /// <summary>
         /// Checks if the user wants Pickles (gives the option)
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle
+        {
+            get
+            {
+                return pickle;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+        /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool cheese = true;
         /// <summary>
         /// Checks if the user wants cheese (gives the option)
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        public bool Cheese
+        {
+            get
+            {
+                return cheese;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// This method makes a new List everytime a user is odering this burger.
         /// </summary>
