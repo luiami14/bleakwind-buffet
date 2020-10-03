@@ -67,7 +67,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 NotifyPropertyChanged("Egg");
-                NotifyPropertyChanged("SpecialInstructions);
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
