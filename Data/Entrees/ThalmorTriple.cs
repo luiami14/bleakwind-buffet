@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public class ThalmorTriple : Entree, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        
         /// <summary>
         /// Price of the burger
         /// </summary>
@@ -67,8 +67,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bun"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Bun");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -87,8 +87,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mustard"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Mustard");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -106,8 +106,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Pickle");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -125,8 +125,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Cheese");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -144,8 +144,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tomato"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Tomato");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -163,8 +163,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lettuce"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Lettuce");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -182,8 +182,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mayo"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Mayo");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -201,8 +201,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bacon"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Bacon");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -220,8 +220,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Egg"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Egg");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>

@@ -12,7 +12,6 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public class SmokehouseSkeleton : Entree, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Price of the breakfast
         /// </summary>
@@ -48,8 +47,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pancake"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("SausageLink");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -67,8 +66,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Egg"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Egg");
+                NotifyPropertyChanged("SpecialInstructions);
             }
         }
         /// <summary>
@@ -86,8 +85,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HashBrowns"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("HashBrowns");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -105,8 +104,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pancake"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Pancake");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>

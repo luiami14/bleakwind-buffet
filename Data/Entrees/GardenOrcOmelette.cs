@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public class GardenOrcOmelette : Entree, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        
         /// <summary>
         /// Price of the Omelette
         /// </summary>
@@ -49,8 +49,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Broccoli"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Broccoli");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -68,8 +68,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mushrooms"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Mushrooms");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -87,8 +87,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tomato"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Tomato");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -106,8 +106,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheddar"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Cheddar");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>

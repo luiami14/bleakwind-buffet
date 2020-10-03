@@ -14,7 +14,7 @@ namespace BleakwindBuffet.Data.Sides
 {
     public class MadOtarGrits : Side, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+       
         /// <summary>
         /// Price of the Grits
         /// </summary>

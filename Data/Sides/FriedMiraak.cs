@@ -14,7 +14,6 @@ namespace BleakwindBuffet.Data.Sides
 {
     public class FriedMiraak : Side, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Price of the pancakes
         /// </summary>

@@ -13,7 +13,6 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public class PhillyPoacher : Entree, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Price of the sandwich
         /// </summary>
@@ -49,8 +48,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sirloin"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Sirloin");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -68,8 +67,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Onion"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Onion");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -87,8 +86,8 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Roll"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Roll");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
