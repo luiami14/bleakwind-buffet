@@ -137,6 +137,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(name, aj.ToString());
         }
         [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            AretinoAppleJuice aj = new AretinoAppleJuice();
+            Assert.PropertyChanged(aj, "Size", () => aj.Size = size);
+        }
+        [Theory]
         [InlineData(true)]
         [InlineData(false)]
         public void ChangingIceNotifiesIceProperty(bool ice)

@@ -190,6 +190,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(sj.ToString(), name);
         }
         [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            SailorSoda sj = new SailorSoda();
+            Assert.PropertyChanged(sj, "Size", () => sj.Size = size);
+        }
+        [Theory]
         [InlineData(true)]
         [InlineData(false)]
         public void ChangingIceNotifiesIceProperty(bool ice)

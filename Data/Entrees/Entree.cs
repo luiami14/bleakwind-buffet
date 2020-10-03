@@ -19,6 +19,13 @@ namespace BleakwindBuffet.Data.Entrees
     public abstract class Entree : IOrderItem, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyPropertyChanged(string Size)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+        }
         /// <summary>
         /// The price of the drink
         /// </summary>

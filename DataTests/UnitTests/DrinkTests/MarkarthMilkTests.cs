@@ -137,6 +137,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(mj.ToString(), name);
         }
         [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            MarkarthMilk mj = new MarkarthMilk();
+            Assert.PropertyChanged(mj, "Size", () => mj.Size = size);
+        }
+        [Theory]
         [InlineData(true)]
         [InlineData(false)]
         public void ChangingIceNotifiesIceProperty(bool ice)

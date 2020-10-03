@@ -110,5 +110,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             mj.Size = size;
             Assert.Equal(name, mj.ToString());
         }
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            MadOtarGrits mj = new MadOtarGrits();
+            Assert.PropertyChanged(mj, "Size", () => mj.Size = size);
+        }
     }
 }

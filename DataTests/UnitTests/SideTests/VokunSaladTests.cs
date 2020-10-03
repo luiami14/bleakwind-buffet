@@ -110,5 +110,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             vj.Size = size;
             Assert.Equal(name, vj.ToString());
         }
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            VokunSalad vj = new VokunSalad();
+            Assert.PropertyChanged(vj, "Size", () => vj.Size = size);
+        }
     }
 }

@@ -15,27 +15,17 @@ namespace BleakwindBuffet.Data.Sides
     public abstract class Side : IOrderItem, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// a private variable that is set to true initially
-        /// </summary>
-        private Size s;
+
+        protected void NotifyPropertyChanged(string Size)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+        }
         /// <summary>
         /// The size of the drink
         /// </summary>
-        public virtual Size Size
-        {
-            get
-            {
-                return s;
-            }
-            set
-            {
-                s = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
-            }
-        }
+        public virtual Size Size { get; set; }
         /// <summary>
         /// The price of the drink
         /// </summary>

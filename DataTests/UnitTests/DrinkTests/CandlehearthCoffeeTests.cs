@@ -188,6 +188,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(name, cj.ToString());
         }
         [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            Assert.PropertyChanged(cj, "Size", () => cj.Size = size);
+        }
+        [Theory]
         [InlineData(true)]
         [InlineData(false)]
         public void ChangingIceNotifiesIceProperty(bool ice)
