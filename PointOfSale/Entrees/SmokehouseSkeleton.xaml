@@ -28,23 +28,23 @@
             Customize Smokehouse Skeleton
         </TextBox>
 
-        <CheckBox Grid.Row="1">
+        <CheckBox FontSize="25" Grid.Row="1">
             Hold sausage
         </CheckBox>
 
-        <CheckBox Grid.Row="2">
+        <CheckBox FontSize="25" Grid.Row="2">
             Hold eggs
         </CheckBox>
 
-        <CheckBox Grid.Row="3">
+        <CheckBox FontSize="25" Grid.Row="3">
             Hold hash browns
         </CheckBox>
 
-        <CheckBox Grid.Row="4">
+        <CheckBox FontSize="25" Grid.Row="4">
             Hold pancakes
         </CheckBox>
 
-        <Button Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
+        <Button FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE
         </Button>
             

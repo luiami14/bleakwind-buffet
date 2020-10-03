@@ -28,19 +28,19 @@
             Customize Philly Poacher
         </TextBox>
 
-        <CheckBox Grid.Row="1">
+        <CheckBox FontSize="25" Grid.Row="1">
             Hold sirloin
         </CheckBox>
 
-        <CheckBox Grid.Row="2">
+        <CheckBox FontSize="25" Grid.Row="2">
             Hold onions
         </CheckBox>
 
-        <CheckBox Grid.Row="3">
+        <CheckBox FontSize="25" Grid.Row="3">
             Hold roll
         </CheckBox>
 
-        <Button Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
+        <Button FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE
         </Button>
             

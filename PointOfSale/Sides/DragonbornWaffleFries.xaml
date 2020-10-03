@@ -28,19 +28,19 @@
             Customize Dragonborn Waffle Fries
         </TextBox>
 
-        <RadioButton  Grid.Row="1" Grid.Column="1" GroupName="Sizes">
+        <RadioButton FontSize="25" Grid.Row="1" Grid.Column="1" GroupName="Sizes">
             Small
         </RadioButton>
 
-        <RadioButton  Grid.Row="2" Grid.Column="1" GroupName="Sizes">
+        <RadioButton FontSize="25" Grid.Row="2" Grid.Column="1" GroupName="Sizes">
             Medium
         </RadioButton>
 
-        <RadioButton  Grid.Row="3" Grid.Column="1" GroupName="Sizes">
+        <RadioButton FontSize="25" Grid.Row="3" Grid.Column="1" GroupName="Sizes">
             Large
         </RadioButton>
 
-        <Button Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
+        <Button FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE
         </Button>
             

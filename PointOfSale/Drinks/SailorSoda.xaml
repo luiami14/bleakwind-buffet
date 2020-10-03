@@ -28,48 +28,48 @@
             Customize Sailor Soda
         </TextBox>
 
-        <CheckBox Grid.Row="1">
+        <CheckBox FontSize="25" Grid.Row="1">
             Hold ice
         </CheckBox>
 
-        <RadioButton  Grid.Row="1" Grid.Column="1" GroupName="Sizes">
+        <RadioButton FontSize="25" Grid.Row="1" Grid.Column="1" GroupName="Sizes">
             Small
         </RadioButton>
 
-        <RadioButton  Grid.Row="2" Grid.Column="1" GroupName="Sizes">
+        <RadioButton FontSize="25" Grid.Row="2" Grid.Column="1" GroupName="Sizes">
             Medium
         </RadioButton>
 
-        <RadioButton  Grid.Row="3" Grid.Column="1" GroupName="Sizes">
+        <RadioButton FontSize="25" Grid.Row="3" Grid.Column="1" GroupName="Sizes">
             Large
         </RadioButton>
 
-        <RadioButton  Grid.Row="1" Grid.Column="2" GroupName="Flavor">
+        <RadioButton FontSize="25" Grid.Row="1" Grid.Column="2" GroupName="Flavor">
             Blackberry
         </RadioButton>
 
-        <RadioButton  Grid.Row="2" Grid.Column="2" GroupName="Flavor">
+        <RadioButton FontSize="25" Grid.Row="2" Grid.Column="2" GroupName="Flavor">
             Cherry
         </RadioButton>
 
-        <RadioButton  Grid.Row="3" Grid.Column="2" GroupName="Flavor">
+        <RadioButton FontSize="25" Grid.Row="3" Grid.Column="2" GroupName="Flavor">
             Grapefruit
         </RadioButton>
 
-        <RadioButton  Grid.Row="4" Grid.Column="2" GroupName="Flavor">
+        <RadioButton FontSize="25" Grid.Row="4" Grid.Column="2" GroupName="Flavor">
             Lemon
         </RadioButton>
 
-        <RadioButton  Grid.Row="5" Grid.Column="2" GroupName="Flavor">
+        <RadioButton FontSize="25" Grid.Row="5" Grid.Column="2" GroupName="Flavor">
             Peach
         </RadioButton>
 
-        <RadioButton  Grid.Row="6" Grid.Column="2" GroupName="Flavor">
+        <RadioButton FontSize="25" Grid.Row="6" Grid.Column="2" GroupName="Flavor">
             Watermelon
         </RadioButton>
 
 
-        <Button Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
+        <Button FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE
         </Button>
             

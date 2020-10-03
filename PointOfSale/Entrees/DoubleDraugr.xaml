@@ -28,39 +28,39 @@
             Customize DoubleDraugr Burger
         </TextBox>
 
-        <CheckBox Grid.Row="1">
+        <CheckBox FontSize="25" Grid.Row="1">
             Hold bun
         </CheckBox>
 
-        <CheckBox Grid.Row="2">
+        <CheckBox FontSize="25" Grid.Row="2">
             Hold ketchup
         </CheckBox>
 
-        <CheckBox Grid.Row="3">
+        <CheckBox FontSize="25" Grid.Row="3">
             Hold mustard
         </CheckBox>
 
-        <CheckBox Grid.Row="4">
+        <CheckBox FontSize="25" Grid.Row="4">
             Hold pickle
         </CheckBox>
 
-        <CheckBox Grid.Row="5">
+        <CheckBox FontSize="25" Grid.Row="5">
             Hold cheese
         </CheckBox>
 
-        <CheckBox Grid.Row="6">
+        <CheckBox FontSize="25" Grid.Row="6">
             Hold tomato
         </CheckBox>
 
-        <CheckBox Grid.Row="7">
+        <CheckBox FontSize="25" Grid.Row="7">
             Hold lettuce
         </CheckBox>
 
-        <CheckBox Grid.Row="8">
+        <CheckBox  FontSize="25" Grid.Row="8">
             Hold mayo
         </CheckBox>
 
-        <Button Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
+        <Button FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE
         </Button>
 
