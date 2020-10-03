@@ -191,5 +191,45 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             BriarheartBurger bj = new BriarheartBurger();
             Assert.Equal("Briarheart Burger", bj.ToString());
         }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingBunNotifiesBunProperty(bool bun)
+        {
+            BriarheartBurger bj = new BriarheartBurger();
+            Assert.PropertyChanged(bj, "Lemon", () => bj.Bun = bun);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingKetchupNotifiesKetchupProperty(bool ketchup)
+        {
+            BriarheartBurger bj = new BriarheartBurger();
+            Assert.PropertyChanged(bj, "Ketchup", () => bj.Ketchup = ketchup);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingMustardNotifiesMustardProperty(bool mustard)
+        {
+            BriarheartBurger bj = new BriarheartBurger();
+            Assert.PropertyChanged(bj, "Mustard", () => bj.Mustard = mustard);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingPickleNotifiesPickleProperty(bool pickle)
+        {
+            BriarheartBurger bj = new BriarheartBurger();
+            Assert.PropertyChanged(bj, "Pickle", () => bj.Pickle = pickle);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingCheeseNotifiesCheeseProperty(bool cheese)
+        {
+            BriarheartBurger bj = new BriarheartBurger();
+            Assert.PropertyChanged(bj, "Cheese", () => bj.Cheese = cheese);
+        }
     }
 }

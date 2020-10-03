@@ -257,5 +257,37 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             DoubleDraugr dj = new DoubleDraugr();
             Assert.Equal("Double Draugr", dj.ToString());
         }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingKetchupNotifiesKetchupProperty(bool ketchup)
+        {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.PropertyChanged(dj, "Ketchup", () => dj.Ketchup = ketchup);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingMustardNotifiesMustardProperty(bool mustard)
+        {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.PropertyChanged(dj, "Mustard", () => dj.Mustard = mustard);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingPickleNotifiesPickleProperty(bool pickle)
+        {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.PropertyChanged(dj, "Pickle", () => dj.Pickle = pickle);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingCheeseNotifiesCheeseProperty(bool cheese)
+        {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.PropertyChanged(dj, "Cheese", () => dj.Cheese = cheese);
+        }
     }
 }

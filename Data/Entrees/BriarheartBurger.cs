@@ -55,7 +55,9 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 ketchup = value;
-            } 
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ketchup"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
         /// <summary>
         /// a private variable that is set to true initially
@@ -72,6 +74,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                bun = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bun"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
@@ -92,6 +95,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                mustard = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mustard"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
@@ -111,6 +115,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                pickle = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
@@ -130,6 +135,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                cheese = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }

@@ -109,6 +109,7 @@ namespace BleakwindBuffet.Data.Drinks
             }
             set
             {
+                ice = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
@@ -128,6 +129,7 @@ namespace BleakwindBuffet.Data.Drinks
             } 
             set
             {
+                roomforcream = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoomForCream"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             } 

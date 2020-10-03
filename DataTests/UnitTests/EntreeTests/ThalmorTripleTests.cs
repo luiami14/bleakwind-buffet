@@ -312,5 +312,6 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             ThalmorTriple tj = new ThalmorTriple();
             Assert.Equal("Thalmor Triple", tj.ToString());
         }
+
     }
 }

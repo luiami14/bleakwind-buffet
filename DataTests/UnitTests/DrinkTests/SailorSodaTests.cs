@@ -189,5 +189,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             sj.Flavor = flavor;
             Assert.Equal(sj.ToString(), name);
         }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingIceNotifiesIceProperty(bool ice)
+        {
+            SailorSoda sj = new SailorSoda();
+            Assert.PropertyChanged(sj, "Ice", () => sj.Ice = ice);
+        }
     }
 }
