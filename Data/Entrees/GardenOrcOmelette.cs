@@ -6,12 +6,14 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class GardenOrcOmelette : Entree
+    public class GardenOrcOmelette : Entree, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Price of the Omelette
         /// </summary>
@@ -33,21 +35,81 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
         /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool broccoli = true;
+        /// <summary>
         /// Checks if the user wants Broccoli (gives the option)
         /// </summary>
-        public bool Broccoli { get; set; } = true;
+        public bool Broccoli
+        {
+            get
+            {
+                return broccoli;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Broccoli"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+        /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool mushrooms = true;
         /// <summary>
         /// Checks if the user wants Mushrooms (gives the option)
         /// </summary>
-        public bool Mushrooms { get; set; } = true;
+        public bool Mushrooms
+        {
+            get
+            {
+                return mushrooms;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mushrooms"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+        /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool tomato = true;
         /// <summary>
         /// Checks if the user wants Tomato (gives the option)
         /// </summary>
-        public bool Tomato { get; set; } = true;
+        public bool Tomato
+        {
+            get
+            {
+                return tomato;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tomato"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+        /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool cheddar = true;
         /// <summary>
         /// Checks if the user wants Cheddar (gives the option)
         /// </summary>
-        public bool Cheddar { get; set; } = true;
+        public bool Cheddar
+        {
+            get
+            {
+                return cheddar;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheddar"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// This method makes a new List everytime a user is odering this breakfast.
         /// </summary>

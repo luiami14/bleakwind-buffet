@@ -5,12 +5,14 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class SmokehouseSkeleton : Entree
+    public class SmokehouseSkeleton : Entree, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Price of the breakfast
         /// </summary>
@@ -32,21 +34,81 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
         /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool sausagelink = true;
+        /// <summary>
         /// Checks if the user wants sausage (gives the option)
         /// </summary>
-        public bool SausageLink { get; set; } = true;
+        public bool SausageLink
+        {
+            get
+            {
+                return pancake;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pancake"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+        /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool egg = true;
         /// <summary>
         /// Checks if the user wants egg (gives the option)
         /// </summary>
-        public bool Egg { get; set; } = true;
+        public bool Egg
+        {
+            get
+            {
+                return egg;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Egg"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+        /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool hashbrowns = true;
         /// <summary>
         /// Checks if the user wants hashbrown (gives the option)
         /// </summary>
-        public bool HashBrowns { get; set; } = true;
+        public bool HashBrowns
+        {
+            get
+            {
+                return hashbrowns;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HashBrowns"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+        /// <summary>
+        /// a private variable that is set to true initially
+        /// </summary>
+        private bool pancake = true;
         /// <summary>
         /// Checks if the user wants pancake (gives the option)
         /// </summary>
-        public bool Pancake { get; set; } = true;
+        public bool Pancake
+        {
+            get
+            {
+                return pancake;
+            }
+            set
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pancake"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// This method makes a new List everytime a user is odering this breakfast.
         /// </summary>
