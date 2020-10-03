@@ -312,6 +312,77 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             ThalmorTriple tj = new ThalmorTriple();
             Assert.Equal("Thalmor Triple", tj.ToString());
         }
-
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingBunNotifiesBunProperty(bool bun)
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.PropertyChanged(tj, "Bun", () => tj.Bun = bun);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingKetchupNotifiesKetchupProperty(bool ketchup)
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.PropertyChanged(tj, "Ketchup", () => tj.Ketchup = ketchup);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingMustardNotifiesMustardProperty(bool mustard)
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.PropertyChanged(tj, "Mustard", () => tj.Mustard = mustard);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingPickleNotifiesPickleProperty(bool pickle)
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.PropertyChanged(tj, "Pickle", () => tj.Pickle = pickle);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingCheeseNotifiesCheeseProperty(bool cheese)
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.PropertyChanged(tj, "Cheese", () => tj.Cheese = cheese);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingLettuceNotifiesLettuceProperty(bool lettuce)
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.PropertyChanged(tj, "Lettuce", () => tj.Lettuce = lettuce);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingMayoNotifiesMayoProperty(bool mayo)
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.PropertyChanged(tj, "Mayo", () => tj.Mayo = mayo);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingBaconNotifiesBaconProperty(bool bacon)
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.PropertyChanged(tj, "Bacon", () => tj.Bacon = bacon);
+        }
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void ChangingEggNotifiesEggProperty(bool egg)
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.PropertyChanged(tj, "Egg", () => tj.Egg = egg);
+        }
     }
 }

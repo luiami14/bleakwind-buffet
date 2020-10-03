@@ -197,7 +197,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ChangingBunNotifiesBunProperty(bool bun)
         {
             BriarheartBurger bj = new BriarheartBurger();
-            Assert.PropertyChanged(bj, "Lemon", () => bj.Bun = bun);
+            Assert.PropertyChanged(bj, "Bun", () => bj.Bun = bun);
         }
         [Theory]
         [InlineData(true)]
