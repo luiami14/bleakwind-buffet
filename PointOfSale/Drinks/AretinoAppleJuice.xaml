@@ -28,19 +28,19 @@
             Customize Aretino Apple Juice
         </TextBox>
 
-        <CheckBox FontSize="25" Grid.Row="1">
+        <CheckBox IsChecked="{Binding Path= Ice}" FontSize="25" Grid.Row="1">
             Add ice
         </CheckBox>
 
-        <RadioButton  FontSize="25" Grid.Row="1" Grid.Column="1" GroupName="Sizes">
+        <RadioButton Name="smallSize" FontSize="25" Grid.Row="1" Grid.Column="1" GroupName="Sizes">
             Small
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="2" Grid.Column="1" GroupName="Sizes">
+        <RadioButton Name="mediumSize" FontSize="25" Grid.Row="2" Grid.Column="1" GroupName="Sizes">
             Medium
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="3" Grid.Column="1" GroupName="Sizes">
+        <RadioButton Name="largeSize" FontSize="25" Grid.Row="3" Grid.Column="1" GroupName="Sizes">
             Large
         </RadioButton>
 
