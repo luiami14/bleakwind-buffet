@@ -16,11 +16,9 @@ namespace BleakwindBuffet.Data.Sides
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void NotifyPropertyChanged(string Size)
+        protected void NotifyPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         /// <summary>
         /// The size of the drink
