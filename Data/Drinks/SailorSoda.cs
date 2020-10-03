@@ -14,8 +14,6 @@ namespace BleakwindBuffet.Data.Drinks
 {
     public class SailorSoda: Drink, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
         /// <summary>
         /// Price of the Sailor soda
         /// </summary>
@@ -102,8 +100,8 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 ice = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                NotifyPropertyChanged("Ice");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -122,6 +120,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 flavor = value;
+                NotifyPropertyChanged("Flavor");
             }
         }
     }

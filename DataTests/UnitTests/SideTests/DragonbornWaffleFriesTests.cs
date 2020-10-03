@@ -119,5 +119,6 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             DragonbornWaffleFries dj = new DragonbornWaffleFries();
             Assert.PropertyChanged(dj, "Size", () => dj.Size = size);
         }
+
     }
 }
