@@ -50,6 +50,8 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 ketchup = value;
+                NotifyPropertyChanged("Ketchup");
+                NotifyPropertyChanged("SpecialInstructions");
             }
         }
         /// <summary>
@@ -67,6 +69,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                bun = value;
                 NotifyPropertyChanged("Bun");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -87,6 +90,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                mustard = value;
                 NotifyPropertyChanged("Mustard");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -106,6 +110,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                pickle = value;
                 NotifyPropertyChanged("Pickle");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -125,6 +130,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                cheese = value;
                 NotifyPropertyChanged("Cheese");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -144,6 +150,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                tomato = value;
                 NotifyPropertyChanged("Tomato");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -163,6 +170,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                lettuce = value;
                 NotifyPropertyChanged("Lettuce");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -182,6 +190,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                mayo = value;
                 NotifyPropertyChanged("Mayo");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -201,6 +210,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                bacon = value;
                 NotifyPropertyChanged("Bacon");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -220,6 +230,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                egg = value;
                 NotifyPropertyChanged("Egg");
                 NotifyPropertyChanged("SpecialInstructions");
             }

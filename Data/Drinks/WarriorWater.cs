@@ -95,7 +95,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// backing variable for the lemon property
         /// </summary>
-        private bool lemon = true;
+        private bool lemon = false;
         /// <summary>
         /// Checks if the user wants lemon
         /// </summary>

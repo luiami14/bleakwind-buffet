@@ -49,6 +49,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                broccoli = value;
                 NotifyPropertyChanged("Broccoli");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -68,6 +69,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                mushrooms = value;
                 NotifyPropertyChanged("Mushrooms");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -87,6 +89,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                tomato = value;
                 NotifyPropertyChanged("Tomato");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -106,6 +109,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                cheddar = value;
                 NotifyPropertyChanged("Cheddar");
                 NotifyPropertyChanged("SpecialInstructions");
             }

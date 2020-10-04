@@ -171,5 +171,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             AretinoAppleJuice aj = new AretinoAppleJuice();
             Assert.PropertyChanged(aj, "Price", () => aj.Size = size);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            AretinoAppleJuice aj = new AretinoAppleJuice();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(aj);
+        }
     }
 }

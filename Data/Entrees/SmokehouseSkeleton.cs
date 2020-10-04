@@ -43,10 +43,11 @@ namespace BleakwindBuffet.Data.Entrees
         {
             get
             {
-                return pancake;
+                return sausagelink;
             }
             set
             {
+                sausagelink = value;
                 NotifyPropertyChanged("SausageLink");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -66,6 +67,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                egg = value;
                 NotifyPropertyChanged("Egg");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -85,6 +87,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                hashbrowns = value;
                 NotifyPropertyChanged("HashBrowns");
                 NotifyPropertyChanged("SpecialInstructions");
             }
@@ -104,6 +107,7 @@ namespace BleakwindBuffet.Data.Entrees
             }
             set
             {
+                pancake = value;
                 NotifyPropertyChanged("Pancake");
                 NotifyPropertyChanged("SpecialInstructions");
             }
