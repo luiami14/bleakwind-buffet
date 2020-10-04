@@ -16,6 +16,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Enums;
 
 namespace PointOfSale
 {
@@ -25,7 +27,9 @@ namespace PointOfSale
     public partial class CandlehearthCoffee : UserControl
     {
         /* private back end variable*/
-        Container cn;
+        private Container cn;
+        /* private back end variable*/
+        private BleakwindBuffet.Data.Drinks.CandlehearthCoffee candleHearthCofee;
         /// <summary>
         /// Displaying the coffee in the container
         /// </summary>
@@ -33,7 +37,32 @@ namespace PointOfSale
         public CandlehearthCoffee(Container c)
         {
             InitializeComponent();
+            candleHearthCofee = new BleakwindBuffet.Data.Drinks.CandlehearthCoffee();
+            DataContext = candleHearthCofee;
             cn = c;
+        }
+        /// <summary>
+        /// Allows the DataContext's Size property to be updated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ChangedSize(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is BleakwindBuffet.Data.Drinks.CandlehearthCoffee aj)
+            {
+                if ((bool)smallSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Small;
+                }
+                else if ((bool)mediumSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Medium;
+                }
+                else if ((bool)largeSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Large;
+                }
+            }
         }
         /// <summary>
         /// This is when the user is done with their special intructions

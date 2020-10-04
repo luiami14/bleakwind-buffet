@@ -29,27 +29,27 @@
         </TextBox>
 
 
-        <CheckBox FontSize="25" Grid.Row="1">
+        <CheckBox  IsChecked="{Binding Path= Ice}" FontSize="25" Grid.Row="1">
             Add ice
         </CheckBox>
 
-        <CheckBox FontSize="25" Grid.Row="2">
+        <CheckBox  IsChecked="{Binding Path= RoomforCream}" FontSize="25" Grid.Row="2">
             Add cream
         </CheckBox>
 
-        <RadioButton FontSize="25" Grid.Row="1" Grid.Column="1" GroupName="Sizes">
+        <RadioButton Name="smallSize" Click="ChangedSize" IsChecked="True" FontSize="25" Grid.Row="1" Grid.Column="1" GroupName="Sizes">
             Small
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="2" Grid.Column="1" GroupName="Sizes">
+        <RadioButton Name="mediumSize" Click="ChangedSize" FontSize="25" Grid.Row="2" Grid.Column="1" GroupName="Sizes">
             Medium
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="3" Grid.Column="1" GroupName="Sizes">
+        <RadioButton Name="largeSize" Click="ChangedSize" FontSize="25" Grid.Row="3" Grid.Column="1" GroupName="Sizes">
             Large
         </RadioButton>
 
-        <Button FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
+        <Button Name="doneWithSpecialInstructions" Click="DoneWithOrder" FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold">
             DONE
         </Button>
 

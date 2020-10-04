@@ -26,6 +26,8 @@ namespace PointOfSale
     {
         /* private back end variable*/
         Container cn;
+        /* private back end variable*/
+        private BleakwindBuffet.Data.Entrees.GardenOrcOmelette gardenOrcOmelelette;
         /// <summary>
         /// Displaying the omelette in the container
         /// </summary>
@@ -33,6 +35,8 @@ namespace PointOfSale
         public GardenOrcOmelette(Container c)
         {
             InitializeComponent();
+            gardenOrcOmelelette = new BleakwindBuffet.Data.Entrees.GardenOrcOmelette();
+            DataContext = gardenOrcOmelelette;
             cn = c;
         }
         /// <summary>

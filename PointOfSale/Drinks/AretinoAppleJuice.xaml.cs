@@ -42,7 +42,7 @@ namespace PointOfSale
             cn = c;
         }
         /// <summary>
-        /// 
+        /// Allows the DataContext's Size property to be updated
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

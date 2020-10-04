@@ -26,6 +26,8 @@ namespace PointOfSale
     {
         /* private back end variable*/
         Container cn;
+        /* private back end variable*/
+        private BleakwindBuffet.Data.Entrees.DoubleDraugr doubleDraugr;
         /// <summary>
         /// Displaying the Draugr in the container
         /// </summary>
@@ -33,6 +35,8 @@ namespace PointOfSale
         public DoubleDraugr(Container c)
         {
             InitializeComponent();
+            doubleDraugr = new BleakwindBuffet.Data.Entrees.DoubleDraugr();
+            DataContext = doubleDraugr;
             cn = c;
         }
         /// <summary>

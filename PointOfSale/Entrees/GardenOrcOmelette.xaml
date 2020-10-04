@@ -28,23 +28,23 @@
             Customize Garden Orc Omelette
         </TextBox>
 
-        <CheckBox FontSize="25" Grid.Row="1">
+        <CheckBox IsChecked="{Binding Path= !Broccoli}" FontSize="25" Grid.Row="1">
             Hold broccoli
         </CheckBox>
 
-        <CheckBox FontSize="25" Grid.Row="2">
+        <CheckBox IsChecked="{Binding Path= !Mushrooms}" FontSize="25" Grid.Row="2">
             Hold mushrooms
         </CheckBox>
 
-        <CheckBox FontSize="25" Grid.Row="3">
+        <CheckBox IsChecked="{Binding Path= !Tomato}" FontSize="25" Grid.Row="3">
             Hold tomato
         </CheckBox>
 
-        <CheckBox FontSize="25" Grid.Row="4">
+        <CheckBox IsChecked="{Binding Path= !Cheddar}" FontSize="25" Grid.Row="4">
             Hold cheddar
         </CheckBox>
 
-        <Button FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
+        <Button Name="doneWithSpecialInstructions" FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE
         </Button>
 

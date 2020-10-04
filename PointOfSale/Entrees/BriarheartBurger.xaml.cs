@@ -26,6 +26,8 @@ namespace PointOfSale
     {
         /* private back end variable*/
         Container cn;
+        /* private back end variable*/
+        private BleakwindBuffet.Data.Entrees.BriarheartBurger briarheartBurger;
         /// <summary>
         /// Displaying the burger in the container
         /// </summary>
@@ -33,6 +35,8 @@ namespace PointOfSale
         public BriarheartBurger(Container c)
         {
             InitializeComponent();
+            briarheartBurger = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
+            DataContext = briarheartBurger;
             cn = c;
         }
         /// <summary>

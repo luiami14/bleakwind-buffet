@@ -28,48 +28,48 @@
             Customize Sailor Soda
         </TextBox>
 
-        <CheckBox FontSize="25" Grid.Row="1">
+        <CheckBox IsChecked="{Binding Path= !Ice}" FontSize="25" Grid.Row="1">
             Hold ice
         </CheckBox>
 
-        <RadioButton FontSize="25" Grid.Row="1" Grid.Column="1" GroupName="Sizes">
+        <RadioButton Name="smallSize" Click="ChangedSize" IsChecked="True" FontSize="25" Grid.Row="1" Grid.Column="1" GroupName="Sizes">
             Small
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="2" Grid.Column="1" GroupName="Sizes">
+        <RadioButton Name="mediumSize" Click="ChangedSize" FontSize="25" Grid.Row="2" Grid.Column="1" GroupName="Sizes">
             Medium
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="3" Grid.Column="1" GroupName="Sizes">
+        <RadioButton Name="largeSize" Click="ChangedSize" FontSize="25" Grid.Row="3" Grid.Column="1" GroupName="Sizes">
             Large
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="1" Grid.Column="2" GroupName="Flavor">
+        <RadioButton Name="blackberry" Click="ChangedFlavor" FontSize="25" Grid.Row="1" Grid.Column="2" GroupName="Flavor">
             Blackberry
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="2" Grid.Column="2" GroupName="Flavor">
+        <RadioButton Name="cherry" Click="ChangedFlavor" FontSize="25" Grid.Row="2" Grid.Column="2" GroupName="Flavor">
             Cherry
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="3" Grid.Column="2" GroupName="Flavor">
+        <RadioButton Name="grapefruit" Click="ChangedFlavor" FontSize="25" Grid.Row="3" Grid.Column="2" GroupName="Flavor">
             Grapefruit
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="4" Grid.Column="2" GroupName="Flavor">
+        <RadioButton Name="lemon" Click="ChangedFlavor" FontSize="25" Grid.Row="4" Grid.Column="2" GroupName="Flavor">
             Lemon
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="5" Grid.Column="2" GroupName="Flavor">
+        <RadioButton Name="peach" Click="ChangedFlavor" FontSize="25" Grid.Row="5" Grid.Column="2" GroupName="Flavor">
             Peach
         </RadioButton>
 
-        <RadioButton FontSize="25" Grid.Row="6" Grid.Column="2" GroupName="Flavor">
+        <RadioButton Name="watermelon" Click="ChangedFlavor" FontSize="25" Grid.Row="6" Grid.Column="2" GroupName="Flavor">
             Watermelon
         </RadioButton>
 
 
-        <Button FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
+        <Button Name="doneWithSpecialInstructions" FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE
         </Button>
             
