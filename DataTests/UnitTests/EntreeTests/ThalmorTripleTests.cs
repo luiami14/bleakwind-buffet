@@ -384,5 +384,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             ThalmorTriple tj = new ThalmorTriple();
             Assert.PropertyChanged(tj, "Egg", () => tj.Egg = egg);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(tj);
+        }
     }
 }

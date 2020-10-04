@@ -289,5 +289,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             DoubleDraugr dj = new DoubleDraugr();
             Assert.PropertyChanged(dj, "Cheese", () => dj.Cheese = cheese);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            DoubleDraugr dj = new DoubleDraugr();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(dj);
+        }
     }
 }

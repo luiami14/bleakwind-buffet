@@ -171,5 +171,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             MarkarthMilk mj = new MarkarthMilk();
             Assert.PropertyChanged(mj, "Ice", () => mj.Ice = ice);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            MarkarthMilk mj = new MarkarthMilk();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(mj);
+        }
     }
 }

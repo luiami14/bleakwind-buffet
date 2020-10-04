@@ -16,6 +16,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Enums;
 
 namespace PointOfSale
 {
@@ -26,7 +28,8 @@ namespace PointOfSale
     {
         /* private back end variable*/
         private Container cn;
-
+        /* private back end variable*/
+        private AretinoAppleJuice appleJuice;
         /// <summary>
         /// Displaying the juice in the container
         /// </summary>
@@ -34,7 +37,19 @@ namespace PointOfSale
         public AretinoAppleJuice(Container c)
         {
             InitializeComponent();
+            appleJuice = new AretinoAppleJuice();
+            DataContext = appleJuice;
             cn = c;
+        }
+        public void ChangedSize(object sender, RoutedEventArgs e)
+        {
+            if(DataContext is AretinoAppleJuice aj)
+            {
+                if((bool)smallSize.IsChecked)
+                {
+                    aj.SizeChanged = Data.Emuns.Size.Small;
+                }
+            }
         }
         /// <summary>
         /// This is when the user is done with their special intructions

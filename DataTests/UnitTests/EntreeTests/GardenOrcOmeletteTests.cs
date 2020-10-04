@@ -199,5 +199,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.PropertyChanged(gj, "Cheddar", () => gj.Cheddar = cheddar);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            GardenOrcOmelette gj = new GardenOrcOmelette();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(gj);
+        }
     }
 }

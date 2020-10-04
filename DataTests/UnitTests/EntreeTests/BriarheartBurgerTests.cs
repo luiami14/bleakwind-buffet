@@ -231,5 +231,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             BriarheartBurger bj = new BriarheartBurger();
             Assert.PropertyChanged(bj, "Cheese", () => bj.Cheese = cheese);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            BriarheartBurger bj = new BriarheartBurger();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(bj);
+        }
     }
 }

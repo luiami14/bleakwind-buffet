@@ -224,5 +224,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             SailorSoda sj = new SailorSoda();
             Assert.PropertyChanged(sj, "Ice", () => sj.Ice = ice);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            SailorSoda sj = new SailorSoda();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(sj);
+        }
     }
 }

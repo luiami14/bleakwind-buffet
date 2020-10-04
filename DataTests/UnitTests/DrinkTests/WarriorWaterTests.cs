@@ -205,5 +205,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             WarriorWater wj = new WarriorWater();
             Assert.PropertyChanged(wj, "Lemon", () => wj.Lemon = lemon);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            WarriorWater wj = new WarriorWater();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(wj);
+        }
     }
 }

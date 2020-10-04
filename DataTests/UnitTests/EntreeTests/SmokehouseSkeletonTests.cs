@@ -198,5 +198,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.PropertyChanged(sj, "Pancake", () => sj.Pancake = pancake);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            SmokehouseSkeleton sj = new SmokehouseSkeleton();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(sj);
+        }
     }
 }

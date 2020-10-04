@@ -230,5 +230,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             CandlehearthCoffee cj = new CandlehearthCoffee();
             Assert.PropertyChanged(cj, "RoomForCream", () => cj.RoomForCream = cream);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            CandlehearthCoffee cj = new CandlehearthCoffee();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(cj);
+        }
+
     }
 }

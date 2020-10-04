@@ -166,5 +166,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             PhillyPoacher pj = new PhillyPoacher();
             Assert.PropertyChanged(pj, "Roll", () => pj.Roll = roll);
         }
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            PhillyPoacher pj = new PhillyPoacher();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(pj);
+        }
     }
 }
