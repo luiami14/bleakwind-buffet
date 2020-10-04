@@ -14,7 +14,6 @@ namespace BleakwindBuffet.Data.Drinks
 {
     public class WarriorWater : Drink, INotifyPropertyChanged
     {
-
         /// <summary>
         /// Price of the water
         /// </summary>
