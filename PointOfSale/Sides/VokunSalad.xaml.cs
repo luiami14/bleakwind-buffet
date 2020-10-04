@@ -26,6 +26,8 @@ namespace PointOfSale
     {
         /* private back end variable*/
         Container cn;
+        /* private back end variable*/
+        private BleakwindBuffet.Data.Sides.VokunSalad vokunSalad;
         /// <summary>
         /// Displaying the salad in the container
         /// </summary>
@@ -33,7 +35,32 @@ namespace PointOfSale
         public VokunSalad(Container c)
         {
             InitializeComponent();
+            vokunSalad = new BleakwindBuffet.Data.Sides.VokunSalad();
+            DataContext = vokunSalad;
             cn = c;
+        }
+        /// <summary>
+        /// Allows the DataContext's Size property to be updated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ChangedSize(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is BleakwindBuffet.Data.Sides.VokunSalad aj)
+            {
+                if ((bool)smallSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Small;
+                }
+                else if ((bool)mediumSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Medium;
+                }
+                else if ((bool)largeSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Large;
+                }
+            }
         }
         /// <summary>
         /// This is when the user is done with their special intructions

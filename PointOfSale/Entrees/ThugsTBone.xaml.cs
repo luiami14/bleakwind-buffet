@@ -26,6 +26,8 @@ namespace PointOfSale
     {
         /* private back end variable*/
         Container cn;
+        /* private back end variable*/
+        private BleakwindBuffet.Data.Entrees.ThugsTBone thugsTBone;
         /// <summary>
         /// Displaying the TBone in the container
         /// </summary>
@@ -33,6 +35,8 @@ namespace PointOfSale
         public ThugsTBone(Container c)
         {
             InitializeComponent();
+            thugsTBone = new BleakwindBuffet.Data.Entrees.ThugsTBone();
+            DataContext = thugsTBone;
             cn = c;
         }
         /// <summary>

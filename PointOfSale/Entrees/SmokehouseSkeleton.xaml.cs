@@ -26,6 +26,8 @@ namespace PointOfSale
     {
         /* private back end variable*/
         Container cn;
+        /* private back end variable*/
+        private BleakwindBuffet.Data.Entrees.SmokehouseSkeleton smokehouseSkeleton;
         /// <summary>
         /// Displaying the smokehouse in the container
         /// </summary>
@@ -33,6 +35,8 @@ namespace PointOfSale
         public SmokehouseSkeleton(Container c)
         {
             InitializeComponent();
+            smokehouseSkeleton = new BleakwindBuffet.Data.Entrees.SmokehouseSkeleton();
+            DataContext = smokehouseSkeleton;
             cn = c;
         }
         /// <summary>

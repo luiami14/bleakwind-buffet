@@ -26,6 +26,8 @@ namespace PointOfSale
     {
         /* private back end variable*/
         Container cn;
+        /* private back end variable*/
+        private BleakwindBuffet.Data.Entrees.PhillyPoacher phillyPoacher;
         /// <summary>
         /// Displaying the poacher in the container
         /// </summary>
@@ -33,6 +35,8 @@ namespace PointOfSale
         public PhillyPoacher(Container c)
         {
             InitializeComponent();
+            phillyPoacher = new BleakwindBuffet.Data.Entrees.PhillyPoacher();
+            DataContext = phillyPoacher;
             cn = c;
         }
         /// <summary>

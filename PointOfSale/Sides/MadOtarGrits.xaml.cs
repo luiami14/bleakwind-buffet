@@ -26,6 +26,8 @@ namespace PointOfSale
     {
         /* private back end variable*/
         Container cn;
+        /* private back end variable*/
+        private BleakwindBuffet.Data.Sides.MadOtarGrits madOtarGrits;
         /// <summary>
         /// Displaying the Grits in the container
         /// </summary>
@@ -33,7 +35,32 @@ namespace PointOfSale
         public MadOtarGrits(Container c)
         {
             InitializeComponent();
+            madOtarGrits = new BleakwindBuffet.Data.Sides.MadOtarGrits();
+            DataContext = madOtarGrits;
             cn = c;
+        }
+        /// <summary>
+        /// Allows the DataContext's Size property to be updated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ChangedSize(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is BleakwindBuffet.Data.Sides.MadOtarGrits aj)
+            {
+                if ((bool)smallSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Small;
+                }
+                else if ((bool)mediumSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Medium;
+                }
+                else if ((bool)largeSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Large;
+                }
+            }
         }
         /// <summary>
         /// This is when the user is done with their special intructions

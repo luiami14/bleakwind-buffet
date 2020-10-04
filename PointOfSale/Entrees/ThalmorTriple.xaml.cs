@@ -25,6 +25,8 @@ namespace PointOfSale
     {
         /* private back end variable*/
         Container cn;
+        /* private back end variable*/
+        private BleakwindBuffet.Data.Entrees.ThalmorTriple thalmorTriple;
         /// <summary>
         /// Displaying the thalmor in the container
         /// </summary>
@@ -32,6 +34,8 @@ namespace PointOfSale
         public ThalmorTriple(Container c)
         {
             InitializeComponent();
+            thalmorTriple = new BleakwindBuffet.Data.Entrees.ThalmorTriple();
+            DataContext = thalmorTriple;
             cn = c;
         }
         /// <summary>
