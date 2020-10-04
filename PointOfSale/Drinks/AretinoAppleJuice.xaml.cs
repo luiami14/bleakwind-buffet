@@ -29,7 +29,7 @@ namespace PointOfSale
         /* private back end variable*/
         private Container cn;
         /* private back end variable*/
-        private AretinoAppleJuice appleJuice;
+        private BleakwindBuffet.Data.Drinks.AretinoAppleJuice appleJuice;
         /// <summary>
         /// Displaying the juice in the container
         /// </summary>
@@ -37,17 +37,30 @@ namespace PointOfSale
         public AretinoAppleJuice(Container c)
         {
             InitializeComponent();
-            appleJuice = new AretinoAppleJuice();
+            appleJuice = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
             DataContext = appleJuice;
             cn = c;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ChangedSize(object sender, RoutedEventArgs e)
         {
-            if(DataContext is AretinoAppleJuice aj)
+            if(DataContext is BleakwindBuffet.Data.Drinks.AretinoAppleJuice aj)
             {
                 if((bool)smallSize.IsChecked)
                 {
-                    aj.SizeChanged = Data.Emuns.Size.Small;
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Small;
+                }
+                else if((bool)mediumSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Medium;
+                }
+                else if((bool)largeSize.IsChecked)
+                {
+                    aj.Size = BleakwindBuffet.Data.Enums.Size.Large;
                 }
             }
         }
