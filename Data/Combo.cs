@@ -11,12 +11,21 @@ namespace BleakwindBuffet.Data
 {
     public class Combo : IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public double Price => throw new NotImplementedException();
-
+        /// <summary>
+        /// 
+        /// </summary>
         public uint Calories => throw new NotImplementedException();
-
+        /// <summary>
+        /// 
+        /// </summary>
         public List<string> SpecialInstructions => throw new NotImplementedException();
-
+        /// <summary>
+        /// 
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         Drink ss = new Data.Drinks.SailorSoda();
@@ -33,10 +42,12 @@ namespace BleakwindBuffet.Data
             }
             set
             {
+                ss.PropertyChanged -= ItemChangedListener;
                 ss = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                ss.PropertyChanged += ItemChangedListener;
             }
         }
         /// <summary>
@@ -50,10 +61,12 @@ namespace BleakwindBuffet.Data
             }
             set
             {
+                sd.PropertyChanged -= ItemChangedListener;
                 sd = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                sd.PropertyChanged += ItemChangedListener;
             }
         }
         /// <summary>
@@ -67,10 +80,12 @@ namespace BleakwindBuffet.Data
             }
             set
             {
+                bb.PropertyChanged -= ItemChangedListener;
                 bb = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                bb.PropertyChanged += ItemChangedListener;
             }
         }
         /// <summary>
@@ -78,7 +93,7 @@ namespace BleakwindBuffet.Data
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void CollectionItemChangedListener(object sender, PropertyChangedEventArgs e)
+        void ItemChangedListener(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == "Size")
             {
@@ -104,6 +119,15 @@ namespace BleakwindBuffet.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public Combo()
+        {
+            ss.PropertyChanged += ItemChangedListener;
+            bb.PropertyChanged += ItemChangedListener;
+            sd.PropertyChanged += ItemChangedListener;
         }
     }
 }
