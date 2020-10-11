@@ -97,19 +97,19 @@ namespace BleakwindBuffet.Data
                 case NotifyCollectionChangedAction.Remove:
                     foreach(IOrderItem item in e.OldItems)
                     {
-                        if (item is AretinoAppleJuice aj) { aj.PropertyChanged += ItemCollectionChangedListener; }
-                        else if (item is CandlehearthCoffee cc) { cc.PropertyChanged += ItemCollectionChangedListener; }
-                        else if (item is MarkarthMilk mm) { mm.PropertyChanged += ItemCollectionChangedListener; }
-                        else if (item is SailorSoda ss) { ss.PropertyChanged += ItemCollectionChangedListener; }
-                        else if (item is WarriorWater ww) { ww.PropertyChanged += ItemCollectionChangedListener; }
-                        else if (item is DragonbornWaffleFries dj) { dj.PropertyChanged += ItemCollectionChangedListener; }
-                        else if (item is FriedMiraak fm) { fm.PropertyChanged += ItemCollectionChangedListener; }
-                        else if (item is MadOtarGrits mg) { mg.PropertyChanged += ItemCollectionChangedListener; }
-                        else if (item is VokunSalad vs) { vs.PropertyChanged += ItemCollectionChangedListener; }
+                        if (item is AretinoAppleJuice aj) { aj.PropertyChanged -= ItemCollectionChangedListener; }
+                        else if (item is CandlehearthCoffee cc) { cc.PropertyChanged -= ItemCollectionChangedListener; }
+                        else if (item is MarkarthMilk mm) { mm.PropertyChanged -= ItemCollectionChangedListener; }
+                        else if (item is SailorSoda ss) { ss.PropertyChanged -= ItemCollectionChangedListener; }
+                        else if (item is WarriorWater ww) { ww.PropertyChanged -= ItemCollectionChangedListener; }
+                        else if (item is DragonbornWaffleFries dj) { dj.PropertyChanged -= ItemCollectionChangedListener; }
+                        else if (item is FriedMiraak fm) { fm.PropertyChanged -= ItemCollectionChangedListener; }
+                        else if (item is MadOtarGrits mg) { mg.PropertyChanged -= ItemCollectionChangedListener; }
+                        else if (item is VokunSalad vs) { vs.PropertyChanged -= ItemCollectionChangedListener; }
                     }
                     break;
                 case NotifyCollectionChangedAction.Reset:
-                    throw new NotImplementedException(""Reset);
+                    throw new NotImplementedException("NotifyCollectionChangedAction.Reset not supported");
             }
         }
         void ItemCollectionChangedListener(object sender, PropertyChangedEventArgs e)
