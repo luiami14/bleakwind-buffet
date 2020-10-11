@@ -96,5 +96,12 @@ namespace BleakwindBuffet.DataTests
             Combo d = new Combo();
             Assert.Equals(("Hold Ice", d.SpecialInstructions);
         }
+        [Fact]
+        public void TestItemChangedListener()
+        {
+            Combo d = new Combo();
+            ActionEvent event = mock
+            Assert.Equal((uint)936, d.Calories);
+        }
     }
 }
