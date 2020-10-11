@@ -1,6 +1,8 @@
 ﻿using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Interface;
+using BleakwindBuffet.Data.Sides;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,6 +29,54 @@ namespace BleakwindBuffet.DataTests
         {
             Combo d = new Combo();
             Assert.PropertyChanged(d, "Price", () => d.Drink = new AretinoAppleJuice());
+        }
+        [Fact]
+        public void ChangingDrinkNotifiesCaloriesProperty()
+        {
+            Combo d = new Combo();
+            Assert.PropertyChanged(d, "Calories", () => d.Drink = new AretinoAppleJuice());
+        }
+        [Fact]
+        public void ChangingDrinkNotifiesSpecialInstructionsProperty()
+        {
+            Combo d = new Combo();
+            Assert.PropertyChanged(d, "SpecialInstructions", () => d.Drink = new AretinoAppleJuice());
+        }
+        [Fact]
+        public void ChangingSideNotifiesPriceProperty()
+        {
+            Combo d = new Combo();
+            Assert.PropertyChanged(d, "Price", () => d.Side = new VokunSalad());
+        }
+        [Fact]
+        public void ChangingSideNotifiesCaloriesProperty()
+        {
+            Combo d = new Combo();
+            Assert.PropertyChanged(d, "Calories", () => d.Side = new VokunSalad());
+        }
+        [Fact]
+        public void ChangingSideNotifiesSpecialInstructionsProperty()
+        {
+            Combo d = new Combo();
+            Assert.PropertyChanged(d, "SpecialInstructions", () => d.Side = new VokunSalad());
+        }
+        [Fact]
+        public void ChangingEntreeNotifiesPriceProperty()
+        {
+            Combo d = new Combo();
+            Assert.PropertyChanged(d, "Price", () => d.Entree = new BriarheartBurger());
+        }
+        [Fact]
+        public void ChangingEntreeNotifiesCaloriesProperty()
+        {
+            Combo d = new Combo();
+            Assert.PropertyChanged(d, "Calories", () => d.Entree = new BriarheartBurger());
+        }
+        [Fact]
+        public void ChangingEntreeNotifiesSpecialInstructionsProperty()
+        {
+            Combo d = new Combo();
+            Assert.PropertyChanged(d, "SpecialInstructions", () => d.Entree = new BriarheartBurger());
         }
     }
 }
