@@ -78,5 +78,23 @@ namespace BleakwindBuffet.DataTests
             Combo d = new Combo();
             Assert.PropertyChanged(d, "SpecialInstructions", () => d.Entree = new BriarheartBurger());
         }
+        [Fact]
+        public void ShouldBePriceDefault()
+        {
+            Combo d = new Combo();
+            Assert.Equal(7.16, d.Price);
+        }
+        [Fact]
+        public void ShouldBeCaloriesDefault()
+        {
+            Combo d = new Combo();
+            Assert.Equal((uint) 936, d.Calories);
+        }
+        [Fact]
+        public void ShouldBeSpecialInstructionsDefault()
+        {
+            Combo d = new Combo();
+            Assert.Equals(("Hold Ice", d.SpecialInstructions);
+        }
     }
 }
