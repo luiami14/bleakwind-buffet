@@ -14,15 +14,40 @@ namespace BleakwindBuffet.Data
         /// <summary>
         /// 
         /// </summary>
-        public double Price => throw new NotImplementedException();
+        public double Price
+        {
+            get
+            {
+                return ss.Price + bb.Price + sd.Price - 1;
+            }
+        }
         /// <summary>
         /// 
         /// </summary>
-        public uint Calories => throw new NotImplementedException();
+        public uint Calories
+        {
+            get
+            {
+                return ss.Calories + bb.Calories + sd.Calories - 1;
+            }
+        }
         /// <summary>
         /// 
         /// </summary>
-        public List<string> SpecialInstructions => throw new NotImplementedException();
+        public List<string> SpecialInstructions
+        {
+            get
+            {
+                List<string> instructions = new List<string>();
+                instructions.Add(bb.ToString());
+                instructions.AddRange(bb.SpecialInstructions);
+                instructions.Add(ss.ToString());
+                instructions.AddRange(ss.SpecialInstructions);
+                instructions.Add(sd.ToString());
+                instructions.AddRange(sd.SpecialInstructions);
+                return instructions;
+            }
+        }
         /// <summary>
         /// 
         /// </summary>

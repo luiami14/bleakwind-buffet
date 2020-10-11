@@ -58,11 +58,15 @@ namespace BleakwindBuffet.Data
                 return number;
             }
         }
-        private uint calories;
         public uint Calories
         {
             get
             {
+                uint calories =0;
+                foreach (IOrderItem element in this)
+                {
+                    calories += element.Calories;
+                }
                 return calories;
             }
         }
