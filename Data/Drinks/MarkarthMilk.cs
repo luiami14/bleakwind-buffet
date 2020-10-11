@@ -30,13 +30,9 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     return 1.11;
                 }
-                else if (Size == Size.Large)
+                else //if (Size == Size.Large)
                 {
                     return 1.22;
-                }
-                else
-                {
-                    throw new NotImplementedException();
                 }
             }
         }
@@ -55,13 +51,9 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     return 72;
                 }
-                else if (Size == Size.Large)
+                else //if (Size == Size.Large)
                 {
                     return 93;
-                }
-                else
-                {
-                    throw new NotImplementedException();
                 }
             }
         }

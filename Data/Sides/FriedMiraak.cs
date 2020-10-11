@@ -29,13 +29,9 @@ namespace BleakwindBuffet.Data.Sides
                 {
                     return 2.01;
                 }
-                else if (Size == Size.Large)
+                else //if (Size == Size.Large)
                 {
                     return 2.88;
-                }
-                else
-                {
-                    throw new NotImplementedException();
                 }
             }
         }
@@ -54,13 +50,9 @@ namespace BleakwindBuffet.Data.Sides
                 {
                     return 236;
                 }
-                else if (Size == Size.Large)
+                else //if (Size == Size.Large)
                 {
                     return 306;
-                }
-                else
-                {
-                    throw new NotImplementedException();
                 }
             }
         }

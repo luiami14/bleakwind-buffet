@@ -24,24 +24,6 @@ namespace BleakwindBuffet.Data.Entrees
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        private Size size;
-        /// <summary>
-        /// The size of the drink
-        /// </summary>
-        public virtual Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
-            }
-        }
         /// <summary>
         /// The price of the drink
         /// </summary>
