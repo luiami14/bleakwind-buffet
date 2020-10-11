@@ -117,5 +117,12 @@ namespace BleakwindBuffet.DataTests
             total = bb.Calories + aj.Calories + vs.Calories;
             Assert.Equal(total, d.Calories);
         }
+
+        [Fact]
+        public void ChangingSizeNotifiesSubtotalProperty()
+        {
+            Order or = new Order();
+        }
+
     }
 }

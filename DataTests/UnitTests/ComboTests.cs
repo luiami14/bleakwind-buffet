@@ -94,14 +94,85 @@ namespace BleakwindBuffet.DataTests
         public void ShouldBeSpecialInstructionsDefault()
         {
             Combo d = new Combo();
-            Assert.Equals(("Hold Ice", d.SpecialInstructions);
+            List<string> total = d.SpecialInstructions;
+            Assert.Equal(total, d.SpecialInstructions);
         }
+
+
+
+
+
         [Fact]
-        public void TestItemChangedListener()
+        public void ChangingDrinkSizeNotifiesPriceProperty()
         {
             Combo d = new Combo();
-            ActionEvent event = mock
-            Assert.Equal((uint)936, d.Calories);
+            Assert.PropertyChanged(d, "Price", () => d.Drink.Size = Data.Enums.Size.Medium);
         }
+        [Fact]
+        public void ChangingDrinkSizeNotifiesCaloriesProperty()
+        {
+            Combo d = new Combo();
+            Assert.PropertyChanged(d, "Calories", () => d.Drink.Size = Data.Enums.Size.Medium);
+        }
+        [Fact]
+        public void ChangingDrinkSizeNotifiesSpecialInstructionsProperty()
+        {
+            Combo d = new Combo();
+            Assert.PropertyChanged(d, "SpecialInstructions", () => d.Drink.Size = Data.Enums.Size.Medium);
+        }
+
+
+        [Fact]
+        public void ChangingDrinkFlavorNotifiesPriceProperty()
+        {
+            Combo d = new Combo();
+            SailorSoda ss = new SailorSoda();
+            d.Drink= ss;
+            Assert.PropertyChanged(d, "Price", () => ((SailorSoda)d.Drink).Flavor = Data.Enums.SodaFlavor.Blackberry);
+        }
+        [Fact]
+        public void ChangingDrinkFlavorNotifiesCaloriesProperty()
+        {
+            Combo d = new Combo();
+            SailorSoda ss = new SailorSoda();
+            d.Drink = ss;
+            Assert.PropertyChanged(d, "Calories", () => ((SailorSoda)d.Drink).Flavor = Data.Enums.SodaFlavor.Lemon);
+        }
+        [Fact]
+        public void ChangingDrinkFlavorNotifiesSpecialInstructionsProperty()
+        {
+            Combo d = new Combo();
+            SailorSoda ss = new SailorSoda();
+            d.Drink = ss;
+            Assert.PropertyChanged(d, "SpecialInstructions", () => ((SailorSoda)d.Drink).Flavor = Data.Enums.SodaFlavor.Peach);
+        }
+
+        [Fact]
+        public void ChangingDrinkSpecialInstructionsNotifiesPriceProperty()
+        {
+            Combo d = new Combo();
+            SailorSoda ss = new SailorSoda();
+            d.Drink = ss;
+            Assert.PropertyChanged(d, "Price", () => ((SailorSoda)d.Drink).Ice = true);
+        }
+        [Fact]
+        public void ChangingDrinkSpecialInstructionsNotifiesCaloriesProperty()
+        {
+            Combo d = new Combo();
+            SailorSoda ss = new SailorSoda();
+            d.Drink = ss;
+            Assert.PropertyChanged(d, "Calories", () => ((SailorSoda)d.Drink).Ice = true);
+        }
+        [Fact]
+        public void ChangingDrinkSpecialInstructionsNotifiesSpecialInstructionsProperty()
+        {
+            Combo d = new Combo();
+            SailorSoda ss = new SailorSoda();
+            d.Drink = ss;
+            Assert.PropertyChanged(d, "SpecialInstructions", () => ((SailorSoda)d.Drink).Ice = true);
+        }
+
+
+
     }
 }
