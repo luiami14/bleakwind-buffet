@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data
     public class Combo : IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
-        /// 
+        /// Property that gets the price
         /// </summary>
         public double Price
         {
@@ -22,7 +22,7 @@ namespace BleakwindBuffet.Data
             }
         }
         /// <summary>
-        /// 
+        /// Property that gets the calories
         /// </summary>
         public uint Calories
         {
@@ -32,7 +32,7 @@ namespace BleakwindBuffet.Data
             }
         }
         /// <summary>
-        /// 
+        /// property that gets the specialintructions
         /// </summary>
         public List<string> SpecialInstructions
         {
@@ -49,15 +49,17 @@ namespace BleakwindBuffet.Data
             }
         }
         /// <summary>
-        /// 
+        /// event handler
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
-
+        /*backing variable */
         Drink ss = new Data.Drinks.SailorSoda();
+        /*backing variable */
         Entree bb = new Data.Entrees.BriarheartBurger();
+        /*backing variable */
         Side sd = new Data.Sides.DragonbornWaffleFries();
         /// <summary>
-        /// 
+        /// Property that gets the drink
         /// </summary>
         public Drink Drink
         {
@@ -76,7 +78,7 @@ namespace BleakwindBuffet.Data
             }
         }
         /// <summary>
-        /// 
+        /// property that gets the side
         /// </summary>
         public Side Side
         {
@@ -95,7 +97,7 @@ namespace BleakwindBuffet.Data
             }
         }
         /// <summary>
-        /// 
+        /// Property that gets the entree
         /// </summary>
         public Entree Entree
         {
@@ -114,7 +116,7 @@ namespace BleakwindBuffet.Data
             }
         }
         /// <summary>
-        /// 
+        /// listener that changes when the user changes size, flavor,and special instructions
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -146,7 +148,7 @@ namespace BleakwindBuffet.Data
             }
         }
         /// <summary>
-        /// 
+        /// The constructor
         /// </summary>
         public Combo()
         {

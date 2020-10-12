@@ -12,7 +12,11 @@ namespace BleakwindBuffet.Data
 {
     public class Order: ObservableCollection<IOrderItem>
     {
+        /*backing variable */
         private double salesTaxRate = 0.12;
+        /// <summary>
+        /// Property that checks the salesTaxRate
+        /// </summary>
         public double SalesTaxRate
         {
             get
@@ -28,6 +32,9 @@ namespace BleakwindBuffet.Data
                 OnPropertyChanged(new PropertyChangedEventArgs("Tax"));
             }
         }
+        /// <summary>
+        /// Property that gets the subtotal
+        /// </summary>
         public double Subtotal
         {
             get
@@ -40,17 +47,27 @@ namespace BleakwindBuffet.Data
                 return subTotal;
             }
         }
+        /// <summary>
+        /// Property that gets the Tax
+        /// </summary>
         public double Tax
         {
             get => Subtotal * salesTaxRate;
         }
- 
+        /// <summary>
+        /// Property that gets the total
+        /// </summary>
         public double Total
         {
             get => Tax + Subtotal;
         }
+        /*backing variable */
         private static double nextOrderNumber = 1;
+        /*backing variable */
         private double number;
+        /// <summary>
+        /// Property that checks number
+        /// </summary>
         public double Number
         {
             get
@@ -58,6 +75,9 @@ namespace BleakwindBuffet.Data
                 return number;
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public uint Calories
         {
             get
@@ -70,12 +90,20 @@ namespace BleakwindBuffet.Data
                 return calories;
             }
         }
+        /// <summary>
+        /// Contructor that checks and implements the listeners
+        /// </summary>
         public Order()
         {
             number = nextOrderNumber;
             nextOrderNumber++;
             CollectionChanged += CollectionChangedListener;
         }
+        /// <summary>
+        /// This collection checks the ones that can change
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void CollectionChangedListener(object sender, NotifyCollectionChangedEventArgs e)
         {
             OnPropertyChanged(new PropertyChangedEventArgs("Subtotal"));
@@ -117,6 +145,11 @@ namespace BleakwindBuffet.Data
                     throw new NotImplementedException("NotifyCollectionChangedAction.Reset not supported");
             }
         }
+        /// <summary>
+        /// Colection that checks the changes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void ItemCollectionChangedListener(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == "Size")
