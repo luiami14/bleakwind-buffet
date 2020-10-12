@@ -101,7 +101,7 @@ namespace BleakwindBuffet.DataTests
         {
             Order d = new Order();
             Order dd = new Order();
-            Assert.Equal((d.Number+1), dd.Number);
+            Assert.Equal((d.Number + 1), dd.Number);
         }
         [Fact]
         public void ShouldBeCaloriesDefault()
@@ -117,12 +117,28 @@ namespace BleakwindBuffet.DataTests
             total = bb.Calories + aj.Calories + vs.Calories;
             Assert.Equal(total, d.Calories);
         }
-
         [Fact]
         public void ChangingSizeNotifiesSubtotalProperty()
         {
             Order or = new Order();
+            AretinoAppleJuice aj = new AretinoAppleJuice();
+            or.Add(aj);
+            foreach (IOrderItem element in or)
+            {
+                if (element is Drink ty)
+                {
+                    Assert.PropertyChanged(or, "Subtotal", () => ty.Size = Data.Enums.Size.Medium);
+                }
+            }
         }
-
+        [Fact]
+        public void ChangingSizeNotifiesCollectionChangedListener()
+        {
+            Order or = new Order();
+            AretinoAppleJuice aj = new AretinoAppleJuice();
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+            MarkarthMilk mm = new MarkarthMilk();
+            SailorSoda ss = new SailorSoda();
+        }
     }
 }

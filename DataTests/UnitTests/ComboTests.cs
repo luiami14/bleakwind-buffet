@@ -97,11 +97,6 @@ namespace BleakwindBuffet.DataTests
             List<string> total = d.SpecialInstructions;
             Assert.Equal(total, d.SpecialInstructions);
         }
-
-
-
-
-
         [Fact]
         public void ChangingDrinkSizeNotifiesPriceProperty()
         {
@@ -120,8 +115,6 @@ namespace BleakwindBuffet.DataTests
             Combo d = new Combo();
             Assert.PropertyChanged(d, "SpecialInstructions", () => d.Drink.Size = Data.Enums.Size.Medium);
         }
-
-
         [Fact]
         public void ChangingDrinkFlavorNotifiesPriceProperty()
         {
@@ -146,7 +139,6 @@ namespace BleakwindBuffet.DataTests
             d.Drink = ss;
             Assert.PropertyChanged(d, "SpecialInstructions", () => ((SailorSoda)d.Drink).Flavor = Data.Enums.SodaFlavor.Peach);
         }
-
         [Fact]
         public void ChangingDrinkSpecialInstructionsNotifiesPriceProperty()
         {
@@ -171,8 +163,5 @@ namespace BleakwindBuffet.DataTests
             d.Drink = ss;
             Assert.PropertyChanged(d, "SpecialInstructions", () => ((SailorSoda)d.Drink).Ice = true);
         }
-
-
-
     }
 }

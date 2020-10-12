@@ -74,6 +74,7 @@ namespace BleakwindBuffet.Data
         {
             number = nextOrderNumber;
             nextOrderNumber++;
+            CollectionChanged += CollectionChangedListener;
         }
         void CollectionChangedListener(object sender, NotifyCollectionChangedEventArgs e)
         {
