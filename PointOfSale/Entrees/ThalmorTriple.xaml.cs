@@ -3,6 +3,7 @@
  * Class name: ThalmorTriple.xaml.cs
  * Purpose: To implement the Thalmor into the selection
  */
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,6 +36,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             thalmorTriple = new BleakwindBuffet.Data.Entrees.ThalmorTriple();
+            if (c.DataContext is Order order)
+            {
+                order.Add(thalmorTriple);
+
+            }
             DataContext = thalmorTriple;
             cn = c;
         }

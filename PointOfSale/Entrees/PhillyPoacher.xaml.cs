@@ -4,6 +4,7 @@
  * Purpose: To implement the poacher into the selection
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             phillyPoacher = new BleakwindBuffet.Data.Entrees.PhillyPoacher();
+            if (c.DataContext is Order order)
+            {
+                order.Add(phillyPoacher);
+
+            }
             DataContext = phillyPoacher;
             cn = c;
         }

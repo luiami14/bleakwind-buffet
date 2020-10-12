@@ -4,6 +4,7 @@
  * Purpose: To implement the Smokehouse into the selection
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             smokehouseSkeleton = new BleakwindBuffet.Data.Entrees.SmokehouseSkeleton();
+            if (c.DataContext is Order order)
+            {
+                order.Add(smokehouseSkeleton);
+
+            }
             DataContext = smokehouseSkeleton;
             cn = c;
         }

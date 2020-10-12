@@ -4,6 +4,7 @@
  * Purpose: To implement the TBone into the selection
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             thugsTBone = new BleakwindBuffet.Data.Entrees.ThugsTBone();
+            if (c.DataContext is Order order)
+            {
+                order.Add(thugsTBone);
+
+            }
             DataContext = thugsTBone;
             cn = c;
         }

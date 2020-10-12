@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Enums;
 
@@ -38,6 +39,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             candleHearthCofee = new BleakwindBuffet.Data.Drinks.CandlehearthCoffee();
+            if (c.DataContext is Order order)
+            {
+                order.Add(candleHearthCofee);
+
+            }
             DataContext = candleHearthCofee;
             cn = c;
         }

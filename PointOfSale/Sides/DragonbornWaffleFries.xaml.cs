@@ -4,6 +4,7 @@
  * Purpose: To implement the Fries into the selection
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             dragonbornWaffleFries = new BleakwindBuffet.Data.Sides.DragonbornWaffleFries();
+            if (c.DataContext is Order order)
+            {
+                order.Add(dragonbornWaffleFries);
+
+            }
             DataContext = dragonbornWaffleFries;
             cn = c;
         }

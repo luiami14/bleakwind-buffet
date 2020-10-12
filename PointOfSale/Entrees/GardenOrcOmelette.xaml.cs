@@ -4,6 +4,7 @@
  * Purpose: To implement the Omelette into the selection
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             gardenOrcOmelelette = new BleakwindBuffet.Data.Entrees.GardenOrcOmelette();
+            if (c.DataContext is Order order)
+            {
+                order.Add(gardenOrcOmelelette);
+
+            }
             DataContext = gardenOrcOmelelette;
             cn = c;
         }

@@ -4,6 +4,7 @@
  * Purpose: To implement the Draugr into the selection
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             doubleDraugr = new BleakwindBuffet.Data.Entrees.DoubleDraugr();
+            if (c.DataContext is Order order)
+            {
+                order.Add(doubleDraugr);
+
+            }
             DataContext = doubleDraugr;
             cn = c;
         }

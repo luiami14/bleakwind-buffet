@@ -4,6 +4,7 @@
  * Purpose: To implement the Soda into the selection
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             sailorSoda = new BleakwindBuffet.Data.Drinks.SailorSoda();
+            if (c.DataContext is Order order)
+            {
+                order.Add(sailorSoda);
+
+            }
             DataContext = sailorSoda;
             cn = c;
         }

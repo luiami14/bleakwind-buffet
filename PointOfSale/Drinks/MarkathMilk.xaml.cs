@@ -4,6 +4,7 @@
  * Purpose: To implement the Coffee into the selection
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             markarthMilk = new BleakwindBuffet.Data.Drinks.MarkarthMilk();
+            if (c.DataContext is Order order)
+            {
+                order.Add(markarthMilk);
+
+            }
             DataContext = markarthMilk;
             cn = c;
         }

@@ -4,6 +4,7 @@
  * Purpose: To implement the Salad into the selection
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             vokunSalad = new BleakwindBuffet.Data.Sides.VokunSalad();
+            if (c.DataContext is Order order)
+            {
+                order.Add(vokunSalad);
+
+            }
             DataContext = vokunSalad;
             cn = c;
         }

@@ -3,6 +3,7 @@
  * Class name:  FriedMiraak.xaml.cs
  * Purpose: To implement the Miraak into the selection
  */
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,6 +36,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             friedMiraak = new BleakwindBuffet.Data.Sides.FriedMiraak();
+            if (c.DataContext is Order order)
+            {
+                order.Add(friedMiraak);
+
+            }
             DataContext = friedMiraak;
             cn = c;
         }
