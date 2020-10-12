@@ -6,25 +6,23 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="200">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <TextBox Grid.ColumnSpan="1" Grid.RowSpan="9" Grid.Row="0"  Grid.Column="4" FontWeight="Bold" FontSize="35" TextAlignment="Center">
-            
-        </TextBox>
-
-    </Grid>
+    <DockPanel Background="#512888">
+        <StackPanel DockPanel.Dock="Top">
+            <TextBlock FontSize="20" TextAlignment="Center" Foreground="White">Order</TextBlock>
+            <Button FontSize="20" Click="ClicksButton">
+                Remove from order
+            </Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            </StackPanel>
+        </StackPanel>
+        <ListView Name="taskListView" ItemsSource="{Binding}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox IsChecked="{Binding Path=Complete}">
+                        <TextBlock Text="{Binding Path=Task}"/>
+                    </CheckBox>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </DockPanel>
 </UserControl>
