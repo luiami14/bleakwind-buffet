@@ -27,14 +27,24 @@ namespace PointOfSale
         /* private back end variable*/         
         private Container cn;
 
+        public Container Container
+        {
+            get
+            {
+                return cn;
+            }
+            set
+            {
+                cn = value;
+            }
+        }
         /// <summary>
         /// This View1 is the starting view of the menu
         /// </summary>
         /// <param name="c">displaying the view in the container</param>
-        public View1(Container c)
+        public View1()
         {
             InitializeComponent();
-            cn = c;
         }
         /// <summary>
         /// This method selects every button that can be clicked in View1

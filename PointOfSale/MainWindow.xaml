@@ -8,5 +8,6 @@
         Title="Bleakwind Buffet Point of Sale" Height="600" Width="900">
     <Grid>
         <local:Container></local:Container>
+        
     </Grid>
 </Window>

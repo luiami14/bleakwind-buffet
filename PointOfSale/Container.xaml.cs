@@ -4,6 +4,7 @@
  * Purpose: This class is for the implementations of both views
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,19 +25,15 @@ namespace PointOfSale
     /// </summary>
     public partial class Container : UserControl
     {
-
-        View1 vw;
-        View2 vq;
         /// <summary>
         /// This contains both views that I implemented into the GUI
         /// </summary>
         public Container()
         {
             InitializeComponent();
-            vw = new View1(this);
-            MenuSelectionComponent.Child = vw;
-            vq = new View2(this);
-            OrderComponent.Child = vq;
+            vw.Container = this;           
+            vq.Container = this;
+            DataContext = new Order();
         }
     }
 }

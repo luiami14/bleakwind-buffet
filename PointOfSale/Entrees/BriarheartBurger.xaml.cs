@@ -4,6 +4,7 @@
  * Purpose: To implement the burger into the selection
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             briarheartBurger = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
+            if(c.DataContext is Order order)
+            {
+                order.Add(briarheartBurger);
+                
+            }
             DataContext = briarheartBurger;
             cn = c;
         }
@@ -46,7 +52,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-            cn.MenuSelectionComponent.Child = new View1(cn); 
+            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
         }
     }
 }

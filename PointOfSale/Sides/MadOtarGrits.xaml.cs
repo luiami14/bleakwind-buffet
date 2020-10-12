@@ -69,7 +69,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-            cn.MenuSelectionComponent.Child = new View1(cn);
+            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
         }
     }
 }

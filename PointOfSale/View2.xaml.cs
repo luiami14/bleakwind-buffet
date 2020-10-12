@@ -25,15 +25,25 @@ namespace PointOfSale
     {
         /* private back end variable*/
         private Container cn;
+        public Container Container
+        {
+            get
+            {
+                return cn;
+            }
+            set
+            {
+                cn = value;
+            }
+        }
 
         /// <summary>
         /// This View2 is the second view
         /// </summary>
         /// <param name="c">displaying the view in the container</param>
-        public View2(Container c)
+        public View2()
         {
             InitializeComponent();
-            cn = c;
         }
     }
 }

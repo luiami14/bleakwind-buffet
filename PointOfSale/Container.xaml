@@ -16,11 +16,15 @@
         <Grid.RowDefinitions>
         </Grid.RowDefinitions>
         <Border Grid.ColumnSpan="3" Name="MenuSelectionComponent">
-            
+            <local:View1 x:Name="vw">
+                
+            </local:View1>
         </Border>
 
         <Border Grid.Column="3" Name="OrderComponent">
+            <local:View2 x:Name="vq">
 
+            </local:View2>
         </Border>
 
     </Grid>

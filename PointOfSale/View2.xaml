@@ -9,18 +9,20 @@
     <DockPanel Background="#512888">
         <StackPanel DockPanel.Dock="Top">
             <TextBlock FontSize="20" TextAlignment="Center" Foreground="White">Order</TextBlock>
-            <Button FontSize="20" Click="ClicksButton">
-                Remove from order
-            </Button>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             </StackPanel>
+            <Button FontSize="20" DockPanel.Dock="Bottom" Name="removeFromOrder">
+                Remove from order
+            </Button>
         </StackPanel>
         <ListView Name="taskListView" ItemsSource="{Binding}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <CheckBox IsChecked="{Binding Path=Complete}">
-                        <TextBlock Text="{Binding Path=Task}"/>
-                    </CheckBox>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding}">
+                            <TextBlock Text="{Binding Path=Price}"/>
+                        </TextBlock>
+                    </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

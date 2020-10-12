@@ -4,6 +4,7 @@
  * Purpose: This widnow where everything is being displayed
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
