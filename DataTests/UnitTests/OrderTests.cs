@@ -134,7 +134,7 @@ namespace BleakwindBuffet.DataTests
         [Fact]
         public void ChangingSizeNotifiesCollectionChangedListener()
         {
-            Order or = new Order();
+            Order d = new Order();
             AretinoAppleJuice aj = new AretinoAppleJuice();
             CandlehearthCoffee cc = new CandlehearthCoffee();
             MarkarthMilk mm = new MarkarthMilk();
@@ -143,6 +143,25 @@ namespace BleakwindBuffet.DataTests
             DragonbornWaffleFries dj = new DragonbornWaffleFries();
             FriedMiraak fm = new FriedMiraak();
             MadOtarGrits mg = new MadOtarGrits();
+            VokunSalad vs = new VokunSalad();
+            d.Add(aj);
+            d.Add(cc);
+            d.Add(mm);
+            d.Add(ss);
+            d.Add(ww);
+            d.Add(dj);
+            d.Add(fm);
+            d.Add(mg);
+            d.Add(vs);
+            d.Remove(aj);
+            d.Remove(cc);
+            d.Remove(mm);
+            d.Remove(ss);
+            d.Remove(ww);
+            d.Remove(dj);
+            d.Remove(fm);
+            d.Remove(mg);
+            d.Remove(vs);
         }
     }
 }

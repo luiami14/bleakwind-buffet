@@ -163,5 +163,21 @@ namespace BleakwindBuffet.DataTests
             d.Drink = ss;
             Assert.PropertyChanged(d, "SpecialInstructions", () => ((SailorSoda)d.Drink).Ice = true);
         }
+        [Fact]
+        public void ChangingEntreeNotifiesProperty()
+        {
+            Combo d = new Combo();
+            BriarheartBurger ss = new BriarheartBurger();
+            d.Entree = ss;
+            Assert.PropertyChanged(d, "SpecialInstructions", () => ((BriarheartBurger)d.Entree).Bun = true);
+        }
+        [Fact]
+        public void ChangingSideNotifiesProperty()
+        {
+            Combo d = new Combo();
+            VokunSalad vk = new VokunSalad();
+            d.Side = vk;
+            Assert.PropertyChanged(d, "SpecialInstructions", () => ((VokunSalad)d.Side).Size = Data.Enums.Size.Medium);
+        }
     }
 }
