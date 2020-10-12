@@ -139,6 +139,10 @@ namespace BleakwindBuffet.DataTests
             CandlehearthCoffee cc = new CandlehearthCoffee();
             MarkarthMilk mm = new MarkarthMilk();
             SailorSoda ss = new SailorSoda();
+            WarriorWater ww = new WarriorWater();
+            DragonbornWaffleFries dj = new DragonbornWaffleFries();
+            FriedMiraak fm = new FriedMiraak();
+            MadOtarGrits mg = new MadOtarGrits();
         }
     }
 }
