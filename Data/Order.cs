@@ -44,7 +44,7 @@ namespace BleakwindBuffet.Data
                 {
                     subTotal += element.Price;
                 }
-                return subTotal;
+                return Math.Round(subTotal, 2);
             }
         }
         /// <summary>
@@ -52,14 +52,14 @@ namespace BleakwindBuffet.Data
         /// </summary>
         public double Tax
         {
-            get => Subtotal * salesTaxRate;
+            get => Math.Round(Subtotal * salesTaxRate, 2);
         }
         /// <summary>
         /// Property that gets the total
         /// </summary>
         public double Total
         {
-            get => Tax + Subtotal;
+            get => Math.Round(Tax + Subtotal, 2);
         }
         /*backing variable */
         private static double nextOrderNumber = 1;

@@ -34,6 +34,13 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
         /// <summary>
+        /// name of the string
+        /// </summary>
+        public string Name
+        {
+            get => this.ToString();
+        }
+        /// <summary>
         /// Gets the calories of juice
         /// </summary>
         public override uint Calories

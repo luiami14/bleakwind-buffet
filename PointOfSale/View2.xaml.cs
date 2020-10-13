@@ -2,7 +2,9 @@
  * Author: Luis Amiel
  * Class name: View1.xaml.cs
  * Purpose: The purpose of this class was implement another screen onto the main screen
- */ 
+ */
+using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -65,6 +67,16 @@ namespace PointOfSale
                 else if (list.SelectedItem is BleakwindBuffet.Data.Entrees.ThugsTBone tb) cn.MenuSelectionComponent.Child = new ThugsTBone(cn, tb);
                 else if (list.SelectedItem is BleakwindBuffet.Data.Sides.VokunSalad vk) cn.MenuSelectionComponent.Child = new VokunSalad(cn, vk);
                 else if (list.SelectedItem is BleakwindBuffet.Data.Drinks.WarriorWater ww) cn.MenuSelectionComponent.Child = new WarriorWater(cn, ww);
+            }
+        }
+        void RemoveItem(object sender, RoutedEventArgs e)
+        {
+            if(DataContext is Order order)
+            {
+                if(sender is Button button)
+                {
+                    order.Remove((IOrderItem)button.DataContext);
+                }
             }
         }
     }

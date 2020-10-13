@@ -5,6 +5,7 @@
  */
 
 using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,6 +46,15 @@ namespace PointOfSale
         public View1()
         {
             InitializeComponent();
+        }
+
+        void CancelButton(object sender, RoutedEventArgs e)
+        {
+            
+                if (sender is Button button)
+                {
+                Container.DataContext = new Order();
+                }
         }
         /// <summary>
         /// This method selects every button that can be clicked in View1

@@ -95,7 +95,7 @@
                  Philly Poacher
             </Button>
 
-        <Button FontSize="20" Grid.Column="7" Grid.Row="7" Click="ClicksButton">
+        <Button FontSize="20" Grid.Column="7" Grid.Row="7" Click="CancelButton">
             Cancel Order
         </Button>
         <Button FontSize="20" Grid.Column="7" Grid.Row="8" Click="ClicksButton" >
