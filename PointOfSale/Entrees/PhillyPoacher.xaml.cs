@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the poacher in the container
         /// </summary>
         /// <param name="c">displaying the poacher in the container</param>
-        public PhillyPoacher(Container c)
+        public PhillyPoacher(Container c, BleakwindBuffet.Data.Entrees.PhillyPoacher pp)
         {
             InitializeComponent();
-            phillyPoacher = new BleakwindBuffet.Data.Entrees.PhillyPoacher();
-            if (c.DataContext is Order order)
-            {
-                order.Add(phillyPoacher);
-
-            }
+            phillyPoacher = pp;
             DataContext = phillyPoacher;
             cn = c;
         }

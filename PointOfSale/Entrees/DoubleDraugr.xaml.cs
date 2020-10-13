@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the Draugr in the container
         /// </summary>
         /// <param name="c">displaying the Draugr in the container</param>
-        public DoubleDraugr(Container c)
+        public DoubleDraugr(Container c, BleakwindBuffet.Data.Entrees.DoubleDraugr dd)
         {
             InitializeComponent();
-            doubleDraugr = new BleakwindBuffet.Data.Entrees.DoubleDraugr();
-            if (c.DataContext is Order order)
-            {
-                order.Add(doubleDraugr);
-
-            }
+            doubleDraugr = dd;
             DataContext = doubleDraugr;
             cn = c;
         }

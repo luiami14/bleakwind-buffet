@@ -32,15 +32,10 @@ namespace PointOfSale
         /// Displaying the Miraak in the container
         /// </summary>
         /// <param name="c">displaying the Miraak in the container</param>
-        public FriedMiraak(Container c)
+        public FriedMiraak(Container c, BleakwindBuffet.Data.Sides.FriedMiraak fm)
         {
             InitializeComponent();
-            friedMiraak = new BleakwindBuffet.Data.Sides.FriedMiraak();
-            if (c.DataContext is Order order)
-            {
-                order.Add(friedMiraak);
-
-            }
+            friedMiraak = fm;
             DataContext = friedMiraak;
             cn = c;
         }

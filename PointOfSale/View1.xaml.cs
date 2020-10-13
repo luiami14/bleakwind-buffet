@@ -4,6 +4,7 @@
  * Purpose: The purpose of this class was implement the clicks of buttons
  */
 
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -26,7 +27,6 @@ namespace PointOfSale
     {
         /* private back end variable*/         
         private Container cn;
-
         public Container Container
         {
             get
@@ -54,23 +54,105 @@ namespace PointOfSale
         void ClicksButton(object sender, RoutedEventArgs e)
         {
             Button bt = (Button) sender;
-            if (bt.Name == "BriarheartBurger") cn.MenuSelectionComponent.Child = new BriarheartBurger(cn);
-            else if (bt.Name == "AretinoAppleJuice") cn.MenuSelectionComponent.Child = new AretinoAppleJuice(cn);
-            else if (bt.Name == "CandlehearthCoffee") cn.MenuSelectionComponent.Child = new CandlehearthCoffee(cn);
-            else if (bt.Name == "DoubleDraugr") cn.MenuSelectionComponent.Child = new DoubleDraugr(cn);
-            else if (bt.Name == "DragonbornWaffleFries") cn.MenuSelectionComponent.Child = new DragonbornWaffleFries(cn);
-            else if (bt.Name == "FriedMiraak") cn.MenuSelectionComponent.Child = new FriedMiraak(cn);
-            else if (bt.Name == "GardenOrcOmelette") cn.MenuSelectionComponent.Child = new GardenOrcOmelette(cn);
-            else if (bt.Name == "MadOtarGrits") cn.MenuSelectionComponent.Child = new MadOtarGrits(cn);
-            else if (bt.Name == "MarkathMilk") cn.MenuSelectionComponent.Child = new MarkathMilk(cn);
-            else if (bt.Name == "PhillyPoacher") cn.MenuSelectionComponent.Child = new PhillyPoacher(cn);
-            else if (bt.Name == "SailorSoda") cn.MenuSelectionComponent.Child = new SailorSoda(cn);
-            else if (bt.Name == "SmokehouseSkeleton") cn.MenuSelectionComponent.Child = new SmokehouseSkeleton(cn);
-            else if (bt.Name == "ThalmorTriple") cn.MenuSelectionComponent.Child = new ThalmorTriple(cn);
-            else if (bt.Name == "ThugsTBone") cn.MenuSelectionComponent.Child = new ThugsTBone(cn);
-            else if (bt.Name == "VokunSalad") cn.MenuSelectionComponent.Child = new VokunSalad(cn);
-            else if (bt.Name == "WarriorWater") cn.MenuSelectionComponent.Child = new WarriorWater(cn);
+            if(DataContext is Order order)
+            {
+                if (bt.Name == "BriarheartBurger")
+                {
+                    BleakwindBuffet.Data.Entrees.BriarheartBurger burger = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new BriarheartBurger(cn, burger);
+                }
+                else if (bt.Name == "AretinoAppleJuice")
+                {
+                    BleakwindBuffet.Data.Drinks.AretinoAppleJuice aj = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
+                    order.Add(aj);
+                    cn.MenuSelectionComponent.Child = new AretinoAppleJuice(cn, aj);
+                }
+                else if (bt.Name == "CandlehearthCoffee")
+                {
+                    BleakwindBuffet.Data.Drinks.CandlehearthCoffee cc = new BleakwindBuffet.Data.Drinks.CandlehearthCoffee();
+                    order.Add(cc);
+                    cn.MenuSelectionComponent.Child = new CandlehearthCoffee(cn, cc);
+                }
+                else if (bt.Name == "DoubleDraugr")
+                {
+                    BleakwindBuffet.Data.Entrees.DoubleDraugr dd = new BleakwindBuffet.Data.Entrees.DoubleDraugr();
+                    order.Add(dd);
+                    cn.MenuSelectionComponent.Child = new DoubleDraugr(cn, dd);
+                }
+                else if (bt.Name == "DragonbornWaffleFries")
+                {
+                    BleakwindBuffet.Data.Sides.DragonbornWaffleFries df = new BleakwindBuffet.Data.Sides.DragonbornWaffleFries();
+                    order.Add(df);
+                    cn.MenuSelectionComponent.Child = new DragonbornWaffleFries(cn, df);
+                }
+                else if (bt.Name == "FriedMiraak")
+                {
+                    BleakwindBuffet.Data.Sides.FriedMiraak fm = new BleakwindBuffet.Data.Sides.FriedMiraak();
+                    order.Add(fm);
+                    cn.MenuSelectionComponent.Child = new FriedMiraak(cn, fm);
+                }
+                else if (bt.Name == "GardenOrcOmelette")
+                {
+                    BleakwindBuffet.Data.Entrees.GardenOrcOmelette go = new BleakwindBuffet.Data.Entrees.GardenOrcOmelette();
+                    order.Add(go);
+                    cn.MenuSelectionComponent.Child = new GardenOrcOmelette(cn, go);
+                }
+                else if (bt.Name == "MadOtarGrits")
+                {
+                    BleakwindBuffet.Data.Sides.MadOtarGrits mg = new BleakwindBuffet.Data.Sides.MadOtarGrits();
+                    order.Add(mg);
+                    cn.MenuSelectionComponent.Child = new MadOtarGrits(cn, mg);
+                }
+                else if (bt.Name == "MarkathMilk")
+                {
+                    BleakwindBuffet.Data.Drinks.MarkarthMilk mm = new BleakwindBuffet.Data.Drinks.MarkarthMilk();
+                    order.Add(mm);
+                    cn.MenuSelectionComponent.Child = new MarkathMilk(cn, mm);
+                }
+                else if (bt.Name == "PhillyPoacher")
+                {
+                    BleakwindBuffet.Data.Entrees.PhillyPoacher pp = new BleakwindBuffet.Data.Entrees.PhillyPoacher();
+                    order.Add(pp);
+                    cn.MenuSelectionComponent.Child = new PhillyPoacher(cn, pp);
+                }
+                else if (bt.Name == "SailorSoda")
+                {
+                    BleakwindBuffet.Data.Drinks.SailorSoda ss = new BleakwindBuffet.Data.Drinks.SailorSoda();
+                    order.Add(ss);
+                    cn.MenuSelectionComponent.Child = new SailorSoda(cn, ss);
+                }
+                else if (bt.Name == "SmokehouseSkeleton")
+                {
+                    BleakwindBuffet.Data.Entrees.SmokehouseSkeleton sm = new BleakwindBuffet.Data.Entrees.SmokehouseSkeleton();
+                    order.Add(sm);
+                    cn.MenuSelectionComponent.Child = new SmokehouseSkeleton(cn, sm);
+                }
+                else if (bt.Name == "ThalmorTriple")
+                {
+                    BleakwindBuffet.Data.Entrees.ThalmorTriple tt = new BleakwindBuffet.Data.Entrees.ThalmorTriple();
+                    order.Add(tt);
+                    cn.MenuSelectionComponent.Child = new ThalmorTriple(cn, tt);
+                }
+                else if (bt.Name == "ThugsTBone")
+                {
+                    BleakwindBuffet.Data.Entrees.ThugsTBone tb = new BleakwindBuffet.Data.Entrees.ThugsTBone();
+                    order.Add(tb);
+                    cn.MenuSelectionComponent.Child = new ThugsTBone(cn, tb);
+                }
+                else if (bt.Name == "VokunSalad")
+                {
+                    BleakwindBuffet.Data.Sides.VokunSalad vs = new BleakwindBuffet.Data.Sides.VokunSalad();
+                    order.Add(vs);
+                    cn.MenuSelectionComponent.Child = new VokunSalad(cn, vs);
+                }
+                else if (bt.Name == "WarriorWater")
+                {
+                    BleakwindBuffet.Data.Drinks.WarriorWater ww = new BleakwindBuffet.Data.Drinks.WarriorWater();
+                    order.Add(ww);
+                    cn.MenuSelectionComponent.Child = new WarriorWater(cn, ww);
+                }
+            }
         }
-
     }
 }

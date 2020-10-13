@@ -28,8 +28,8 @@
             Customize Sailor Soda
         </TextBox>
 
-        <CheckBox IsChecked="{Binding Path= !Ice}" FontSize="25" Grid.Row="1">
-            Hold ice
+        <CheckBox IsChecked="{Binding Path= Ice}" FontSize="25" Grid.Row="1">
+            Ice
         </CheckBox>
 
         <RadioButton Name="smallSize" Click="ChangedSize" IsChecked="True" FontSize="25" Grid.Row="1" Grid.Column="1" GroupName="Sizes">

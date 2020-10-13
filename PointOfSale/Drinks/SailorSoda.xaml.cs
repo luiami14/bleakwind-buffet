@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the soda in the container
         /// </summary>
         /// <param name="c">displaying the soda in the container</param>
-        public SailorSoda(Container c)
+        public SailorSoda(Container c, BleakwindBuffet.Data.Drinks.SailorSoda ss)
         {
             InitializeComponent();
-            sailorSoda = new BleakwindBuffet.Data.Drinks.SailorSoda();
-            if (c.DataContext is Order order)
-            {
-                order.Add(sailorSoda);
-
-            }
+            sailorSoda = ss;
             DataContext = sailorSoda;
             cn = c;
         }

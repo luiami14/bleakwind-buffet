@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the milk in the container
         /// </summary>
         /// <param name="c">displaying the milk in the container</param>
-        public MarkathMilk(Container c)
+        public MarkathMilk(Container c, BleakwindBuffet.Data.Drinks.MarkarthMilk mm)
         {
             InitializeComponent();
-            markarthMilk = new BleakwindBuffet.Data.Drinks.MarkarthMilk();
-            if (c.DataContext is Order order)
-            {
-                order.Add(markarthMilk);
-
-            }
+            markarthMilk =mm;
             DataContext = markarthMilk;
             cn = c;
         }

@@ -28,16 +28,16 @@
             Customize Philly Poacher
         </TextBox>
 
-        <CheckBox IsChecked="{Binding Path= !Sirloin}" FontSize="25" Grid.Row="1">
-            Hold sirloin
+        <CheckBox IsChecked="{Binding Path= Sirloin}" FontSize="25" Grid.Row="1">
+            Sirloin
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Onion}" FontSize="25" Grid.Row="2">
-            Hold onions
+        <CheckBox IsChecked="{Binding Path= Onion}" FontSize="25" Grid.Row="2">
+            Onions
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Roll}" FontSize="25" Grid.Row="3">
-            Hold roll
+        <CheckBox IsChecked="{Binding Path= Roll}" FontSize="25" Grid.Row="3">
+            Roll
         </CheckBox>
 
         <Button Name="doneWithSpecialInstructions" FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">

@@ -32,15 +32,10 @@ namespace PointOfSale
         /// Displaying the thalmor in the container
         /// </summary>
         /// <param name="c">displaying the smokehouse in the container</param>
-        public ThalmorTriple(Container c)
+        public ThalmorTriple(Container c, BleakwindBuffet.Data.Entrees.ThalmorTriple tt)
         {
             InitializeComponent();
-            thalmorTriple = new BleakwindBuffet.Data.Entrees.ThalmorTriple();
-            if (c.DataContext is Order order)
-            {
-                order.Add(thalmorTriple);
-
-            }
+            thalmorTriple = tt;
             DataContext = thalmorTriple;
             cn = c;
         }

@@ -35,15 +35,10 @@ namespace PointOfSale
         /// Displaying the juice in the container
         /// </summary>
         /// <param name="c">displaying the juice in the container</param>
-        public AretinoAppleJuice(Container c)
+        public AretinoAppleJuice(Container c, BleakwindBuffet.Data.Drinks.AretinoAppleJuice aj)
         {
             InitializeComponent();
-            appleJuice = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
-            if (c.DataContext is Order order)
-            {
-                order.Add(appleJuice);
-
-            }
+            appleJuice = aj;
             DataContext = appleJuice;
             cn = c;
         }

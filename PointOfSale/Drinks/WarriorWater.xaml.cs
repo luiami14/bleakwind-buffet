@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the water in the container
         /// </summary>
         /// <param name="c">displaying the water in the container</param>
-        public WarriorWater(Container c)
+        public WarriorWater(Container c, BleakwindBuffet.Data.Drinks.WarriorWater ww)
         {
             InitializeComponent();
-            warriorWater = new BleakwindBuffet.Data.Drinks.WarriorWater();
-            if (c.DataContext is Order order)
-            {
-                order.Add(warriorWater);
-
-            }
+            warriorWater = ww;
             DataContext = warriorWater;
             cn = c;
         }

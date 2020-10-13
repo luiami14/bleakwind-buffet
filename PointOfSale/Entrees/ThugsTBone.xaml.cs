@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the TBone in the container
         /// </summary>
         /// <param name="c">displaying the TBone in the container</param>
-        public ThugsTBone(Container c)
+        public ThugsTBone(Container c, BleakwindBuffet.Data.Entrees.ThugsTBone tb)
         {
             InitializeComponent();
-            thugsTBone = new BleakwindBuffet.Data.Entrees.ThugsTBone();
-            if (c.DataContext is Order order)
-            {
-                order.Add(thugsTBone);
-
-            }
+            thugsTBone = tb;
             DataContext = thugsTBone;
             cn = c;
         }

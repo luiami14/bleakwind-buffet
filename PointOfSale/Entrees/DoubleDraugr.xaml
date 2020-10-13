@@ -28,36 +28,36 @@
             Customize DoubleDraugr Burger
         </TextBox>
 
-        <CheckBox IsChecked="{Binding Path= !Bun}" FontSize="25" Grid.Row="1">
-            Hold bun
+        <CheckBox IsChecked="{Binding Path= Bun}" FontSize="25" Grid.Row="1">
+            Bun
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Ketchup}" FontSize="25" Grid.Row="2">
-            Hold ketchup
+        <CheckBox IsChecked="{Binding Path= Ketchup}" FontSize="25" Grid.Row="2">
+            Ketchup
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Mustard}" FontSize="25" Grid.Row="3">
-            Hold mustard
+        <CheckBox IsChecked="{Binding Path= Mustard}" FontSize="25" Grid.Row="3">
+            Mustard
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Pickle}" FontSize="25" Grid.Row="4">
-            Hold pickle
+        <CheckBox IsChecked="{Binding Path= Pickle}" FontSize="25" Grid.Row="4">
+            Pickle
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Cheese}" FontSize="25" Grid.Row="5">
-            Hold cheese
+        <CheckBox IsChecked="{Binding Path= Cheese}" FontSize="25" Grid.Row="5">
+            Cheese
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Tomato}" FontSize="25" Grid.Row="6">
-            Hold tomato
+        <CheckBox IsChecked="{Binding Path= Tomato}" FontSize="25" Grid.Row="6">
+            Tomato
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Lettuce}" FontSize="25" Grid.Row="7">
-            Hold lettuce
+        <CheckBox IsChecked="{Binding Path= Lettuce}" FontSize="25" Grid.Row="7">
+            Lettuce
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Mayo}"  FontSize="25" Grid.Row="8">
-            Hold mayo
+        <CheckBox IsChecked="{Binding Path= Mayo}"  FontSize="25" Grid.Row="8">
+            Mayo
         </CheckBox>
 
         <Button Name="doneWithSpecialInstructions" FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">

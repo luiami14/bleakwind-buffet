@@ -33,15 +33,11 @@ namespace PointOfSale
         /// Displaying the Fries in the container
         /// </summary>
         /// <param name="c">displaying the Fries in the container</param>
-        public DragonbornWaffleFries(Container c)
+        public DragonbornWaffleFries(Container c, BleakwindBuffet.Data.Sides.DragonbornWaffleFries dw)
         {
             InitializeComponent();
-            dragonbornWaffleFries = new BleakwindBuffet.Data.Sides.DragonbornWaffleFries();
+            dragonbornWaffleFries = dw;
             if (c.DataContext is Order order)
-            {
-                order.Add(dragonbornWaffleFries);
-
-            }
             DataContext = dragonbornWaffleFries;
             cn = c;
         }

@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the omelette in the container
         /// </summary>
         /// <param name="c">displaying the omelette in the container</param>
-        public GardenOrcOmelette(Container c)
+        public GardenOrcOmelette(Container c, BleakwindBuffet.Data.Entrees.GardenOrcOmelette go)
         {
             InitializeComponent();
-            gardenOrcOmelelette = new BleakwindBuffet.Data.Entrees.GardenOrcOmelette();
-            if (c.DataContext is Order order)
-            {
-                order.Add(gardenOrcOmelelette);
-
-            }
+            gardenOrcOmelelette = go;
             DataContext = gardenOrcOmelelette;
             cn = c;
         }

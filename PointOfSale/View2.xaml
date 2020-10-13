@@ -11,18 +11,25 @@
             <TextBlock FontSize="20" TextAlignment="Center" Foreground="White">Order</TextBlock>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             </StackPanel>
-            <Button FontSize="20" DockPanel.Dock="Bottom" Name="removeFromOrder">
-                Remove from order
-            </Button>
         </StackPanel>
-        <ListView Name="taskListView" ItemsSource="{Binding}">
+        <ListView Name="taskListView" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" SelectionChanged="UpdateItem">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding}">
+                    <DockPanel>
+                        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                            <TextBlock Text="{Binding}">
                             <TextBlock Text="{Binding Path=Price}"/>
                         </TextBlock>
-                    </StackPanel>
+                        </StackPanel>
+                        <StackPanel DockPanel.Dock="Top">
+                            <ListView Name="specialInstructions" ItemsSource="{Binding Path=SpecialInstructions}">
+                                
+                            </ListView>
+                        </StackPanel>
+                        <Button FontSize="20" Name="removeFromOrder" DockPanel.Dock="Bottom">
+                            Remove from order
+                        </Button>
+                    </DockPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

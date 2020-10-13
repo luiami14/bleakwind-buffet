@@ -35,15 +35,10 @@ namespace PointOfSale
         /// Displaying the coffee in the container
         /// </summary>
         /// <param name="c">displaying the coffee in the container</param>
-        public CandlehearthCoffee(Container c)
+        public CandlehearthCoffee(Container c, BleakwindBuffet.Data.Drinks.CandlehearthCoffee cc)
         {
             InitializeComponent();
-            candleHearthCofee = new BleakwindBuffet.Data.Drinks.CandlehearthCoffee();
-            if (c.DataContext is Order order)
-            {
-                order.Add(candleHearthCofee);
-
-            }
+            candleHearthCofee = cc;
             DataContext = candleHearthCofee;
             cn = c;
         }

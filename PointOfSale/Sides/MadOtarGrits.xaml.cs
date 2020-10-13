@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the Grits in the container
         /// </summary>
         /// <param name="c">displaying the Grits in the container</param>
-        public MadOtarGrits(Container c)
+        public MadOtarGrits(Container c, BleakwindBuffet.Data.Sides.MadOtarGrits mo)
         {
             InitializeComponent();
-            madOtarGrits = new BleakwindBuffet.Data.Sides.MadOtarGrits();
-            if (c.DataContext is Order order)
-            {
-                order.Add(madOtarGrits);
-
-            }
+            madOtarGrits = mo;
             DataContext = madOtarGrits;
             cn = c;
         }

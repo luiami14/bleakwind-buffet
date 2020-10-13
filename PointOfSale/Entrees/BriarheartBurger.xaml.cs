@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the burger in the container
         /// </summary>
         /// <param name="c">displaying the water in the container</param>
-        public BriarheartBurger(Container c)
+        public BriarheartBurger(Container c, BleakwindBuffet.Data.Entrees.BriarheartBurger bb)
         {
             InitializeComponent();
-            briarheartBurger = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
-            if(c.DataContext is Order order)
-            {
-                order.Add(briarheartBurger);
-                
-            }
+            briarheartBurger =bb;
             DataContext = briarheartBurger;
             cn = c;
         }

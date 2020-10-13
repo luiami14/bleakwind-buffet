@@ -28,20 +28,20 @@
             Customize Smokehouse Skeleton
         </TextBox>
 
-        <CheckBox IsChecked="{Binding Path= !SausageLink}" FontSize="25" Grid.Row="1">
-            Hold sausage
+        <CheckBox IsChecked="{Binding Path= SausageLink}" FontSize="25" Grid.Row="1">
+            Sausage
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Egg}" FontSize="25" Grid.Row="2">
-            Hold eggs
+        <CheckBox IsChecked="{Binding Path= Egg}" FontSize="25" Grid.Row="2">
+            Eggs
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !HashBrowns}" FontSize="25" Grid.Row="3">
-            Hold hash browns
+        <CheckBox IsChecked="{Binding Path= HashBrowns}" FontSize="25" Grid.Row="3">
+            Hash browns
         </CheckBox>
 
-        <CheckBox IsChecked="{Binding Path= !Pancake}" FontSize="25" Grid.Row="4">
-            Hold pancakes
+        <CheckBox IsChecked="{Binding Path= Pancake}" FontSize="25" Grid.Row="4">
+            Pancakes
         </CheckBox>
 
         <Button Name="doneWithSpecialInstructions" FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">

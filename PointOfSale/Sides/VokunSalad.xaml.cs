@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the salad in the container
         /// </summary>
         /// <param name="c">displaying the salad in the container</param>
-        public VokunSalad(Container c)
+        public VokunSalad(Container c, BleakwindBuffet.Data.Sides.VokunSalad vs)
         {
             InitializeComponent();
-            vokunSalad = new BleakwindBuffet.Data.Sides.VokunSalad();
-            if (c.DataContext is Order order)
-            {
-                order.Add(vokunSalad);
-
-            }
+            vokunSalad = vs;
             DataContext = vokunSalad;
             cn = c;
         }

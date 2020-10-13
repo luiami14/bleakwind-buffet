@@ -29,8 +29,8 @@
             Customize Warrior Water
         </TextBox>
 
-        <CheckBox IsChecked="{Binding Path= !Ice}" FontSize="25" Grid.Row="1">
-            Hold ice
+        <CheckBox IsChecked="{Binding Path= Ice}" FontSize="25" Grid.Row="1">
+            Ice
         </CheckBox>
 
         <CheckBox IsChecked="{Binding Path= Lemon}" FontSize="25" Grid.Row="2">

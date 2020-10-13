@@ -33,15 +33,10 @@ namespace PointOfSale
         /// Displaying the smokehouse in the container
         /// </summary>
         /// <param name="c">displaying the smokehouse in the container</param>
-        public SmokehouseSkeleton(Container c)
+        public SmokehouseSkeleton(Container c, BleakwindBuffet.Data.Entrees.SmokehouseSkeleton ss)
         {
             InitializeComponent();
-            smokehouseSkeleton = new BleakwindBuffet.Data.Entrees.SmokehouseSkeleton();
-            if (c.DataContext is Order order)
-            {
-                order.Add(smokehouseSkeleton);
-
-            }
+            smokehouseSkeleton = ss;
             DataContext = smokehouseSkeleton;
             cn = c;
         }
