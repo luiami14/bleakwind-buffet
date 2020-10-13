@@ -221,6 +221,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             CandlehearthCoffee cj = new CandlehearthCoffee();
             Assert.PropertyChanged(cj, "Ice", () => cj.Ice = ice);
+            Assert.PropertyChanged(cj, "SpecialInstructions", () => cj.Ice = ice);
         }
         [Theory]
         [InlineData(true)]

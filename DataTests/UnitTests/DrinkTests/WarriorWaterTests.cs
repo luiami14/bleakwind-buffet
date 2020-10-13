@@ -196,6 +196,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             WarriorWater wj = new WarriorWater();
             Assert.PropertyChanged(wj, "Ice", () => wj.Ice = ice);
+            Assert.PropertyChanged(wj, "SpecialInstructions", () => wj.Ice = ice);
         }
         [Theory]
         [InlineData(true)]

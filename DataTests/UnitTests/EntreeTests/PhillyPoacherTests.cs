@@ -149,6 +149,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             PhillyPoacher pj = new PhillyPoacher();
             Assert.PropertyChanged(pj, "Sirloin", () => pj.Sirloin = sirloin);
+            Assert.PropertyChanged(pj, "SpecialInstructions", () => pj.Sirloin = sirloin);
         }
         [Theory]
         [InlineData(true)]
@@ -157,6 +158,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             PhillyPoacher pj = new PhillyPoacher();
             Assert.PropertyChanged(pj, "Onion", () => pj.Onion = onion);
+            Assert.PropertyChanged(pj, "SpecialInstructions", () => pj.Onion = onion);
         }
         [Theory]
         [InlineData(true)]
@@ -165,6 +167,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             PhillyPoacher pj = new PhillyPoacher();
             Assert.PropertyChanged(pj, "Roll", () => pj.Roll = roll);
+            Assert.PropertyChanged(pj, "SpecialInstructions", () => pj.Roll = roll);
         }
         [Fact]
         public void ImplementsINotifyPropertyChange()

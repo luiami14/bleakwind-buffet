@@ -319,6 +319,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.PropertyChanged(tj, "Bun", () => tj.Bun = bun);
+            Assert.PropertyChanged(tj, "SpecialInstructions", () => tj.Bun = bun);
         }
         [Theory]
         [InlineData(true)]
@@ -327,6 +328,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.PropertyChanged(tj, "Ketchup", () => tj.Ketchup = ketchup);
+            Assert.PropertyChanged(tj, "SpecialInstructions", () => tj.Ketchup = ketchup);
         }
         [Theory]
         [InlineData(true)]
@@ -335,6 +337,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.PropertyChanged(tj, "Mustard", () => tj.Mustard = mustard);
+            Assert.PropertyChanged(tj, "SpecialInstructions", () => tj.Mustard = mustard);
         }
         [Theory]
         [InlineData(true)]
@@ -343,6 +346,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.PropertyChanged(tj, "Pickle", () => tj.Pickle = pickle);
+            Assert.PropertyChanged(tj, "SpecialInstructions", () => tj.Pickle = pickle);
         }
         [Theory]
         [InlineData(true)]
@@ -351,6 +355,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.PropertyChanged(tj, "Cheese", () => tj.Cheese = cheese);
+            Assert.PropertyChanged(tj, "SpecialInstructions", () => tj.Cheese = cheese);
         }
         [Theory]
         [InlineData(true)]
@@ -359,6 +364,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.PropertyChanged(tj, "Lettuce", () => tj.Lettuce = lettuce);
+            Assert.PropertyChanged(tj, "SpecialInstructions", () => tj.Lettuce = lettuce);
         }
         [Theory]
         [InlineData(true)]
@@ -367,6 +373,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.PropertyChanged(tj, "Mayo", () => tj.Mayo = mayo);
+            Assert.PropertyChanged(tj, "SpecialInstructions", () => tj.Mayo = mayo);
         }
         [Theory]
         [InlineData(true)]
@@ -375,6 +382,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.PropertyChanged(tj, "Bacon", () => tj.Bacon = bacon);
+            Assert.PropertyChanged(tj, "SpecialInstructions", () => tj.Bacon = bacon);
         }
         [Theory]
         [InlineData(true)]
@@ -383,6 +391,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThalmorTriple tj = new ThalmorTriple();
             Assert.PropertyChanged(tj, "Egg", () => tj.Egg = egg);
+            Assert.PropertyChanged(tj, "SpecialInstructions", () => tj.Egg = egg);
         }
         [Fact]
         public void ImplementsINotifyPropertyChange()

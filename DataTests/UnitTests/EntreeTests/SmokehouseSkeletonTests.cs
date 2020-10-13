@@ -173,6 +173,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.PropertyChanged(sj, "SausageLink", () => sj.SausageLink = sausage);
+            Assert.PropertyChanged(sj, "SpecialInstructions", () => sj.SausageLink = sausage);
         }
         [Theory]
         [InlineData(true)]
@@ -181,6 +182,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.PropertyChanged(sj, "Egg", () => sj.Egg = egg);
+            Assert.PropertyChanged(sj, "SpecialInstructions", () => sj.Egg = egg);
+
         }
         [Theory]
         [InlineData(true)]
@@ -189,6 +192,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.PropertyChanged(sj, "HashBrowns", () => sj.HashBrowns = hashbrowns);
+            Assert.PropertyChanged(sj, "SpecialInstructions", () => sj.HashBrowns = hashbrowns);
         }
         [Theory]
         [InlineData(true)]
@@ -197,6 +201,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             SmokehouseSkeleton sj = new SmokehouseSkeleton();
             Assert.PropertyChanged(sj, "Pancake", () => sj.Pancake = pancake);
+            Assert.PropertyChanged(sj, "SpecialInstructions", () => sj.Pancake = pancake);
         }
         [Fact]
         public void ImplementsINotifyPropertyChange()

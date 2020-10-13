@@ -139,10 +139,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public void ChangingIceNotifiesIceProperty(bool ice)
+        public void ChangingIceNotifiesIcePropertyANDSpecialInstructions(bool ice)
         {
             AretinoAppleJuice aj = new AretinoAppleJuice();
             Assert.PropertyChanged(aj, "Ice", () => aj.Ice = ice);
+            Assert.PropertyChanged(aj, "SpecialInstructions", () => aj.Ice = ice);
         }
         [Theory]
         [InlineData(Size.Small)]

@@ -198,6 +198,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             BriarheartBurger bj = new BriarheartBurger();
             Assert.PropertyChanged(bj, "Bun", () => bj.Bun = bun);
+            Assert.PropertyChanged(bj, "SpecialInstructions", () => bj.Bun = bun);
         }
         [Theory]
         [InlineData(true)]
@@ -206,6 +207,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             BriarheartBurger bj = new BriarheartBurger();
             Assert.PropertyChanged(bj, "Ketchup", () => bj.Ketchup = ketchup);
+            Assert.PropertyChanged(bj, "SpecialInstructions", () => bj.Ketchup = ketchup);
         }
         [Theory]
         [InlineData(true)]
@@ -214,6 +216,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             BriarheartBurger bj = new BriarheartBurger();
             Assert.PropertyChanged(bj, "Mustard", () => bj.Mustard = mustard);
+            Assert.PropertyChanged(bj, "SpecialInstructions", () => bj.Mustard = mustard);
         }
         [Theory]
         [InlineData(true)]
@@ -222,6 +225,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             BriarheartBurger bj = new BriarheartBurger();
             Assert.PropertyChanged(bj, "Pickle", () => bj.Pickle = pickle);
+            Assert.PropertyChanged(bj, "SpecialInstructions", () => bj.Pickle = pickle);
         }
         [Theory]
         [InlineData(true)]
@@ -230,6 +234,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             BriarheartBurger bj = new BriarheartBurger();
             Assert.PropertyChanged(bj, "Cheese", () => bj.Cheese = cheese);
+            Assert.PropertyChanged(bj, "SpecialInstructions", () => bj.Cheese = cheese);
         }
         [Fact]
         public void ImplementsINotifyPropertyChange()

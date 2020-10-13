@@ -264,6 +264,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.PropertyChanged(dj, "Ketchup", () => dj.Ketchup = ketchup);
+            Assert.PropertyChanged(dj, "SpecialInstructions", () => dj.Ketchup = ketchup);
         }
         [Theory]
         [InlineData(true)]
@@ -272,6 +273,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.PropertyChanged(dj, "Mustard", () => dj.Mustard = mustard);
+            Assert.PropertyChanged(dj, "SpecialInstructions", () => dj.Mustard = mustard);
         }
         [Theory]
         [InlineData(true)]
@@ -280,6 +282,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.PropertyChanged(dj, "Pickle", () => dj.Pickle = pickle);
+            Assert.PropertyChanged(dj, "SpecialInstructions", () => dj.Pickle = pickle);
         }
         [Theory]
         [InlineData(true)]
@@ -288,6 +291,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             DoubleDraugr dj = new DoubleDraugr();
             Assert.PropertyChanged(dj, "Cheese", () => dj.Cheese = cheese);
+            Assert.PropertyChanged(dj, "SpecialInstructions", () => dj.Cheese = cheese);
         }
         [Fact]
         public void ImplementsINotifyPropertyChange()

@@ -174,6 +174,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.PropertyChanged(gj, "Broccoli", () => gj.Broccoli = broccoli);
+            Assert.PropertyChanged(gj, "SpecialInstructions", () => gj.Broccoli = broccoli);
         }
         [Theory]
         [InlineData(true)]
@@ -182,6 +183,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.PropertyChanged(gj, "Mushrooms", () => gj.Mushrooms = mushrooms);
+            Assert.PropertyChanged(gj, "SpecialInstructions", () => gj.Mushrooms = mushrooms);
         }
         [Theory]
         [InlineData(true)]
@@ -190,6 +192,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.PropertyChanged(gj, "Tomato", () => gj.Tomato = tomato);
+            Assert.PropertyChanged(gj, "SpecialInstructions", () => gj.Tomato = tomato);
         }
         [Theory]
         [InlineData(true)]
@@ -198,6 +201,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             GardenOrcOmelette gj = new GardenOrcOmelette();
             Assert.PropertyChanged(gj, "Cheddar", () => gj.Cheddar = cheddar);
+            Assert.PropertyChanged(gj, "SpecialInstructions", () => gj.Cheddar = cheddar);
         }
         [Fact]
         public void ImplementsINotifyPropertyChange()

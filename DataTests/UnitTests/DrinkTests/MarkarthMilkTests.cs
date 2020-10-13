@@ -170,6 +170,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             MarkarthMilk mj = new MarkarthMilk();
             Assert.PropertyChanged(mj, "Ice", () => mj.Ice = ice);
+            Assert.PropertyChanged(mj, "SpecialInstructions", () => mj.Ice = ice);
         }
         [Fact]
         public void ImplementsINotifyPropertyChange()
