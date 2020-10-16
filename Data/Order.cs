@@ -10,6 +10,9 @@ using System.Text;
 
 namespace BleakwindBuffet.Data
 {
+    /// <summary>
+    /// This class order is the all the logic for the this project
+    /// </summary>
     public class Order: ObservableCollection<IOrderItem>
     {
         /*backing variable */

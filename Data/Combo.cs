@@ -9,6 +9,9 @@ using System.Text;
 
 namespace BleakwindBuffet.Data
 {
+    /// <summary>
+    /// This class combo is the all the logic for the this project
+    /// </summary>
     public class Combo : IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
