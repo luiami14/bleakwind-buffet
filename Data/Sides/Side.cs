@@ -33,6 +33,7 @@ namespace BleakwindBuffet.Data.Sides
             set
             {
                 size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Name"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));

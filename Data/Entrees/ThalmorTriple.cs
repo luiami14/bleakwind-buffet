@@ -257,6 +257,13 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
         /// <summary>
+        /// name of the string
+        /// </summary>
+        public string Name
+        {
+            get => this.ToString();
+        }
+        /// <summary>
         /// This method just prints out the name of the burger
         /// </summary>
         /// <returns>returns the name of the entree</returns>

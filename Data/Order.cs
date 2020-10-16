@@ -157,6 +157,7 @@ namespace BleakwindBuffet.Data
         {
             if (e.PropertyName == "Size")
             {
+                OnPropertyChanged(new PropertyChangedEventArgs("Price"));
                 OnPropertyChanged(new PropertyChangedEventArgs("Subtotal"));
                 OnPropertyChanged(new PropertyChangedEventArgs("Total"));
                 OnPropertyChanged(new PropertyChangedEventArgs("Calories"));

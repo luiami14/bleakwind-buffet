@@ -69,6 +69,13 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
         /// <summary>
+        /// name of the string
+        /// </summary>
+        public string Name
+        {
+            get => this.ToString();
+        }
+        /// <summary>
         /// This method just prints out the name of the drink
         /// </summary>
         /// <returns>returns the name of the drink</returns>
@@ -112,6 +119,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 flavor = value;
+                NotifyPropertyChanged("Name");
                 NotifyPropertyChanged("Flavor");
             }
         }

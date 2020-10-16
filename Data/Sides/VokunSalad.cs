@@ -15,6 +15,13 @@ namespace BleakwindBuffet.Data.Sides
     public class VokunSalad : Side, INotifyPropertyChanged
     {
         /// <summary>
+        /// name of the string
+        /// </summary>
+        public string Name
+        {
+            get => this.ToString();
+        }
+        /// <summary>
         /// Price of the salad
         /// </summary>
         public override double Price

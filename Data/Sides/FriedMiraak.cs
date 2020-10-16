@@ -15,6 +15,13 @@ namespace BleakwindBuffet.Data.Sides
     public class FriedMiraak : Side, INotifyPropertyChanged
     {
         /// <summary>
+        /// name of the string
+        /// </summary>
+        public string Name
+        {
+            get => this.ToString();
+        }
+        /// <summary>
         /// Price of the pancakes
         /// </summary>
         public override double Price

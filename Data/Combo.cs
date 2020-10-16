@@ -74,6 +74,7 @@ namespace BleakwindBuffet.Data
             {
                 ss.PropertyChanged -= ItemChangedListener;
                 ss = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Drink"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -93,6 +94,7 @@ namespace BleakwindBuffet.Data
             {
                 sd.PropertyChanged -= ItemChangedListener;
                 sd = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Side"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -112,6 +114,7 @@ namespace BleakwindBuffet.Data
             {
                 bb.PropertyChanged -= ItemChangedListener;
                 bb = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Entree"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));

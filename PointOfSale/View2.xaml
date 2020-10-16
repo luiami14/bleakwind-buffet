@@ -44,10 +44,10 @@
                 <DataTemplate>
                     <DockPanel>
                         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
-                            <TextBlock Text="{Binding}">
-                                
-                            <TextBlock Text="{Binding Path=Price}"/>
-                        </TextBlock>
+
+                            <TextBlock Text="{Binding Path=Name}"/>
+
+                            <TextBlock Text="{Binding Path=Price, StringFormat=c}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Top">
                             <ListView Name="specialInstructions" ItemsSource="{Binding Path=SpecialInstructions}">

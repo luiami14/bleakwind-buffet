@@ -15,6 +15,13 @@ namespace BleakwindBuffet.Data.Drinks
     public class CandlehearthCoffee : Drink, INotifyPropertyChanged
     {
         /// <summary>
+        /// name of the string
+        /// </summary>
+        public string Name
+        {
+            get => this.ToString();
+        }
+        /// <summary>
         /// Price of the coffee
         /// </summary>
         public override double Price
