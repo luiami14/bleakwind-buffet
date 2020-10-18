@@ -72,6 +72,10 @@
         <Button Name="doneWithSpecialInstructions" FontSize="25" Grid.Row="8" Grid.Column="2" FontWeight="Bold" Click="DoneWithOrder">
             DONE
         </Button>
-            
+
+        <Button FontSize="20" Grid.Column="7" Grid.Row="7" Click="CancelButton">
+            Cancel Order
+        </Button>
+
     </Grid>
 </UserControl>

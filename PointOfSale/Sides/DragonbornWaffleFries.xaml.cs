@@ -73,5 +73,18 @@ namespace PointOfSale
         {
             cn.MenuSelectionComponent.Child = new View1() { Container = cn };
         }
+        /// <summary>
+        /// This is when the user wants to cancel the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void CancelButton(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                cn.DataContext = new Order();
+                cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+            }
+        }
     }
 }
