@@ -32,7 +32,7 @@
             Entree
         </Button>
 
-        <Button  FontSize="25" Grid.Row="3" Grid.Column="1" Click="DrinkButon">
+        <Button  FontSize="25" Grid.Row="3" Grid.Column="1" Click="DrinkButton">
             Drink
         </Button>
         

@@ -1,4 +1,7 @@
 ﻿using BleakwindBuffet.Data;
+using PointOfSale.Drinks;
+using PointOfSale.Entrees;
+using PointOfSale.Sides;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,6 +24,7 @@ namespace PointOfSale
     {
         /* private back end variable*/
         private Container cn;
+        /* private back end variable*/
         private Combo combo;
         /// <summary>
         /// 
@@ -76,17 +80,17 @@ namespace PointOfSale
 
         void EntreeButton(object sender, RoutedEventArgs e)
         {
-            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+            cn.MenuSelectionComponent.Child = new Entree() { Container = cn };
         }
 
         void DrinkButton(object sender, RoutedEventArgs e)
         {
-            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+            cn.MenuSelectionComponent.Child = new Drink() { Container = cn };
         }
 
         void SideButton(object sender, RoutedEventArgs e)
         {
-            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+            cn.MenuSelectionComponent.Child = new Side() { Container = cn };
         }
     }
 }
