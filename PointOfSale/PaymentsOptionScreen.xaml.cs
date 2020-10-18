@@ -21,14 +21,25 @@ namespace PointOfSale
     {
         /* private back end variable*/
         private Container cn;
+        /// <summary>
+        /// 
+        /// </summary>
+        public Container Container
+        {
+            get
+            {
+                return cn;
+            }
+            set
+            {
+                cn = value;
+            }
+        }
         /* private back end variable*/
         private BleakwindBuffet.Data.Combo cc;
-        public PaymentsOptionScreen(Container c, BleakwindBuffet.Data.Combo combo)
+        public PaymentsOptionScreen()
         {
             InitializeComponent();
-            cc = combo;
-            DataContext = cc;
-            cn = c;
         }
         /// <summary>
         /// 

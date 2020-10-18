@@ -166,7 +166,7 @@ namespace PointOfSale
                 {
                     Combo combo = new Combo();
                     order.Add(combo);
-                    cn.MenuSelectionComponent.Child = new ComboCutomizationScreen(cn, combo);
+                    cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn };
                 }
             }
         }

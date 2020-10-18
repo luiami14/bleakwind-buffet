@@ -21,14 +21,38 @@ namespace PointOfSale
     {
         /* private back end variable*/
         private Container cn;
+        private Combo combo;
+        /// <summary>
+        /// 
+        /// </summary>
+        public Container Container
+        {
+            get
+            {
+                return cn;
+            }
+            set
+            {
+                cn = value;
+            }
+        }
+        public Combo Combo
+        {
+            get
+            {
+                return combo;
+            }
+            set
+            {
+                combo = value;
+                DataContext = combo;
+            }
+        }
         /* private back end variable*/
         private BleakwindBuffet.Data.Combo cc;
-        public ComboCutomizationScreen(Container c, BleakwindBuffet.Data.Combo combo)
+        public ComboCutomizationScreen()
         {
             InitializeComponent();
-            cc = combo;
-            DataContext = cc;
-            cn = c;
         }
 
         void CompleteButton(object sender, RoutedEventArgs e)
