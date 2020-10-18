@@ -15,26 +15,27 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for PaymentsOptionScreen.xaml
+    /// Interaction logic for ComboCutomizationScreen.xaml
     /// </summary>
-    public partial class PaymentsOptionScreen : UserControl
+    public partial class ComboCutomizationScreen : UserControl
     {
         /* private back end variable*/
         private Container cn;
         /* private back end variable*/
         private BleakwindBuffet.Data.Combo cc;
-        public PaymentsOptionScreen(Container c, BleakwindBuffet.Data.Combo combo)
+        public ComboCutomizationScreen(Container c, BleakwindBuffet.Data.Combo combo)
         {
             InitializeComponent();
             cc = combo;
             DataContext = cc;
             cn = c;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
+        void CompleteButton(object sender, RoutedEventArgs e)
+        {
+            cn.MenuSelectionComponent.Child = new PaymentsOptionScreen() { Container = cn };
+        }
+
         void CancelButton(object sender, RoutedEventArgs e)
         {
             if (sender is Button button)
@@ -43,18 +44,10 @@ namespace PointOfSale
                 cn.MenuSelectionComponent.Child = new View1() { Container = cn };
             }
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void ReturnToOrder(object sender, RoutedEventArgs e)
+
+        void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-            if (sender is Button button)
-            {
-                cn.DataContext = new Combo();
-                cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn };
-            }
+            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
         }
     }
 }

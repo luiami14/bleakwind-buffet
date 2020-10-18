@@ -162,6 +162,12 @@ namespace PointOfSale
                     order.Add(ww);
                     cn.MenuSelectionComponent.Child = new WarriorWater(cn, ww);
                 }
+                else if(bt.Name == "ComboMeal")
+                {
+                    Combo combo = new Combo();
+                    order.Add(combo);
+                    cn.MenuSelectionComponent.Child = new ComboCutomizationScreen(cn, combo);
+                }
             }
         }
     }

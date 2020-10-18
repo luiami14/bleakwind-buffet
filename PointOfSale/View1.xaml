@@ -102,5 +102,9 @@
             Complete Order
         </Button>
 
+        <Button FontSize="20" Grid.Column="1" Grid.Row="8" Click="ClicksButton" Name="ComboMeal" >
+            Combo Meal
+        </Button>
+
     </Grid>
 </UserControl>
