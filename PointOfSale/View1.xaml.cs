@@ -168,6 +168,11 @@ namespace PointOfSale
                     order.Add(combo);
                     cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn };
                 }
+                else if(bt.Name == "CompleteOrder")
+                {
+                    Combo combo = new Combo();
+                    cn.MenuSelectionComponent.Child = new PaymentsOptionScreen() { Container = cn };
+                }
             }
         }
     }

@@ -73,5 +73,20 @@ namespace PointOfSale
         {
             cn.MenuSelectionComponent.Child = new View1() { Container = cn };
         }
+
+        void EntreeButton(object sender, RoutedEventArgs e)
+        {
+            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+        }
+
+        void DrinkButton(object sender, RoutedEventArgs e)
+        {
+            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+        }
+
+        void SideButton(object sender, RoutedEventArgs e)
+        {
+            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+        }
     }
 }
