@@ -1,4 +1,5 @@
 ﻿using BleakwindBuffet.Data;
+using PointOfSale.DrinksCombo;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -64,6 +65,7 @@ namespace PointOfSale.Drinks
             if (sender is Button button)
             {
                 cn.DataContext = new Combo();
+                Container.DataContext = new Order();
                 cn.MenuSelectionComponent.Child = new View1() { Container = cn };
             }
         }
@@ -71,6 +73,76 @@ namespace PointOfSale.Drinks
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
             cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+        }
+
+        void AretinoAppleJuiceCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "AretinoAppleJuice")
+                {
+                    BleakwindBuffet.Data.Drinks.AretinoAppleJuice burger = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new AretinoAppleJuiceCombo() { Container = cn };
+                }
+            }
+        }
+
+        void CandlehearthCoffeeCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "CandlehearthCoffee")
+                {
+                    BleakwindBuffet.Data.Drinks.CandlehearthCoffee burger = new BleakwindBuffet.Data.Drinks.CandlehearthCoffee();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new CandlehearthCoffeeCombo() { Container = cn };
+                }
+            }
+        }
+
+        void MarkathMilkCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "MarkathMilk")
+                {
+                    BleakwindBuffet.Data.Drinks.MarkarthMilk burger = new BleakwindBuffet.Data.Drinks.MarkarthMilk();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new MarkathMilkCombo() { Container = cn };
+                }
+            }
+        }
+
+        void SailorSodaCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "SailorSoda")
+                {
+                    BleakwindBuffet.Data.Drinks.SailorSoda burger = new BleakwindBuffet.Data.Drinks.SailorSoda();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new SailorSodaCombo() { Container = cn };
+                }
+            }
+        }
+
+        void WarriorWaterCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "WarriorWater")
+                {
+                    BleakwindBuffet.Data.Drinks.WarriorWater burger = new BleakwindBuffet.Data.Drinks.WarriorWater();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new WarriorWaterCombo() { Container = cn };
+                }
+            }
         }
     }
 }

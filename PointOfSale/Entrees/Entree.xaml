@@ -28,25 +28,25 @@
             Entrees
         </TextBox>
 
-        <Button  FontSize="25" Grid.Row="1">
+        <Button  FontSize="25" Grid.Row="1" Click="BriarheartBurgerCombo" Name="BriarheartBurger">
             Briarheart Burger
         </Button>
-        <Button  FontSize="25" Grid.Row="1" Grid.Column="1">
+        <Button  FontSize="25" Grid.Row="1" Grid.Column="1" Click="DoubleDraugrCombo" Name="DoubleDraugr">
             Double Draugr
         </Button>
-        <Button  FontSize="25" Grid.Row="2">
-            Garden Orc Ommelette
+        <Button  FontSize="25" Grid.Row="2" Click="GardenOrcOmeletteCombo" Name="GardenOrcOmelette">
+            Garden Orc Omelette
         </Button>
-        <Button  FontSize="25" Grid.Row="2" Grid.Column="1">
+        <Button  FontSize="25" Grid.Row="2" Grid.Column="1" Click="PhillyPoacherCombo" Name="PhillyPoacher">
             Philly Poacher
         </Button>
-        <Button  FontSize="25" Grid.Row="3">
+        <Button  FontSize="25" Grid.Row="3" Click="SmokehouseSkeletonCombo" Name="SmokehouseSkeleton">
             Smokehouse Skeleton
         </Button>
-        <Button  FontSize="25" Grid.Row="3" Grid.Column="1">
+        <Button  FontSize="25" Grid.Row="3" Grid.Column="1" Click="ThalmorTripleCombo" Name="ThalmorTriple">
             Thalmor Triple
         </Button>
-        <Button  FontSize="25" Grid.Row="4">
+        <Button  FontSize="25" Grid.Row="4" Click="ThugsTBoneCombo" Name="ThugsTBone">
             Thugs T Bone
         </Button>
 

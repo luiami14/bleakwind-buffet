@@ -51,6 +51,7 @@ namespace PointOfSale
             if (sender is Button button)
             {
                 cn.DataContext = new Combo();
+                Container.DataContext = new Order();
                 cn.MenuSelectionComponent.Child = new View1() { Container = cn };
             }
         }

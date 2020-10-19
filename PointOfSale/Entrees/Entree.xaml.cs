@@ -1,4 +1,5 @@
 ﻿using BleakwindBuffet.Data;
+using PointOfSale.EntreesCombo;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -63,6 +64,7 @@ namespace PointOfSale.Entrees
             if (sender is Button button)
             {
                 cn.DataContext = new Combo();
+                Container.DataContext = new Order();
                 cn.MenuSelectionComponent.Child = new View1() { Container = cn };
             }
         }
@@ -70,6 +72,104 @@ namespace PointOfSale.Entrees
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
             cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+        }
+
+        void BriarheartBurgerCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "BriarheartBurger")
+                {
+                    BleakwindBuffet.Data.Entrees.BriarheartBurger burger = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new BriarheartBurgerCombo() { Container = cn };
+                }
+            }
+        }
+
+        void DoubleDraugrCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "DoubleDraugr")
+                {
+                    BleakwindBuffet.Data.Entrees.DoubleDraugr burger = new BleakwindBuffet.Data.Entrees.DoubleDraugr();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new DoubleDraugrCombo() { Container = cn };
+                }
+            }
+        }
+
+        void GardenOrcOmeletteCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "GardenOrcOmelette")
+                {
+                    BleakwindBuffet.Data.Entrees.GardenOrcOmelette burger = new BleakwindBuffet.Data.Entrees.GardenOrcOmelette();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new GardenOrcOmeletteCombo() { Container = cn };
+                }
+            }
+        }
+
+        void PhillyPoacherCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "PhillyPoacher")
+                {
+                    BleakwindBuffet.Data.Entrees.PhillyPoacher burger = new BleakwindBuffet.Data.Entrees.PhillyPoacher();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new PhillyPoacherCombo() { Container = cn };
+                }
+            }
+        }
+
+        void SmokehouseSkeletonCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "SmokehouseSkeleton")
+                {
+                    BleakwindBuffet.Data.Entrees.SmokehouseSkeleton burger = new BleakwindBuffet.Data.Entrees.SmokehouseSkeleton();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new SmokehouseSkeletonCombo() { Container = cn };
+                }
+            }
+        }
+
+        void ThalmorTripleCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "ThalmorTriple")
+                {
+                    BleakwindBuffet.Data.Entrees.ThalmorTriple burger = new BleakwindBuffet.Data.Entrees.ThalmorTriple();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new ThalmorTripleCombo() { Container = cn };
+                }
+            }
+        }
+
+        void ThugsTBoneCombo(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            if (DataContext is Order order)
+            {
+                if (bt.Name == "ThugsTBone")
+                {
+                    BleakwindBuffet.Data.Entrees.ThugsTBone burger = new BleakwindBuffet.Data.Entrees.ThugsTBone();
+                    order.Add(burger);
+                    cn.MenuSelectionComponent.Child = new ThugsTBoneCombo() { Container = cn };
+                }
+            }
         }
     }
 }

@@ -28,19 +28,19 @@
             Drinks
         </TextBox>
 
-        <Button  FontSize="25" Grid.Row="1">
+        <Button  FontSize="25" Grid.Row="1" Click="AretinoAppleJuiceCombo" Name="AretinoAppleJuice">
             Aretino Apple Juice
         </Button>
-        <Button  FontSize="25" Grid.Row="1" Grid.Column="1">
+        <Button  FontSize="25" Grid.Row="1" Grid.Column="1" Click="CandlehearthCoffeeCombo" Name="CandlehearthCoffee">
             Candlehearth Coffee
         </Button>
-        <Button  FontSize="25" Grid.Row="2">
+        <Button  FontSize="25" Grid.Row="2" Click="MarkathMilkCombo" Name="MarkathMilk">
             Markath Milk
         </Button>
-        <Button  FontSize="25" Grid.Row="2" Grid.Column="1">
+        <Button  FontSize="25" Grid.Row="2" Grid.Column="1" Click="SailorSodaCombo" Name="SailorSoda">
             Sailor Soda
         </Button>
-        <Button  FontSize="25" Grid.Row="3">
+        <Button  FontSize="25" Grid.Row="3" Click="WarriorWaterCombo" Name="WarriorWater">
             Warrior Water
         </Button>
 

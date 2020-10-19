@@ -28,16 +28,16 @@
             Sides
         </TextBox>
 
-        <Button  FontSize="25" Grid.Row="1">
-            Dragonbor Waffle Fries
+        <Button  FontSize="25" Grid.Row="1" Name="DragonbornWaffleFries" Click="DragonbornWaffleFriesCombo">
+            Dragonborn Waffle Fries
         </Button>
-        <Button  FontSize="25" Grid.Row="1" Grid.Column="1">
+        <Button  FontSize="25" Grid.Row="1" Grid.Column="1" Name="FriedMiraak" Click="FriedMiraakCombo">
             Fried Miraak
         </Button>
-        <Button  FontSize="25" Grid.Row="2">
+        <Button  FontSize="25" Grid.Row="2" Name="MadOtarGrits" Click="MadOtarGritsCombo">
             Mad Otar Grits
         </Button>
-        <Button  FontSize="25" Grid.Row="2" Grid.Column="1">
+        <Button  FontSize="25" Grid.Row="2" Grid.Column="1" Name="VokunSalad" Click="VokunSaladCombo">
             Vokun Salad
         </Button>
 
