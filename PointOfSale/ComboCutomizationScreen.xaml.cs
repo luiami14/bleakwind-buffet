@@ -81,17 +81,17 @@ namespace PointOfSale
 
         void EntreeButton(object sender, RoutedEventArgs e)
         {
-            cn.MenuSelectionComponent.Child = new Entree() { Container = cn };
+            cn.MenuSelectionComponent.Child = new Entree() { Container = cn, Combo = combo };
         }
 
         void DrinkButton(object sender, RoutedEventArgs e)
         {
-            cn.MenuSelectionComponent.Child = new Drink() { Container = cn };
+            cn.MenuSelectionComponent.Child = new Drink() { Container = cn, Combo = combo };
         }
 
         void SideButton(object sender, RoutedEventArgs e)
         {
-            cn.MenuSelectionComponent.Child = new Side() { Container = cn };
+            cn.MenuSelectionComponent.Child = new Side() { Container = cn, Combo = combo };
         }
     }
 }

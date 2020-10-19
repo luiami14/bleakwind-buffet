@@ -46,7 +46,7 @@ namespace PointOfSale.EntreesCombo
             set
             {
                 combo = value;
-                DataContext = combo;
+                DataContext = (BleakwindBuffet.Data.Entrees.PhillyPoacher)combo.Entree;
             }
         }
         /// <summary>

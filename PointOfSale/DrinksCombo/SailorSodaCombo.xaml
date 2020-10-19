@@ -48,7 +48,7 @@
             Blackberry
         </RadioButton>
 
-        <RadioButton Name="cherry" Click="ChangedFlavor" FontSize="25" Grid.Row="2" Grid.Column="2" GroupName="Flavor">
+        <RadioButton Name="cherry" Click="ChangedFlavor" IsChecked="True" FontSize="25" Grid.Row="2" Grid.Column="2" GroupName="Flavor">
             Cherry
         </RadioButton>
 

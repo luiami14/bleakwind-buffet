@@ -77,13 +77,13 @@ namespace PointOfSale.Sides
         void DragonbornWaffleFriesCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
-            if (DataContext is Order order)
+            if (DataContext is Combo order)
             {
                 if (bt.Name == "DragonbornWaffleFries")
                 {
                     BleakwindBuffet.Data.Sides.DragonbornWaffleFries burger = new BleakwindBuffet.Data.Sides.DragonbornWaffleFries();
-                    order.Add(burger);
-                    cn.MenuSelectionComponent.Child = new DragonbornWaffleFriesCombo() { Container = cn };
+                    order.Side = burger;
+                    cn.MenuSelectionComponent.Child = new DragonbornWaffleFriesCombo() { Container = cn , Combo = combo};
                 }
             }
         }
@@ -91,13 +91,13 @@ namespace PointOfSale.Sides
         void FriedMiraakCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
-            if (DataContext is Order order)
+            if (DataContext is Combo  order)
             {
                 if (bt.Name == "FriedMiraak")
                 {
                     BleakwindBuffet.Data.Sides.FriedMiraak burger = new BleakwindBuffet.Data.Sides.FriedMiraak();
-                    order.Add(burger);
-                    cn.MenuSelectionComponent.Child = new FriedMiraakCombo() { Container = cn };
+                    order.Side = burger;
+                    cn.MenuSelectionComponent.Child = new FriedMiraakCombo() { Container = cn, Combo =combo };
                 }
             }
         }
@@ -105,13 +105,13 @@ namespace PointOfSale.Sides
         void MadOtarGritsCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
-            if (DataContext is Order order)
+            if (DataContext is Combo order)
             {
                 if (bt.Name == "MadOtarGrits")
                 {
                     BleakwindBuffet.Data.Sides.MadOtarGrits burger = new BleakwindBuffet.Data.Sides.MadOtarGrits();
-                    order.Add(burger);
-                    cn.MenuSelectionComponent.Child = new MadOtarGritsCombo() { Container = cn };
+                    order.Side = burger;
+                    cn.MenuSelectionComponent.Child = new MadOtarGritsCombo() { Container = cn, Combo = combo};
                 }
             }
         }
@@ -119,13 +119,13 @@ namespace PointOfSale.Sides
         void VokunSaladCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
-            if (DataContext is Order order)
+            if (DataContext is Combo order)
             {
                 if (bt.Name == "VokunSalad")
                 {
                     BleakwindBuffet.Data.Sides.VokunSalad burger = new BleakwindBuffet.Data.Sides.VokunSalad();
-                    order.Add(burger);
-                    cn.MenuSelectionComponent.Child = new VokunSaladCombo() { Container = cn };
+                    order.Side = burger;
+                    cn.MenuSelectionComponent.Child = new VokunSaladCombo() { Container = cn , Combo =combo};
                 }
             }
         }

@@ -46,7 +46,7 @@ namespace PointOfSale.DrinksCombo
             set
             {
                 combo = value;
-                DataContext = combo;
+                DataContext = (BleakwindBuffet.Data.Drinks.MarkarthMilk)combo.Drink;
             }
         }
         /// <summary>

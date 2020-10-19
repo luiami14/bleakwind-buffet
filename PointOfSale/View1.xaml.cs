@@ -166,11 +166,10 @@ namespace PointOfSale
                 {
                     Combo combo = new Combo();
                     order.Add(combo);
-                    cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn };
+                    cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn, Combo = combo };
                 }
                 else if(bt.Name == "CompleteOrder")
                 {
-                    Combo combo = new Combo();
                     cn.MenuSelectionComponent.Child = new PaymentsOptionScreen() { Container = cn };
                 }
             }

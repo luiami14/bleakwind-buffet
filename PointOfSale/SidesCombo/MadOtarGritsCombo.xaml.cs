@@ -46,7 +46,7 @@ namespace PointOfSale.SidesCombo
             set
             {
                 combo = value;
-                DataContext = combo;
+                DataContext = (BleakwindBuffet.Data.Sides.MadOtarGrits)combo.Side;
             }
         }
         /// <summary>
