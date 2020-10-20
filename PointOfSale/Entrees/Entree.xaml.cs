@@ -25,7 +25,7 @@ namespace PointOfSale.Entrees
         /* private back end variable*/
         private Combo combo;
         /// <summary>
-        /// 
+        /// Property called Container
         /// </summary>
         public Container Container
         {
@@ -38,6 +38,9 @@ namespace PointOfSale.Entrees
                 cn = value;
             }
         }
+        /// <summary>
+        /// Property called combo
+        /// </summary>
         public Combo Combo
         {
             get
@@ -50,15 +53,27 @@ namespace PointOfSale.Entrees
                 DataContext = combo;
             }
         }
+        /// <summary>
+        /// This is the cunstructor
+        /// </summary>
         public Entree()
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// This button is when the user is complete with the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void CompleteButton(object sender, RoutedEventArgs e)
         {
             cn.MenuSelectionComponent.Child = new PaymentsOptionScreen() { Container = cn };
         }
-
+        /// <summary>
+        /// This button is when the user wants to cancel the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void CancelButton(object sender, RoutedEventArgs e)
         {
             if (sender is Button button)
@@ -68,12 +83,20 @@ namespace PointOfSale.Entrees
                 cn.MenuSelectionComponent.Child = new View1() { Container = cn };
             }
         }
-
+        /// <summary>
+        /// This button is when the user is done with the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
             cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn };
         }
-
+        /// <summary>
+        /// This button is when the user clicks on this entree
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void BriarheartBurgerCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -87,7 +110,11 @@ namespace PointOfSale.Entrees
                 }
             }
         }
-
+        /// <summary>
+        /// This button is when the user clicks on this entree
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void DoubleDraugrCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -101,7 +128,11 @@ namespace PointOfSale.Entrees
                 }
             }
         }
-
+        /// <summary>
+        ///This button is when the user clicks on this entree
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void GardenOrcOmeletteCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -115,7 +146,11 @@ namespace PointOfSale.Entrees
                 }
             }
         }
-
+        /// <summary>
+        /// This button is when the user clicks on this entree
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void PhillyPoacherCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -129,7 +164,11 @@ namespace PointOfSale.Entrees
                 }
             }
         }
-
+        /// <summary>
+        /// This button is when the user clicks on this entree
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void SmokehouseSkeletonCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -143,7 +182,11 @@ namespace PointOfSale.Entrees
                 }
             }
         }
-
+        /// <summary>
+        /// This button is when the user clicks on this entree
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void ThalmorTripleCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -157,7 +200,11 @@ namespace PointOfSale.Entrees
                 }
             }
         }
-
+        /// <summary>
+        /// This button is when the user clicks on this entree
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void ThugsTBoneCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;

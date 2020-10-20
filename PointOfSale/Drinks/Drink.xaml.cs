@@ -25,7 +25,7 @@ namespace PointOfSale.Drinks
         /* private back end variable*/
         private Combo combo;
         /// <summary>
-        /// 
+        /// Property called container
         /// </summary>
         public Container Container
         {
@@ -38,6 +38,9 @@ namespace PointOfSale.Drinks
                 cn = value;
             }
         }
+        /// <summary>
+        /// Property caleed combo
+        /// </summary>
         public Combo Combo
         {
             get
@@ -50,16 +53,27 @@ namespace PointOfSale.Drinks
                 DataContext = combo;
             }
         }
+        /// <summary>
+        /// this is the cunstructor
+        /// </summary>
         public Drink()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This button is when the user is complete with the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void CompleteButton(object sender, RoutedEventArgs e)
         {
             cn.MenuSelectionComponent.Child = new PaymentsOptionScreen() { Container = cn };
         }
-
+        /// <summary>
+        /// This button is when the uder wants to cancel the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void CancelButton(object sender, RoutedEventArgs e)
         {
             if (sender is Button button)
@@ -69,12 +83,20 @@ namespace PointOfSale.Drinks
                 cn.MenuSelectionComponent.Child = new View1() { Container = cn };
             }
         }
-
+        /// <summary>
+        /// This button is called when the uder is done with the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
             cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn };
         }
-
+        /// <summary>
+        /// This is called when the user wants to change the drink
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void AretinoAppleJuiceCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -88,7 +110,11 @@ namespace PointOfSale.Drinks
                 }
             }
         }
-
+        /// <summary>
+        /// This is called when the user wants to change the drink
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void CandlehearthCoffeeCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -102,7 +128,11 @@ namespace PointOfSale.Drinks
                 }
             }
         }
-
+        /// <summary>
+        /// This is called when the user wants to change the drink
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void MarkathMilkCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -116,7 +146,11 @@ namespace PointOfSale.Drinks
                 }
             }
         }
-
+        /// <summary>
+        /// This is called when the user wants to change the drink
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void SailorSodaCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -130,7 +164,11 @@ namespace PointOfSale.Drinks
                 }
             }
         }
-
+        /// <summary>
+        /// This is called when the user wants to change the drink
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void WarriorWaterCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;

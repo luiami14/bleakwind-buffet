@@ -24,7 +24,7 @@ namespace PointOfSale.SidesCombo
         /* private back end variable*/
         private Combo combo;
         /// <summary>
-        /// 
+        /// property called container
         /// </summary>
         public Container Container
         {
@@ -37,6 +37,9 @@ namespace PointOfSale.SidesCombo
                 cn = value;
             }
         }
+        /// <summary>
+        /// property called combo
+        /// </summary>
         public Combo Combo
         {
             get

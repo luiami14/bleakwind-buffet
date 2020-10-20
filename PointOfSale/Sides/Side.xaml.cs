@@ -25,7 +25,7 @@ namespace PointOfSale.Sides
         /* private back end variable*/
         private Combo combo;
         /// <summary>
-        /// 
+        /// A property called Container
         /// </summary>
         public Container Container
         {
@@ -38,6 +38,9 @@ namespace PointOfSale.Sides
                 cn = value;
             }
         }
+        /// <summary>
+        /// A property called combo
+        /// </summary>
         public Combo Combo
         {
             get
@@ -50,15 +53,27 @@ namespace PointOfSale.Sides
                 DataContext = combo;
             }
         }
+        /// <summary>
+        /// This is the constructor
+        /// </summary>
         public Side()
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// This button is when the user wants to complete the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void CompleteButton(object sender, RoutedEventArgs e)
         {
             cn.MenuSelectionComponent.Child = new PaymentsOptionScreen() { Container = cn };
         }
-
+        /// <summary>
+        /// this button is when the user is want to cancel the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void CancelButton(object sender, RoutedEventArgs e)
         {
             if (sender is Button button)
@@ -68,12 +83,20 @@ namespace PointOfSale.Sides
                 cn.MenuSelectionComponent.Child = new View1() { Container = cn };
             }
         }
-
+        /// <summary>
+        /// This button is when the user is done with the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
             cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn };
         }
-
+        /// <summary>
+        /// This button is when the user picks the fries
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void DragonbornWaffleFriesCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -87,7 +110,11 @@ namespace PointOfSale.Sides
                 }
             }
         }
-
+        /// <summary>
+        /// This button is when the user picks the fried mirrak
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void FriedMiraakCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -101,7 +128,11 @@ namespace PointOfSale.Sides
                 }
             }
         }
-
+        /// <summary>
+        /// This is when the user picks the Otar grits
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void MadOtarGritsCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -115,7 +146,11 @@ namespace PointOfSale.Sides
                 }
             }
         }
-
+        /// <summary>
+        /// This is when the user clicks on the vokun salad
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void VokunSaladCombo(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;

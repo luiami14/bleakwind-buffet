@@ -24,7 +24,7 @@ namespace PointOfSale
         /* private back end variable*/
         private Container cn;
         /// <summary>
-        /// 
+        /// Property that contains the Container that I created
         /// </summary>
         public Container Container
         {
@@ -39,12 +39,15 @@ namespace PointOfSale
         }
         /* private back end variable*/
         private BleakwindBuffet.Data.Combo cc;
+        /// <summary>
+        /// This is the contructor
+        /// </summary>
         public PaymentsOptionScreen()
         {
             InitializeComponent();
         }
         /// <summary>
-        /// 
+        /// This button cancels the order and goes back
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -58,7 +61,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// 
+        /// This button returns to the order screen
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -70,7 +73,7 @@ namespace PointOfSale
             }
         }
         /// <summary>
-        /// 
+        /// This is when the user clikc on the credit or debit card button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

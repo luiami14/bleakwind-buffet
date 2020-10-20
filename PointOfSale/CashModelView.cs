@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Luis Amiel
- * Class name: RegisterModelView.cs
- * Purpose: Class used to represent the payment options logic
+ * Class name: CashModelView.cs
+ * Purpose: Class used to represent the payment options logic of the cash
  */
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using RoundRegister;
 
 namespace PointOfSale
 {
-    public class RegisterModelView
+    public class CashModelView
     {
         /// <summary>
         /// This shows if the card was approved or not

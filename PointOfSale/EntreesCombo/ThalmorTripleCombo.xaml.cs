@@ -24,7 +24,7 @@ namespace PointOfSale.EntreesCombo
         /* private back end variable*/
         private Combo combo;
         /// <summary>
-        /// 
+        /// property called container
         /// </summary>
         public Container Container
         {
@@ -37,6 +37,9 @@ namespace PointOfSale.EntreesCombo
                 cn = value;
             }
         }
+        /// <summary>
+        /// property called container
+        /// </summary>
         public Combo Combo
         {
             get
