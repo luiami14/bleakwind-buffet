@@ -64,7 +64,6 @@ namespace PointOfSale
         {
             if (sender is Button button)
             {
-                cn.DataContext = new Combo();
                 cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn };
             }
         }

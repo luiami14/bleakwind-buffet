@@ -72,7 +72,7 @@ namespace PointOfSale.Drinks
 
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+            cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn };
         }
 
         void AretinoAppleJuiceCombo(object sender, RoutedEventArgs e)

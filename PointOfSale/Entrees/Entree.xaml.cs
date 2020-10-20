@@ -71,7 +71,7 @@ namespace PointOfSale.Entrees
 
         void DoneWithOrder(object sender, RoutedEventArgs e)
         {
-            cn.MenuSelectionComponent.Child = new View1() { Container = cn };
+            cn.MenuSelectionComponent.Child = new ComboCutomizationScreen() { Container = cn };
         }
 
         void BriarheartBurgerCombo(object sender, RoutedEventArgs e)
