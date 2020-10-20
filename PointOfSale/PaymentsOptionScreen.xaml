@@ -32,7 +32,7 @@
             Cash
         </Button>
 
-        <Button  FontSize="25" Grid.Row="3" Grid.Column="1">
+        <Button  FontSize="25" Grid.Row="3" Grid.Column="1" Click="CreditDebitCard">
             Credit/Debit Card
         </Button>
 
