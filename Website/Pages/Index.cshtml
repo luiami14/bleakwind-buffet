@@ -5,7 +5,7 @@
 }
 
     <div class="text-center">
-        <h1 class="display-4">Bleakwind Buffet</h1>
+        <h1>Bleakwind Buffet</h1>
         <p>We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim. Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure and earned your loot, so spend it with us!.</p>
         <h2>Entrees</h2>
         @foreach (BleakwindBuffet.Data.Entrees.Entree rs in BleakwindBuffet.Data.Menu.Menu.Entrees())
@@ -16,84 +16,84 @@
                     <h3>
                         @bb.Name
                     </h3>
-                    <h3>
+                    <h5>
                         Price: $@bb.Price
-                    </h3>
-                    <h3>
-                        @bb.Calories
-                    </h3>
+                    </h5>
+                    <h5>
+                        Calories:@bb.Calories
+                    </h5>
                 }
                 else if (rs is BleakwindBuffet.Data.Entrees.DoubleDraugr dd)
                 {
                     <h3>
                         @dd.Name
                     </h3>
-                    <h3>
+                    <h5>
                         Price: $@dd.Price
-                    </h3>
-                    <h3>
+                    </h5>
+                    <h5>
                         Calories:@dd.Calories
-                    </h3>
+                    </h5>
                 }
                 else if (rs is BleakwindBuffet.Data.Entrees.GardenOrcOmelette go)
                 {
                     <h3>
                         @go.Name
                     </h3>
-                    <h3>
+                    <h5>
                         Price: $@go.Price
-                    </h3>
-                    <h3>
+                    </h5>
+                    <h5>
                         Calories:@go.Calories
-                    </h3>
+                    </h5>
                 }
                 else if (rs is BleakwindBuffet.Data.Entrees.PhillyPoacher pp)
                 {
                     <h3>
                         @pp.Name
                     </h3>
-                    <h3>
+                    <h5>
                         Price: $@pp.Price
-                    </h3>
-                    <h3>
+                    </h5>
+                    <h5>
                         Calories:@pp.Calories
-                    </h3>
+                    </h5>
                 }
                 else if (rs is BleakwindBuffet.Data.Entrees.SmokehouseSkeleton ss)
                 {
                     <h3>
                         @ss.Name
                     </h3>
-                    <h3>
+                    <h5>
                         Price: $@ss.Price
-                    </h3>
-                    <h3>
+                    </h5>
+                    <h5>
                         Calories:@ss.Calories
-                    </h3>
+                    </h5>
                 }
                 else if (rs is BleakwindBuffet.Data.Entrees.ThalmorTriple tt)
                 {
                     <h3>
                         @tt.Name
                     </h3>
-                    <h3>
+                    <h5>
                         Price: $@tt.Price
-                    </h3>
-                    <h3>
+                    </h5>
+                    <h5>
                         Calories:@tt.Calories
-                    </h3>
+                    </h5>
                 }
                 else if (rs is BleakwindBuffet.Data.Entrees.ThugsTBone tb)
                 {
                     <h3>
                         @tb.Name
                     </h3>
-                    <h3>
+                    <h5>
                         Price: $@tb.Price
-                    </h3>
-                    <h3>
+                    </h5>
+                    <h5>
                         Calories:@tb.Calories
-                    </h3>
+                    </h5>
                 }
             </div>
         }
@@ -106,48 +106,48 @@
             <h3>
                 @df.Name
             </h3>
-            <h3>
+            <h5>
                 Price: $@df.Price
-            </h3>
-            <h3>
+            </h5>
+            <h5>
                 Calories:@df.Calories
-            </h3>
+            </h5>
         }
         else if (rs is BleakwindBuffet.Data.Sides.FriedMiraak fm)
         {
             <h3>
                 @fm.Name
             </h3>
-            <h3>
+            <h5>
                 Price: $@fm.Price
-            </h3>
-            <h3>
+            </h5>
+            <h5>
                 Calories:@fm.Calories
-            </h3>
+            </h5>
         }
         else if (rs is BleakwindBuffet.Data.Sides.MadOtarGrits mg)
         {
             <h3>
                 @mg.Name
             </h3>
-            <h3>
+            <h5>
                 Price: $@mg.Price
-            </h3>
-            <h3>
+            </h5>
+            <h5>
                 Calories:@mg.Calories
-            </h3>
+            </h5>
         }
         else if (rs is BleakwindBuffet.Data.Sides.VokunSalad vs)
         {
             <h3>
                 @vs.Name
             </h3>
-            <h3>
+            <h5>
                 Price: $@vs.Price
-            </h3>
-            <h3>
+            </h5>
+            <h5>
                 Calories:@vs.Calories
-            </h3>
+            </h5>
         }
     </div>
         }
@@ -160,60 +160,60 @@
             <h3>
                 @aj.Name
             </h3>
-            <h3>
+            <h5>
                 Price: $@aj.Price
-            </h3>
-            <h3>
+            </h5>
+            <h5>
                 Calories:@aj.Calories
-            </h3>
+            </h5>
         }
         else if (rs is BleakwindBuffet.Data.Drinks.CandlehearthCoffee cc)
         {
             <h3>
                 @cc.Name
             </h3>
-            <h3>
+            <h5>
                 Price: $@cc.Price
-            </h3>
-            <h3>
+            </h5>
+            <h5>
                 Calories:@cc.Calories
-            </h3>
+            </h5>
         }
         else if (rs is BleakwindBuffet.Data.Drinks.MarkarthMilk mm)
         {
             <h3>
                 @mm.Name
             </h3>
-            <h3>
+            <h5>
                 Price: $@mm.Price
-            </h3>
-            <h3>
+            </h5>
+            <h5>
                 Calories:@mm.Calories
-            </h3>
+            </h5>
         }
         else if (rs is BleakwindBuffet.Data.Drinks.SailorSoda ss)
         {
             <h3>
                 @ss.Name
             </h3>
-            <h3>
+            <h5>
                 Price: $@ss.Price
-            </h3>
-            <h3>
+            </h5>
+            <h5>
                 Calories:@ss.Calories
-            </h3>
+            </h5>
         }
         else if (rs is BleakwindBuffet.Data.Drinks.WarriorWater ww)
         {
             <h3>
                 @ww.Name
             </h3>
-            <h3>
+            <h5>
                 Price: $@ww.Price
-            </h3>
-            <h3>
+            </h5>
+            <h5>
                 Calories:@ww.Calories
-            </h3>
+            </h5>
         }
     </div>
         }
