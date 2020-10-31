@@ -1,0 +1,223 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Bleakwind Buffet</h1>
+        <p>We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim. Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure and earned your loot, so spend it with us!.</p>
+        <h2>Entrees</h2>
+        @foreach (BleakwindBuffet.Data.Entrees.Entree rs in BleakwindBuffet.Data.Menu.Menu.Entrees())
+        {
+            <div class="menu-item">
+                @if (rs is BleakwindBuffet.Data.Entrees.BriarheartBurger bb)
+                {
+                    <h3>
+                        @bb.Name
+                    </h3>
+                    <h3>
+                        @bb.Price
+                    </h3>
+                    <h3>
+                        @bb.Calories
+                    </h3>
+                }
+                else if (rs is BleakwindBuffet.Data.Entrees.DoubleDraugr dd)
+                {
+                    <h3>
+                        @dd.Name
+                    </h3>
+                    <h3>
+                        @dd.Price
+                    </h3>
+                    <h3>
+                        @dd.Calories
+                    </h3>
+                }
+                else if (rs is BleakwindBuffet.Data.Entrees.GardenOrcOmelette go)
+                {
+                    <h3>
+                        @go.Name
+                    </h3>
+                    <h3>
+                        @go.Price
+                    </h3>
+                    <h3>
+                        @go.Calories
+                    </h3>
+                }
+                else if (rs is BleakwindBuffet.Data.Entrees.PhillyPoacher pp)
+                {
+                    <h3>
+                        @pp.Name
+                    </h3>
+                    <h3>
+                        @pp.Price
+                    </h3>
+                    <h3>
+                        @pp.Calories
+                    </h3>
+                }
+                else if (rs is BleakwindBuffet.Data.Entrees.SmokehouseSkeleton ss)
+                {
+                    <h3>
+                        @ss.Name
+                    </h3>
+                    <h3>
+                        @ss.Price
+                    </h3>
+                    <h3>
+                        @ss.Calories
+                    </h3>
+                }
+                else if (rs is BleakwindBuffet.Data.Entrees.ThalmorTriple tt)
+                {
+                    <h3>
+                        @tt.Name
+                    </h3>
+                    <h3>
+                        @tt.Price
+                    </h3>
+                    <h3>
+                        @tt.Calories
+                    </h3>
+                }
+                else if (rs is BleakwindBuffet.Data.Entrees.ThugsTBone tb)
+                {
+                    <h3>
+                        @tb.Name
+                    </h3>
+                    <h3>
+                        @tb.Price
+                    </h3>
+                    <h3>
+                        @tb.Calories
+                    </h3>
+                }
+            </div>
+        }
+        <h2>Sides</h2>
+        @foreach (BleakwindBuffet.Data.Sides.Side rs in BleakwindBuffet.Data.Menu.Menu.Sides())
+        {
+    <div class="menu-item">
+        @if (rs is BleakwindBuffet.Data.Sides.DragonbornWaffleFries df)
+        {
+            <h3>
+                @df.Name
+            </h3>
+            <h3>
+                @df.Price
+            </h3>
+            <h3>
+                @df.Calories
+            </h3>
+        }
+        else if (rs is BleakwindBuffet.Data.Sides.FriedMiraak fm)
+        {
+            <h3>
+                @fm.Name
+            </h3>
+            <h3>
+                @fm.Price
+            </h3>
+            <h3>
+                @fm.Calories
+            </h3>
+        }
+        else if (rs is BleakwindBuffet.Data.Sides.MadOtarGrits mg)
+        {
+            <h3>
+                @mg.Name
+            </h3>
+            <h3>
+                @mg.Price
+            </h3>
+            <h3>
+                @mg.Calories
+            </h3>
+        }
+        else if (rs is BleakwindBuffet.Data.Sides.VokunSalad vs)
+        {
+            <h3>
+                @vs.Name
+            </h3>
+            <h3>
+                @vs.Price
+            </h3>
+            <h3>
+                @vs.Calories
+            </h3>
+        }
+    </div>
+        }
+        <h2>Drinks</h2>
+        @foreach (BleakwindBuffet.Data.Drinks.Drink rs in BleakwindBuffet.Data.Menu.Menu.Drinks())
+        {
+    <div class="menu-item">
+        @if (rs is BleakwindBuffet.Data.Drinks.AretinoAppleJuice aj)
+        {
+            <h3>
+                @aj.Name
+            </h3>
+            <h3>
+                @aj.Price
+            </h3>
+            <h3>
+                @aj.Calories
+            </h3>
+        }
+        else if (rs is BleakwindBuffet.Data.Drinks.CandlehearthCoffee cc)
+        {
+            <h3>
+                @cc.Name
+            </h3>
+            <h3>
+                @cc.Price
+            </h3>
+            <h3>
+                @cc.Calories
+            </h3>
+        }
+        else if (rs is BleakwindBuffet.Data.Drinks.MarkarthMilk mm)
+        {
+            <h3>
+                @mm.Name
+            </h3>
+            <h3>
+                @mm.Price
+            </h3>
+            <h3>
+                @mm.Calories
+            </h3>
+        }
+        else if (rs is BleakwindBuffet.Data.Drinks.SailorSoda ss)
+        {
+            <h3>
+                @ss.Name
+            </h3>
+            <h3>
+                @ss.Price
+            </h3>
+            <h3>
+                @ss.Calories
+            </h3>
+        }
+        else if (rs is BleakwindBuffet.Data.Drinks.WarriorWater ww)
+        {
+            <h3>
+                @ww.Name
+            </h3>
+            <h3>
+                @ww.Price
+            </h3>
+            <h3>
+                @ww.Calories
+            </h3>
+        }
+    </div>
+        }
+        <h2>Combo</h2>
+        <div>
+        </div>
+    </div>
