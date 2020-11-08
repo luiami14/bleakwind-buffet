@@ -114,7 +114,5 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
             Assert.Contains(Menu.Sides(), (item) => { return item.ToString().Equals(name); });
             Assert.Contains(Menu.FullMenu(), (item) => { return item.ToString().Equals(name); });
         }
-
-
     }
 }
