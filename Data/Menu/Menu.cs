@@ -18,6 +18,11 @@ namespace BleakwindBuffet.Data.Menu
 {
     public static class Menu
     {
+        /// <summary>
+        /// This search method searches all of the options that are available in the menu
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static IEnumerable<IOrderItem> Search(string s)
         {
             List<IOrderItem> results = new List<IOrderItem>();
@@ -101,6 +106,9 @@ namespace BleakwindBuffet.Data.Menu
             }
             return results;
         }
+        /// <summary>
+        /// This property stores the 3 main categories
+        /// </summary>
         public static string[] Category
         {
             get => new string[]
@@ -110,6 +118,12 @@ namespace BleakwindBuffet.Data.Menu
                 "Side"
             };
         }
+        /// <summary>
+        /// This method filters the menu by category
+        /// </summary>
+        /// <param name="items"></param>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> items, IEnumerable<string> s)
         {
             if (s == null || s.Count() == 0) return items;
@@ -132,6 +146,13 @@ namespace BleakwindBuffet.Data.Menu
             }
             return results;
         }
+        /// <summary>
+        /// This method filters the menu by calories
+        /// </summary>
+        /// <param name="items"></param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        /// <returns></returns>
         public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> items, int? min, int? max)
         {
             if (min == null && max == null) return items;
@@ -162,6 +183,13 @@ namespace BleakwindBuffet.Data.Menu
             }
             return results;
         }
+        /// <summary>
+        /// This method filters the menu by price
+        /// </summary>
+        /// <param name="items"></param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        /// <returns></returns>
         public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> items, double? min, double? max)
         {
             if (min == null && max == null) return items;
