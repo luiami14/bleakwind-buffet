@@ -18,16 +18,85 @@ namespace BleakwindBuffet.Data.Menu
 {
     public static class Menu
     {
-        public static IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> items, string s)
+        public static IEnumerable<IOrderItem> Search(string s)
         {
             List<IOrderItem> results = new List<IOrderItem>();
             if (s == null) return FullMenu();
 
             foreach (IOrderItem item in FullMenu())
             {
-                if (item.Calories != 0 && item.Price != 0)
+                if (item is Entree entree)
                 {
-                    results.Add(item);
+                    if(entree is BriarheartBurger briar && briar.Name != null && briar.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(briar);
+                    }
+                    else if(entree is DoubleDraugr doub && doub.Name != null && doub.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(doub);
+                    }
+                    else if(entree is GardenOrcOmelette go && go.Name != null && go.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(go);
+                    }
+                    else if (entree is PhillyPoacher pp && pp.Name != null && pp.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(pp);
+                    }
+                    else if (entree is SmokehouseSkeleton ss && ss.Name != null && ss.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(ss);
+                    }
+                    else if (entree is ThalmorTriple tt && tt.Name != null && tt.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(tt);
+                    }
+                    else if (entree is ThugsTBone tb && tb.Name != null && tb.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(tb);
+                    }
+                }
+                else if(item is Drink drink)
+                {
+                    if (drink is AretinoAppleJuice aj && aj.Name != null && aj.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(aj);
+                    }
+                    else if(drink is CandlehearthCoffee cc && cc.Name != null && cc.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(cc);
+                    }
+                    else if (drink is MarkarthMilk mm && mm.Name != null && mm.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(mm);
+                    }
+                    else if (drink is SailorSoda ss && ss.Name != null && ss.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(ss);
+                    }
+                    else if (drink is WarriorWater ww && ww.Name != null && ww.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(ww);
+                    }
+                }
+                else if(item is Side side)
+                {
+                    if (side is DragonbornWaffleFries df && df.Name != null && df.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(df);
+                    }
+                    else if (side is FriedMiraak fm && fm.Name != null && fm.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(fm);
+                    }
+                    else if (side is MadOtarGrits mg && mg.Name != null && mg.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(mg);
+                    }
+                    else if (side is VokunSalad vs && vs.Name != null && vs.Name.Contains(s, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        results.Add(vs);
+                    }
                 }
             }
             return results;
@@ -36,9 +105,9 @@ namespace BleakwindBuffet.Data.Menu
         {
             get => new string[]
             {
-                "Entrees",
-                "Drinks", 
-                "Sides"
+                "Entree",
+                "Drink", 
+                "Side"
             };
         }
         public static IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> items, IEnumerable<string> s)
@@ -48,14 +117,21 @@ namespace BleakwindBuffet.Data.Menu
             List<IOrderItem> results = new List<IOrderItem>();
             foreach(IOrderItem item in items)
             {
-                if(s.Contains("Entrees") && item is  )
+                if(s.Contains("Entree") && item is Entree entree )
                 {
-
+                    results.Add(entree);
+                }
+                if(s.Contains("Side") && item is Side side)
+                {
+                    results.Add(side);
+                }
+                if(s.Contains("Drink") && item is Drink drink)
+                {
+                    results.Add(drink);
                 }
             }
             return results;
         }
-
         public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> items, int? min, int? max)
         {
             if (min == null && max == null) return items;

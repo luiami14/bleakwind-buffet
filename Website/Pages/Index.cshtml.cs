@@ -17,7 +17,7 @@ namespace Website.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public IEnumerable<IOrderItem> Menu { get; set; }
+        public IEnumerable<IOrderItem> MenuItems { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -26,9 +26,15 @@ namespace Website.Pages
 
         public void OnGet()
         {
-
+            MenuItems = Menu.Search(SearchTerms);
+            MenuItems = Menu.FilterByCategory(MenuItems, Category);
+            MenuItems = Menu.FilterByCalories(MenuItems, CaloriesMin, CaloriesMax);
+            MenuItems = Menu.FilterByPrice(MenuItems, PriceMin, PriceMax);
         }
-
+        [BindProperty(SupportsGet = true)]
+        public string SearchTerms { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string[] Category { get; set; }
         [BindProperty(SupportsGet = true)]
         public int CaloriesMin { get; set; }
         [BindProperty(SupportsGet = true)]
