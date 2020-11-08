@@ -11,17 +11,116 @@ using BleakwindBuffet.Data.Interface;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Drinks;
-
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BleakwindBuffet.Data.Menu
 {
     public static class Menu
     {
-        /// <summary>
-        /// The IOrder method for the Entrees
-        /// </summary>
-        /// <returns>returns the items on the list</returns>
-        public static IEnumerable<IOrderItem> Entrees()
+        public static IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> items, string s)
+        {
+            List<IOrderItem> results = new List<IOrderItem>();
+            if (s == null) return FullMenu();
+
+            foreach (IOrderItem item in FullMenu())
+            {
+                if (item.Calories != 0 && item.Price != 0)
+                {
+                    results.Add(item);
+                }
+            }
+            return results;
+        }
+        public static string[] Category
+        {
+            get => new string[]
+            {
+                "Entrees",
+                "Drinks", 
+                "Sides"
+            };
+        }
+        public static IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> items, IEnumerable<string> s)
+        {
+            if (s == null || s.Count() == 0) return items;
+
+            List<IOrderItem> results = new List<IOrderItem>();
+            foreach(IOrderItem item in items)
+            {
+                if(s.Contains("Entrees") && item is  )
+                {
+
+                }
+            }
+            return results;
+        }
+
+        public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> items, int? min, int? max)
+        {
+            if (min == null && max == null) return items;
+            var results = new List<IOrderItem>();
+            if (min == null)
+            {
+                foreach (IOrderItem movie in items)
+                {
+                    if (movie.Calories <= max) results.Add(movie);
+                }
+                return results;
+            }
+            if (max == null)
+            {
+                foreach (IOrderItem movie in items)
+                {
+                    if (movie.Calories >= min) results.Add(movie);
+                }
+
+                return results;
+            }
+            foreach (IOrderItem movie in items)
+            {
+                if (movie.Calories >= min && movie.Calories <= max)
+                {
+                    results.Add(movie);
+                }
+            }
+            return results;
+        }
+        public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> items, double? min, double? max)
+        {
+            if (min == null && max == null) return items;
+            var results = new List<IOrderItem>();
+            if (min == null)
+            {
+                foreach (IOrderItem movie in items)
+                {
+                    if (movie.Price <= max) results.Add(movie);
+                }
+                return results;
+            }
+            if (max == null)
+            {
+                foreach (IOrderItem movie in items)
+                {
+                    if (movie.Price >= min) results.Add(movie);
+                }
+
+                return results;
+            }
+            foreach (IOrderItem movie in items)
+            {
+                if (movie.Price >= min && movie.Price <= max)
+                {
+                    results.Add(movie);
+                }
+            }
+            return results;
+        }
+            /// <summary>
+            /// The IOrder method for the Entrees
+            /// </summary>
+            /// <returns>returns the items on the list</returns>
+            public static IEnumerable<IOrderItem> Entrees()
         {
             List<IOrderItem> tj = new List<IOrderItem>();
             tj.Add(new BriarheartBurger());
