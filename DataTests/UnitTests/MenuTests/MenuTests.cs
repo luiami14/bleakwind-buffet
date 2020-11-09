@@ -88,6 +88,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
         {
             Assert.Contains(Menu.Drinks(), (item) => { return item.ToString().Equals(name); });
             Assert.Contains(Menu.FullMenu(), (item) => { return item.ToString().Equals(name); });
+            Assert.Contains(Menu.Search(null), (item) => { return item.ToString().Equals(name); });
         }
         /// <summary>
         /// Test that the menu returns all of the sides
@@ -113,6 +114,103 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
         {
             Assert.Contains(Menu.Sides(), (item) => { return item.ToString().Equals(name); });
             Assert.Contains(Menu.FullMenu(), (item) => { return item.ToString().Equals(name); });
+            Assert.Contains(Menu.Search(null), (item) => { return item.ToString().Equals(name); });
+        }
+        [Fact]
+        public void PriceHasToBeOverZeroAndLessThanTen()
+        {
+            IEnumerable<IOrderItem> list = Menu.FilterByPrice(Menu.FullMenu(), 0.01, 10);
+            Assert.Contains(list, item => item.ToString().Contains("Briarheart Burger"));
+            Assert.Contains(list, item => item.ToString().Contains("Double Draugr"));
+            Assert.Contains(list, item => item.ToString().Contains("Garden Orc Omelette"));
+            Assert.Contains(list, item => item.ToString().Contains("Philly Poacher"));
+            Assert.Contains(list, item => item.ToString().Contains("Smokehouse Skeleton"));
+            Assert.Contains(list, item => item.ToString().Contains("Thalmor Triple"));
+            Assert.Contains(list, item => item.ToString().Contains("Thugs T-Bone"));
+        }
+        [Fact]
+        public void CaloriesHasToBeOverZeroAndLessThanAThousand()
+        {
+            IEnumerable<IOrderItem> list = Menu.FilterByCalories(Menu.FullMenu(), 1, 1000);
+            Assert.Contains(list, item => item.ToString().Contains("Briarheart Burger"));
+            Assert.Contains(list, item => item.ToString().Contains("Double Draugr"));
+            Assert.Contains(list, item => item.ToString().Contains("Garden Orc Omelette"));
+            Assert.Contains(list, item => item.ToString().Contains("Philly Poacher"));
+            Assert.Contains(list, item => item.ToString().Contains("Smokehouse Skeleton"));
+            Assert.Contains(list, item => item.ToString().Contains("Thalmor Triple"));
+            Assert.Contains(list, item => item.ToString().Contains("Thugs T-Bone"));
+        }
+        [Fact]
+        public void ChecksIfMinCaloriesEqualNull()
+        {
+            IEnumerable<IOrderItem> list = Menu.FilterByCalories(Menu.FullMenu(), null, 1000);
+            Assert.Contains(list, item => item.ToString().Contains("Briarheart Burger"));
+            Assert.Contains(list, item => item.ToString().Contains("Double Draugr"));
+            Assert.Contains(list, item => item.ToString().Contains("Garden Orc Omelette"));
+            Assert.Contains(list, item => item.ToString().Contains("Philly Poacher"));
+            Assert.Contains(list, item => item.ToString().Contains("Smokehouse Skeleton"));
+            Assert.Contains(list, item => item.ToString().Contains("Thalmor Triple"));
+            Assert.Contains(list, item => item.ToString().Contains("Thugs T-Bone"));
+        }
+        [Fact]
+        public void ChecksIfMaxCaloriesEqualNull()
+        {
+            IEnumerable<IOrderItem> list = Menu.FilterByCalories(Menu.FullMenu(), 1, null);
+            Assert.Contains(list, item => item.ToString().Contains("Briarheart Burger"));
+            Assert.Contains(list, item => item.ToString().Contains("Double Draugr"));
+            Assert.Contains(list, item => item.ToString().Contains("Garden Orc Omelette"));
+            Assert.Contains(list, item => item.ToString().Contains("Philly Poacher"));
+            Assert.Contains(list, item => item.ToString().Contains("Smokehouse Skeleton"));
+            Assert.Contains(list, item => item.ToString().Contains("Thalmor Triple"));
+            Assert.Contains(list, item => item.ToString().Contains("Thugs T-Bone"));
+        }
+        [Fact]
+        public void ChecksIfCaloriesEqualNull()
+        {
+            IEnumerable<IOrderItem> list = Menu.FilterByCalories(Menu.FullMenu(), null, null);
+            Assert.Contains(list, item => item.ToString().Contains("Briarheart Burger"));
+            Assert.Contains(list, item => item.ToString().Contains("Double Draugr"));
+            Assert.Contains(list, item => item.ToString().Contains("Garden Orc Omelette"));
+            Assert.Contains(list, item => item.ToString().Contains("Philly Poacher"));
+            Assert.Contains(list, item => item.ToString().Contains("Smokehouse Skeleton"));
+            Assert.Contains(list, item => item.ToString().Contains("Thalmor Triple"));
+            Assert.Contains(list, item => item.ToString().Contains("Thugs T-Bone"));
+        }
+        [Fact]
+        public void ChecksIfMinPriceEqualNull()
+        {
+            IEnumerable<IOrderItem> list = Menu.FilterByPrice(Menu.FullMenu(), null, 10);
+            Assert.Contains(list, item => item.ToString().Contains("Briarheart Burger"));
+            Assert.Contains(list, item => item.ToString().Contains("Double Draugr"));
+            Assert.Contains(list, item => item.ToString().Contains("Garden Orc Omelette"));
+            Assert.Contains(list, item => item.ToString().Contains("Philly Poacher"));
+            Assert.Contains(list, item => item.ToString().Contains("Smokehouse Skeleton"));
+            Assert.Contains(list, item => item.ToString().Contains("Thalmor Triple"));
+            Assert.Contains(list, item => item.ToString().Contains("Thugs T-Bone"));
+        }
+        [Fact]
+        public void ChecksIfMaxPriceEqualNull()
+        {
+            IEnumerable<IOrderItem> list = Menu.FilterByPrice(Menu.FullMenu(), 0.01, null);
+            Assert.Contains(list, item => item.ToString().Contains("Briarheart Burger"));
+            Assert.Contains(list, item => item.ToString().Contains("Double Draugr"));
+            Assert.Contains(list, item => item.ToString().Contains("Garden Orc Omelette"));
+            Assert.Contains(list, item => item.ToString().Contains("Philly Poacher"));
+            Assert.Contains(list, item => item.ToString().Contains("Smokehouse Skeleton"));
+            Assert.Contains(list, item => item.ToString().Contains("Thalmor Triple"));
+            Assert.Contains(list, item => item.ToString().Contains("Thugs T-Bone"));
+        }
+        [Fact]
+        public void ChecksIfPriceEqualNull()
+        {
+            IEnumerable<IOrderItem> list = Menu.FilterByPrice(Menu.FullMenu(), null, null);
+            Assert.Contains(list, item => item.ToString().Contains("Briarheart Burger"));
+            Assert.Contains(list, item => item.ToString().Contains("Double Draugr"));
+            Assert.Contains(list, item => item.ToString().Contains("Garden Orc Omelette"));
+            Assert.Contains(list, item => item.ToString().Contains("Philly Poacher"));
+            Assert.Contains(list, item => item.ToString().Contains("Smokehouse Skeleton"));
+            Assert.Contains(list, item => item.ToString().Contains("Thalmor Triple"));
+            Assert.Contains(list, item => item.ToString().Contains("Thugs T-Bone"));
         }
     }
 }
