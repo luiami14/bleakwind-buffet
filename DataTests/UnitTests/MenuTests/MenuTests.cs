@@ -212,5 +212,179 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
             Assert.Contains(list, item => item.ToString().Contains("Thalmor Triple"));
             Assert.Contains(list, item => item.ToString().Contains("Thugs T-Bone"));
         }
+        [Theory]
+        [InlineData("Briarheart Burger")]
+        [InlineData("Double Draugr")]
+        [InlineData("Garden Orc Omelette")]
+        [InlineData("Philly Poacher")]
+        [InlineData("Smokehouse Skeleton")]
+        [InlineData("Thalmor Triple")]
+        [InlineData("Thugs T-Bone")]
+        public void ChecksIfCategoryEntreeEqual(string name)
+        {
+            var list = new List<string>();
+            list.Add("Entree");
+            Assert.Contains(Menu.FilterByCategory(Menu.FullMenu(), list), (item) => { return item.ToString().Equals(name); });
+        }
+        [Theory]
+        [InlineData("Small Vokun Salad")]
+        [InlineData("Medium Vokun Salad")]
+        [InlineData("Large Vokun Salad")]
+
+        [InlineData("Small Fried Miraak")]
+        [InlineData("Medium Fried Miraak")]
+        [InlineData("Large Fried Miraak")]
+
+        [InlineData("Small Dragonborn Waffle Fries")]
+        [InlineData("Medium Dragonborn Waffle Fries")]
+        [InlineData("Large Dragonborn Waffle Fries")]
+
+        [InlineData("Small Mad Otar Grits")]
+        [InlineData("Medium Mad Otar Grits")]
+        [InlineData("Large Mad Otar Grits")]
+        public void ChecksIfCategorySidesEqual(string name)
+        {
+            var list = new List<string>();
+            list.Add("Side");
+            Assert.Contains(Menu.FilterByCategory(Menu.FullMenu(), list), (item) => { return item.ToString().Equals(name); });
+        }
+        [Theory]
+        [InlineData("Small Warrior Water")]
+        [InlineData("Medium Warrior Water")]
+        [InlineData("Large Warrior Water")]
+
+        [InlineData("Small Watermelon Sailor Soda")]
+        [InlineData("Medium Watermelon Sailor Soda")]
+        [InlineData("Large Watermelon Sailor Soda")]
+
+        [InlineData("Small Blackberry Sailor Soda")]
+        [InlineData("Medium Blackberry Sailor Soda")]
+        [InlineData("Large Blackberry Sailor Soda")]
+
+        [InlineData("Small Cherry Sailor Soda")]
+        [InlineData("Medium Cherry Sailor Soda")]
+        [InlineData("Large Cherry Sailor Soda")]
+
+        [InlineData("Small Grapefruit Sailor Soda")]
+        [InlineData("Medium Grapefruit Sailor Soda")]
+        [InlineData("Large Grapefruit Sailor Soda")]
+
+        [InlineData("Small Lemon Sailor Soda")]
+        [InlineData("Medium Lemon Sailor Soda")]
+        [InlineData("Large Lemon Sailor Soda")]
+
+        [InlineData("Small Peach Sailor Soda")]
+        [InlineData("Medium Peach Sailor Soda")]
+        [InlineData("Large Peach Sailor Soda")]
+
+        [InlineData("Small Candlehearth Coffee")]
+        [InlineData("Medium Candlehearth Coffee")]
+        [InlineData("Large Candlehearth Coffee")]
+
+        [InlineData("Small Aretino Apple Juice")]
+        [InlineData("Medium Aretino Apple Juice")]
+        [InlineData("Large Aretino Apple Juice")]
+
+        [InlineData("Small Markarth Milk")]
+        [InlineData("Medium Markarth Milk")]
+        [InlineData("Large Markarth Milk")]
+        public void ChecksIfCategoryDrinksEqual(string name)
+        {
+            var list = new List<string>();
+            list.Add("Drink");
+            Assert.Contains(Menu.FilterByCategory(Menu.FullMenu(), list), (item) => { return item.ToString().Equals(name); });
+        }
+        [Theory]
+        [InlineData("Briarheart Burger")]
+        [InlineData("Double Draugr")]
+        [InlineData("Garden Orc Omelette")]
+        [InlineData("Philly Poacher")]
+        [InlineData("Smokehouse Skeleton")]
+        [InlineData("Thalmor Triple")]
+        [InlineData("Thugs T-Bone")]
+        public void ChecksIfCategoryEntreeEqualNull(string name)
+        {
+            var list = new List<string>();
+            list.Add("Entree");
+            Assert.Contains(Menu.FilterByCategory(Menu.FullMenu(), null), (item) => { return item.ToString().Equals(name); });
+        }
+        [Theory]
+        [InlineData("Small Warrior Water")]
+        [InlineData("Small Watermelon Sailor Soda")]
+        [InlineData("Small Blackberry Sailor Soda")]
+        [InlineData("Small Cherry Sailor Soda")]
+        [InlineData("Small Grapefruit Sailor Soda")]
+        [InlineData("Small Lemon Sailor Soda")]
+        [InlineData("Small Peach Sailor Soda")]
+        [InlineData("Small Candlehearth Coffee")]
+        [InlineData("Small Aretino Apple Juice")]
+        [InlineData("Small Markarth Milk")]
+        [InlineData("Small Vokun Salad")]
+        [InlineData("Small Fried Miraak")]
+        [InlineData("Small Dragonborn Waffle Fries")]
+        [InlineData("Small Mad Otar Grits")]
+        public void ChecksTheSmallSearch(string name)
+        {
+            Assert.Contains(Menu.Search("Small"), (item) => { return item.ToString().Equals(name); });
+        }
+        [Theory]
+        [InlineData("Medium Warrior Water")]
+        [InlineData("Medium Watermelon Sailor Soda")]
+        [InlineData("Medium Blackberry Sailor Soda")]
+        [InlineData("Medium Cherry Sailor Soda")]
+        [InlineData("Medium Grapefruit Sailor Soda")]
+        [InlineData("Medium Lemon Sailor Soda")]
+        [InlineData("Medium Peach Sailor Soda")]
+        [InlineData("Medium Candlehearth Coffee")]
+        [InlineData("Medium Aretino Apple Juice")]
+        [InlineData("Medium Markarth Milk")]
+        [InlineData("Medium Vokun Salad")]
+        [InlineData("Medium Fried Miraak")]
+        [InlineData("Medium Dragonborn Waffle Fries")]
+        [InlineData("Medium Mad Otar Grits")]
+        public void ChecksTheMediumSearch(string name)
+        {
+            Assert.Contains(Menu.Search("Medium"), (item) => { return item.ToString().Equals(name); });
+        }
+        [Theory]
+        [InlineData("Large Warrior Water")]
+        [InlineData("Large Watermelon Sailor Soda")]
+        [InlineData("Large Blackberry Sailor Soda")]
+        [InlineData("Large Cherry Sailor Soda")]
+        [InlineData("Large Grapefruit Sailor Soda")]
+        [InlineData("Large Lemon Sailor Soda")]
+        [InlineData("Large Peach Sailor Soda")]
+        [InlineData("Large Candlehearth Coffee")]
+        [InlineData("Large Aretino Apple Juice")]
+        [InlineData("Large Markarth Milk")]
+        [InlineData("Large Vokun Salad")]
+        [InlineData("Large Fried Miraak")]
+        [InlineData("Large Dragonborn Waffle Fries")]
+        [InlineData("Large Mad Otar Grits")]
+        public void ChecksTheLargeSearch(string name)
+        {
+            Assert.Contains(Menu.Search("Large"), (item) => { return item.ToString().Equals(name); });
+        }
+        [Theory]
+        [InlineData("Briarheart Burger")]
+        [InlineData("Double Draugr")]
+        [InlineData("Garden Orc Omelette")]
+        [InlineData("Philly Poacher")]
+        [InlineData("Smokehouse Skeleton")]
+        [InlineData("Thalmor Triple")]
+        [InlineData("Thugs T-Bone")]
+        public void ChecksTheEntreeSearch(string name)
+        {
+            Assert.Contains(Menu.Search(name), (item) => { return item.ToString().Equals(name); });
+        }
+        [Theory]
+        [InlineData("Entree")]
+        [InlineData("Side")]
+        [InlineData("Drink")]
+        public void ChecksAllCategories(string name)
+        {
+            Assert.Contains(name, Menu.Category);
+        }
+
     }
 }
