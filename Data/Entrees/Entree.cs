@@ -39,5 +39,16 @@ namespace BleakwindBuffet.Data.Entrees
         /// Special instructions to prepare the drink
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+        /// <summary>
+        /// This is a property called Description, displays the descriptions
+        /// </summary>
+        public abstract string Description { get; }
+        /// <summary>
+        /// name of the string
+        /// </summary>
+        public virtual string Name
+        {
+            get => this.ToString();
+        }
     }
 }

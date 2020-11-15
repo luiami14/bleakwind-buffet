@@ -13,7 +13,16 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public class DoubleDraugr : Entree, INotifyPropertyChanged
     {
-        
+        /// <summary>
+        /// This method is the description online
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Double patty burger on a brioche bun. Comes with ketchup, mustard, pickle, cheese, tomato, lettuce, and mayo.";
+            }
+        }
         /// <summary>
         /// Price of the burger
         /// </summary>

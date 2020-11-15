@@ -13,7 +13,16 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public class ThugsTBone : Entree, INotifyPropertyChanged
     {
-        
+        /// <summary>
+        /// This method is the description online
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Juicy T-Bone, not much else to say.";
+            }
+        }
         /// <summary>
         /// Price of the T-Bone
         /// </summary>

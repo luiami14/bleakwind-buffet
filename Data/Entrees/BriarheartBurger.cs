@@ -16,9 +16,6 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class BriarheartBurger : Entree, INotifyPropertyChanged
     {
-
-        
-
         /// <summary>
         /// Price of the burger
         /// </summary>
@@ -170,6 +167,16 @@ namespace BleakwindBuffet.Data.Entrees
         public override string ToString()
         {
             return "Briarheart Burger";
+        }
+        /// <summary>
+        /// This method is the description online
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.";
+            }
         }
     }
 }

@@ -15,6 +15,13 @@ namespace BleakwindBuffet.Data
     public class Combo : IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
+        /// This is a property called Description, displays the descriptions
+        /// </summary>
+        public string Description
+        {
+            get;
+        }
+        /// <summary>
         /// Property that gets the price
         /// </summary>
         public double Price
@@ -161,6 +168,13 @@ namespace BleakwindBuffet.Data
             ss.PropertyChanged += ItemChangedListener;
             bb.PropertyChanged += ItemChangedListener;
             sd.PropertyChanged += ItemChangedListener;
+        }
+        /// <summary>
+        /// name of the string
+        /// </summary>
+        public virtual string Name
+        {
+            get => this.ToString();
         }
     }
 }

@@ -14,7 +14,16 @@ namespace BleakwindBuffet.Data.Drinks
 {
     public class MarkarthMilk : Drink, INotifyPropertyChanged
     {
-
+        /// <summary>
+        /// This method is the description online
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Hormone-free organic 2% milk.";
+            }
+        }
         /// <summary>
         /// Price of the milk
         /// </summary>

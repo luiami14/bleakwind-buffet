@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.Data.Interface
 {
@@ -28,5 +29,19 @@ namespace BleakwindBuffet.Data.Interface
         /// Special instructions to prepare the drink
         /// </summary>
         List<string> SpecialInstructions { get; }
+        /// <summary>
+        /// This is a property called Description, displays the descriptions
+        /// </summary>
+        public string Description
+        {
+            get;
+        }
+        /// <summary>
+        /// name of the string
+        /// </summary>
+        public string Name
+        {
+            get;
+        }
     }
 }

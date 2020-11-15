@@ -385,6 +385,5 @@ namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
         {
             Assert.Contains(name, Menu.Category);
         }
-
     }
 }
