@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Luis Amiel
+ * Class name: Index.cshtml.cs
+ * Purpose: Class used for a for the index
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
