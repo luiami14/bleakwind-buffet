@@ -14,7 +14,7 @@ namespace BleakwindBuffet.Data.Entrees
     public class GardenOrcOmelette : Entree, INotifyPropertyChanged
     {
         /// <summary>
-        /// 
+        /// property called category
         /// </summary>
         public override string Category
         {

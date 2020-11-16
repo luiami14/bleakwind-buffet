@@ -13,6 +13,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class BriarheartBurgerTests
     {
+        [Theory]
+        [InlineData("Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            BriarheartBurger bj = new BriarheartBurger();
+            Assert.Equal(name, bj.Description);
+            Assert.Equal("Entree", bj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a entree
         /// </summary>

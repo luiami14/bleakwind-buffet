@@ -13,6 +13,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class GardenOrcOmeletteTests
     {
+        [Theory]
+        [InlineData("Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            GardenOrcOmelette gj = new GardenOrcOmelette();
+            Assert.Equal(name, gj.Description);
+            Assert.Equal("Entree", gj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a entree
         /// </summary>

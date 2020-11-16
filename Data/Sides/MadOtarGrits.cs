@@ -15,7 +15,7 @@ namespace BleakwindBuffet.Data.Sides
     public class MadOtarGrits : Side, INotifyPropertyChanged
     {
         /// <summary>
-        /// 
+        /// property called category
         /// </summary>
         public override string Category
         {
@@ -29,15 +29,13 @@ namespace BleakwindBuffet.Data.Sides
         /// </summary>
         public override string Description
         {
-            get
-            {
-                return "Cheesey Grits.";
-            }
+            get => "Cheesey Grits.";
+
         }
         /// <summary>
         /// name of the string
         /// </summary>
-        public string Name
+        public override string Name
         {
             get => this.ToString();
         }

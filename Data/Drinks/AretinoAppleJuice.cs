@@ -23,7 +23,7 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
         /// <summary>
-        /// 
+        /// property called category
         /// </summary>
         public override string Category
         {

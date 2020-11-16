@@ -15,6 +15,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class VokunSaladTests
     {
+        [Theory]
+        [InlineData("A seasonal fruit salad of mellons, berries, mango, grape, apple, and oranges.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            VokunSalad vj = new VokunSalad();
+            Assert.Equal(name, vj.Description);
+            Assert.Equal("Side", vj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a Side
         /// </summary>

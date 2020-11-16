@@ -17,13 +17,22 @@ namespace BleakwindBuffet.Data
         /// <summary>
         /// 
         /// </summary>
-        public string Category { get; }
+        public string Category
+        {
+            get
+            {
+                return "";
+            }
+        }
         /// <summary>
         /// This is a property called Description, displays the descriptions
         /// </summary>
         public string Description
         {
-            get;
+            get
+            {
+                return "";
+            }
         }
         /// <summary>
         /// Property that gets the price

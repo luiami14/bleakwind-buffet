@@ -44,7 +44,7 @@ namespace Website.Pages
             }
             if(Category != null && Category.Length !=0)
             {
-                MenuItems = MenuItems.Where(menu => menu.Category != null && Category.Contains(menu.Description));
+                MenuItems = MenuItems.Where(menu => menu.Category != null && Category.Contains(menu.Category));
             }
             if(CaloriesMin != null)
             {

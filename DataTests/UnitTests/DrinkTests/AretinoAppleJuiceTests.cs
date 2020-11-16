@@ -14,6 +14,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class AretinoAppleJuiceTests
     {
+        [Theory]
+        [InlineData("Fresh squeezed apple juice.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            AretinoAppleJuice aj = new AretinoAppleJuice();
+            Assert.Equal(name, aj.Description);
+            Assert.Equal("Drink", aj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a drink
         /// </summary>
@@ -179,5 +187,6 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             AretinoAppleJuice aj = new AretinoAppleJuice();
             Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(aj);
         }
+         
     }
 }

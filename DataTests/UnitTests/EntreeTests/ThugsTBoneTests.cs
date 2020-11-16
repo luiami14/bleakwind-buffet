@@ -13,6 +13,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class ThugsTBoneTests
     {
+        [Theory]
+        [InlineData("Juicy T-Bone, not much else to say.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            ThugsTBone tj = new ThugsTBone();
+            Assert.Equal(name, tj.Description);
+            Assert.Equal("Entree", tj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a entree
         /// </summary>

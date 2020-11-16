@@ -14,7 +14,7 @@ namespace BleakwindBuffet.Data.Entrees
     public class PhillyPoacher : Entree, INotifyPropertyChanged
     {
         /// <summary>
-        /// 
+        /// property called category
         /// </summary>
         public override string Category
         {

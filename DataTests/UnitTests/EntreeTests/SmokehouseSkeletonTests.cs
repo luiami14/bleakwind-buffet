@@ -13,6 +13,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class SmokehouseSkeletonTests
     {
+        [Theory]
+        [InlineData("Put some meat on those bones with a small stack of pancakes. Includes sausage links, eggs, and hash browns on the side. Topped with the syrup of your choice.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            SmokehouseSkeleton sj = new SmokehouseSkeleton();
+            Assert.Equal(name, sj.Description);
+            Assert.Equal("Entree", sj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a entree
         /// </summary>

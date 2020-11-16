@@ -15,7 +15,7 @@ namespace BleakwindBuffet.Data.Drinks
     public class SailorSoda: Drink, INotifyPropertyChanged
     {
         /// <summary>
-        /// 
+        /// property called category
         /// </summary>
         public override string Category
         {

@@ -51,7 +51,7 @@ namespace BleakwindBuffet.Data.Entrees
             get => this.ToString();
         }
         /// <summary>
-        /// 
+        /// property called category
         /// </summary>
         public abstract string Category { get; }
     }

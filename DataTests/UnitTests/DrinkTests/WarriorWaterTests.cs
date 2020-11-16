@@ -15,6 +15,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class WarriorWaterTests
     {
+        [Theory]
+        [InlineData("It’s water. Just water.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            WarriorWater wj = new WarriorWater();
+            Assert.Equal(name, wj.Description);
+            Assert.Equal("Drink", wj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a drink
         /// </summary>

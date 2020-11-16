@@ -13,6 +13,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class ThalmorTripleTests
     {
+        [Theory]
+        [InlineData("Think you are strong enough to take on the Thalmor? Inlcudes two 1/4lb patties with a 1/2lb patty inbetween with ketchup, mustard, pickle, cheese, tomato, lettuce, mayo, bacon, and an egg.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            ThalmorTriple tj = new ThalmorTriple();
+            Assert.Equal(name, tj.Description);
+            Assert.Equal("Entree", tj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a entree
         /// </summary>

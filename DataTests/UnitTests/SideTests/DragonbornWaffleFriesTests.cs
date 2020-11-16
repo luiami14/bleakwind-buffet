@@ -15,6 +15,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class DragonbornWaffleFriesTests
     {
+        [Theory]
+        [InlineData("Crispy fried potato waffle fries.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            DragonbornWaffleFries dj = new DragonbornWaffleFries();
+            Assert.Equal(name, dj.Description);
+            Assert.Equal("Side", dj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a Side
         /// </summary>

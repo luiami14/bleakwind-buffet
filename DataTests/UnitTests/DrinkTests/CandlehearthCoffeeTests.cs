@@ -14,6 +14,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class CandlehearthCoffeeTests
     {
+        [Theory]
+        [InlineData("Fair trade, fresh ground dark roast coffee.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+            Assert.Equal(name, cc.Description);
+            Assert.Equal("Drink", cc.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a drink
         /// </summary>

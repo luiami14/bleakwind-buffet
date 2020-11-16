@@ -13,6 +13,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class PhillyPoacherTests
     {
+        [Theory]
+        [InlineData("Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            PhillyPoacher pj = new PhillyPoacher();
+            Assert.Equal(name, pj.Description);
+            Assert.Equal("Entree", pj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a entree
         /// </summary>

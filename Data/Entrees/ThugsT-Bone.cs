@@ -14,7 +14,7 @@ namespace BleakwindBuffet.Data.Entrees
     public class ThugsTBone : Entree, INotifyPropertyChanged
     {
         /// <summary>
-        /// 
+        /// property called category
         /// </summary>
         public override string Category
         {

@@ -15,6 +15,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class MadOtarGritsTests
     {
+        [Theory]
+        [InlineData("Cheesey Grits.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            MadOtarGrits mj = new MadOtarGrits();
+            Assert.Equal(name, mj.Description);
+            Assert.Equal("Side", mj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a Side
         /// </summary>

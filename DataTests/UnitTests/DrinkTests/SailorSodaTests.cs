@@ -16,6 +16,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class SailorSodaTests
     {
+        [Theory]
+        [InlineData("An old-fashioned jerked soda, carbonated water and flavored syrup poured over a bed of crushed ice.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            SailorSoda sj = new SailorSoda();
+            Assert.Equal(name, sj.Description);
+            Assert.Equal("Drink", sj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a drink
         /// </summary>

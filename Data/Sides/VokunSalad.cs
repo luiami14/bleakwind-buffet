@@ -15,7 +15,7 @@ namespace BleakwindBuffet.Data.Sides
     public class VokunSalad : Side, INotifyPropertyChanged
     {
         /// <summary>
-        /// 
+        /// property called category
         /// </summary>
         public override string Category
         {

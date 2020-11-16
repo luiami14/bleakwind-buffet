@@ -15,6 +15,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class FriedMiraakTests
     {
+        [Theory]
+        [InlineData("Perfectly prepared hash brown pancakes.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            FriedMiraak fj = new FriedMiraak();
+            Assert.Equal(name, fj.Description);
+            Assert.Equal("Side", fj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a Side
         /// </summary>

@@ -16,7 +16,7 @@ namespace BleakwindBuffet.Data.Sides
     public class DragonbornWaffleFries : Side, INotifyPropertyChanged
     {
         /// <summary>
-        /// 
+        /// property called category
         /// </summary>
         public override string Category
         {

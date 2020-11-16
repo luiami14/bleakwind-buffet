@@ -44,7 +44,7 @@ namespace BleakwindBuffet.Data.Interface
             get;
         }
         /// <summary>
-        /// 
+        /// property called category
         /// </summary>
         public string Category { get;  }
     }

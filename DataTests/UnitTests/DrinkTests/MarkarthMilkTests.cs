@@ -14,6 +14,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class MarkarthMilkTests
     {
+        [Theory]
+        [InlineData("Hormone-free organic 2% milk.")]
+        public void ChecksAllEntreeDescriptions(string name)
+        {
+            MarkarthMilk mj = new MarkarthMilk();
+            Assert.Equal(name, mj.Description);
+            Assert.Equal("Drink", mj.Category);
+        }
         /// <summary>
         /// A test that tests if it should be a drink
         /// </summary>
