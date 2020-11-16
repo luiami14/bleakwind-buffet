@@ -16,6 +16,16 @@ namespace BleakwindBuffet.Data.Sides
     public class DragonbornWaffleFries : Side, INotifyPropertyChanged
     {
         /// <summary>
+        /// 
+        /// </summary>
+        public override string Category
+        {
+            get
+            {
+                return "Side";
+            }
+        }
+        /// <summary>
         /// This method is the description online
         /// </summary>
         public override string Description

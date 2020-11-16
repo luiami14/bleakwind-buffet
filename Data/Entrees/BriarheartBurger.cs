@@ -17,6 +17,16 @@ namespace BleakwindBuffet.Data.Entrees
     public class BriarheartBurger : Entree, INotifyPropertyChanged
     {
         /// <summary>
+        /// 
+        /// </summary>
+        public override string Category
+        {
+            get
+            {
+                return "Entree";
+            }
+        }
+        /// <summary>
         /// Price of the burger
         /// </summary>
         public override double Price

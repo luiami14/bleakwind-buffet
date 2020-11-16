@@ -15,6 +15,10 @@ namespace BleakwindBuffet.Data
     public class Combo : IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
+        /// 
+        /// </summary>
+        public string Category { get; }
+        /// <summary>
         /// This is a property called Description, displays the descriptions
         /// </summary>
         public string Description

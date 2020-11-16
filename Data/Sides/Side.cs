@@ -65,5 +65,9 @@ namespace BleakwindBuffet.Data.Sides
         {
             get => this.ToString();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        public abstract string Category { get; }
     }
 }

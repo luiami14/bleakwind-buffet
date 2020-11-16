@@ -42,6 +42,7 @@
     //////////////////////////////////////////////////////////////////
     <div class="float-columns">
         <h2>Entrees</h2>
+        <div class="menu-item">
         @foreach (var rs in Model.MenuItems)
         {
             <div class="menu-item">
@@ -63,57 +64,62 @@
             </div>
         }
         </div>
+        </div>
     <div class="float-columns">
         <h2>Sides</h2>
-        @foreach (var rs in Model.MenuItems)
-        {
-            <div class="menu-item">
-                @if (rs is BleakwindBuffet.Data.Sides.Side df)
-                {
-                    <h3>
-                        @df.Name
-                    </h3>
-                    <h5>
-                        Description:@df.Description
-                    </h5>
-                    <h5>
-                        Price: $@df.Price
-                    </h5>
-                    <h5>
-                        Calories:@df.Calories
-                    </h5>
-                }
+        <div class="menu-item">
+            @foreach (var rs in Model.MenuItems)
+            {
+                <div class="menu-item">
+                    @if (rs is BleakwindBuffet.Data.Sides.Side df)
+                    {
+                        <h3>
+                            @df.Name
+                        </h3>
+                        <h5>
+                            Description:@df.Description
+                        </h5>
+                        <h5>
+                            Price: $@df.Price
+                        </h5>
+                        <h5>
+                            Calories:@df.Calories
+                        </h5>
+                    }
 
+                </div>
+            }
             </div>
-        }
-    </div>
+        </div>
     <div class="float-columns">
         <h2>Drinks</h2>
-        @foreach (var rs in Model.MenuItems)
-        {
-            <div class="menu-item" >
-                @if (rs is BleakwindBuffet.Data.Drinks.Drink aj)
-                {
-                    <h3>
-                        @aj.Name
-                    </h3>
-                    <h5>
-                        Description:@aj.Description
-                    </h5>
-                    <h5>
-                        Price: $@aj.Price
-                    </h5>
-                    <h5>
-                        Calories:@aj.Calories
-                    </h5>
-                }
+        <div class="menu-item">
+            @foreach (var rs in Model.MenuItems)
+            {
+                <div class="menu-item">
+                    @if (rs is BleakwindBuffet.Data.Drinks.Drink aj)
+                    {
+                        <h3>
+                            @aj.Name
+                        </h3>
+                        <h5>
+                            Description:@aj.Description
+                        </h5>
+                        <h5>
+                            Price: $@aj.Price
+                        </h5>
+                        <h5>
+                            Calories:@aj.Calories
+                        </h5>
+                    }
+                </div>
+            }
             </div>
-        }
         </div>
-    <div class="clearfix">
-        <h2>Combo</h2>
-        <p>
-            Any entree, side, and drink can be combined into a Combo with a $1 discount.
-        </p>
-     </div>
+        <div class="clearfix">
+            <h2>Combo</h2>
+            <p>
+                Any entree, side, and drink can be combined into a Combo with a $1 discount.
+            </p>
+        </div>
     </div>

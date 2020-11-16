@@ -23,6 +23,16 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
         /// <summary>
+        /// 
+        /// </summary>
+        public override string Category
+        {
+            get
+            {
+                return "Drink";
+            }
+        }
+        /// <summary>
         /// Price of the juice
         /// </summary>
         public override double Price

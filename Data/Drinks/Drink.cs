@@ -70,5 +70,9 @@ namespace BleakwindBuffet.Data.Drinks
         {
             get => this.ToString();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        public abstract string Category { get;  }
     }
 }

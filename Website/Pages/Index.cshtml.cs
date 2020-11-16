@@ -36,10 +36,37 @@ namespace Website.Pages
         /// </summary>
         public void OnGet()
         {
-            MenuItems = Menu.Search(SearchTerms);
-            MenuItems = Menu.FilterByCategory(MenuItems, Category);
-            MenuItems = Menu.FilterByCalories(MenuItems, CaloriesMin, CaloriesMax);
-            MenuItems = Menu.FilterByPrice(MenuItems, PriceMin, PriceMax);
+            MenuItems = Menu.FullMenu();
+
+            if(SearchTerms != null)
+            {
+                MenuItems = MenuItems.Where(menu => menu.Name != null && menu.Name.Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
+            }
+            if(Category != null && Category.Length !=0)
+            {
+                MenuItems = MenuItems.Where(menu => menu.Category != null && Category.Contains(menu.Description));
+            }
+            if(CaloriesMin != null)
+            {
+                MenuItems = MenuItems.Where(menu => menu.Calories >= CaloriesMin);
+            }
+            if(CaloriesMax != null)
+            {
+                MenuItems = MenuItems.Where(menu => menu.Calories <= CaloriesMax);
+            }
+            if(PriceMin != null)
+            {
+                MenuItems = MenuItems.Where(menu => menu.Price >= PriceMin);
+            }
+            if (PriceMax != null)
+            {
+                MenuItems = MenuItems.Where(menu => menu.Price <= PriceMax);
+            }
+
+            //MenuItems = Menu.Search(SearchTerms);
+            //MenuItems = Menu.FilterByCategory(MenuItems, Category);
+            //MenuItems = Menu.FilterByCalories(MenuItems, CaloriesMin, CaloriesMax);
+            //MenuItems = Menu.FilterByPrice(MenuItems, PriceMin, PriceMax);
         }
         /// <summary>
         /// This property searchTerms
@@ -55,21 +82,21 @@ namespace Website.Pages
         /// The property CaloriesMin
         /// </summary>
         [BindProperty(SupportsGet = true)]
-        public int CaloriesMin { get; set; }
+        public int? CaloriesMin { get; set; }
         /// <summary>
         /// The property CaloriesMax
         /// </summary>
         [BindProperty(SupportsGet = true)]
-        public int CaloriesMax { get; set; } = 1000;
+        public int? CaloriesMax { get; set; } = 1000;
         /// <summary>
         /// The property PriceMin
         /// </summary>
         [BindProperty(SupportsGet = true)]
-        public double PriceMin { get; set; }
+        public double? PriceMin { get; set; }
         /// <summary>
         /// The property PriceMax
         /// </summary>
         [BindProperty(SupportsGet = true)]
-        public double PriceMax { get; set; } = 10;
+        public double? PriceMax { get; set; } = 10;
     }
 }
